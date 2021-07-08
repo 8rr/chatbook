@@ -1,0 +1,1224 @@
+﻿<!-- 继承自模板：app_doc/docs_base.html -->
+
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 14px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="max-age=7200">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="第一章-态度,骄傲与风趣指南-大卫.D,PUAshow,泡学,迷男方法,泡学chat">
+    <meta name="description" content="第一章-态度
+
+1.诱惑术的伦理道德问题
+
+2.把妹达人的坏名声
+
+3.要知道你想要什么
+
+4.要知道女人也喜欢性
+
+5.一个现实的展望--关于人生
+
+6.—般意义上的自信的迷思
+
+7.信念的威力
+
+">
+    <title>第一章-态度 - 骄傲与风趣指南-大卫.D - 泡学chat书库 </title>
+    <link href="../../static/layui/css/layui-1.css?version=0.6.1" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/editor.md/css/editormd.css?version=0.6.1">
+    
+
+    <link href="../../static/viewerjs/viewer.min.css?version=0.6.1" rel="stylesheet">
+    <link rel="icon" href="../../static/search/mrdoc_logo_300.png" sizes="192x192">
+    <link href="../../static/mrdoc/mrdoc.css?version=0.6.1" rel="stylesheet">
+    <style>
+        /*一级无序li显示实心圆点*/
+        .doc-content ul li{
+            list-style:disc;
+        }
+        /*二级无序li显示空心圆点*/
+        .doc-content ul > li > ul > li{
+            list-style-type: circle;
+        }
+        /*有序li显示数字*/
+        .doc-content ol li{
+            list-style-type: decimal;
+        }
+        .doc-content ol ol ul,.doc-content ol ul ul,.doc-content ul ol ul,.doc-content ul ul ul {
+            list-style-type: square;
+        }
+        /* 三级及以下无序li显示小方块 */
+        .doc-content ul ul ul li{
+            list-style-type: square;
+        }
+        /* 下拉目录隐藏li样式 */
+        .editormd-toc-menu ul.markdown-toc-list li{
+            /*list-style:none;*/
+        }
+        /* 弹出框文档目录样式 */
+        ul.markdown-toc-list{
+            list-style-position:inside;
+        }
+        ul.markdown-toc-list li{
+            list-style: none!important;
+            line-height: 24px;
+        }
+        ul.markdown-toc-list > li > ul > li,ul.markdown-toc-list > li > ul li{
+            padding-left:15px;
+        }
+        ul.markdown-toc-list a{
+            /* text-decoration: underline!important; */
+        }
+        /* 块级代码和行内代码去除边框 */
+        .markdown-body p code{
+            border:none;
+        }
+        /* HTML预览样式 */
+        .markdown-body h1{ 
+            font-size: 1.7em;
+        }
+        .markdown-body h2{
+            font-size: 1.5em;
+        }
+        .markdown-body h3{
+            font-size: 1.25em;
+        }
+        .markdown-body h4{
+            font-size: 1em;
+        }
+        .markdown-body h5{
+            font-size: .875em;
+        }
+        .markdown-body h6{
+            font-size: .85em;
+        }
+        
+        .markdown-body p img{
+            max-width: 350px;
+        }
+        
+        #url_qrcode img{
+            margin: auto;
+        }
+        /* 文档代码块样式 */
+        ol.linenums li{ 
+            width: max-content;
+        }
+        pre.linenums{
+            max-height: 500px;
+        }
+        li.L1, li.L3, li.L5, li.L7, li.L9 {
+            background: none !important;
+        }
+
+        /* layui弹出框颜色 */
+        .layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+            border-bottom: 2px solid #333;
+        }
+        .layui-tab-brief>.layui-tab-title .layui-this{
+            color: #333;
+        }
+        /* 覆盖vditor样式 */
+        .vditor-outline__item{
+            padding: 0;
+            padding-bottom: 5px;
+            color: #333;
+        }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="doc layui-fluid" style="padding-left:0px;">
+    <!-- 左侧目录栏 -->
+    <div class="doc-summary">
+        <!-- 文档搜索 -->
+        <form action="/project-15/" method="get">
+            <div id="doc-search-input">
+                <input type="text" name="kw" placeholder="输入并回车搜索" value="" class="layui-input doc-search-input">
+            </div>
+        </form>
+        <!-- 文集名称 -->
+        <div class="project-title">
+            <a href="../index.htm">骄傲与风趣指南-大卫.D
+                
+            </a>
+            <p>
+                
+            </p>
+        </div>
+        <hr>
+        <!-- <div style="margin-left:15px;">
+            <a href="javascript:void(0);" onclick="openDocTree()"><i class="fa fa-bars"></i> 展开</a>
+            <a href="javascript:void(0);" onclick="closeDocTree()"><i class="fa fa-bars"></i> 折叠</a>
+        </div> -->
+        
+        <!-- 遍历文集大纲 -->
+        <!-- 如果文集的文档数量超过999，使用异步加载文集目录 -->
+        
+        <!-- 文档数量小于999，使用同步加载文集目录 -->
+        <nav>
+            <ul class="summary">
+            <!-- 一级目录 -->
+            
+                <li>
+                    
+                        <a href="../doc-151/index.htm" title="简介">简介</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="index.htm" title="第一章-态度">第一章-态度</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-153/index.htm" title="第二章-寻找/打开阶段">第二章-寻找/打开阶段</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-154/index.htm" title="第三章-吸引阶段">第三章-吸引阶段</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-155/index.htm" title="大师流一公然性骄傲与风趣">大师流一公然性骄傲与风趣</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-156/index.htm" title="第四章-考验阶段">第四章-考验阶段</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-157/index.htm" title="第五章-舒适感">第五章-舒适感</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-158/index.htm" title="第六章-扩张">第六章-扩张</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-159/index.htm" title="第七章-close阶段">第七章-close阶段</a>
+                    
+                </li>
+            
+            </ul>
+        </nav>
+        
+        <div class="bq">
+            <a href="javascript:void(0);" class="mrdoc-link" id="dashang">本文档使用MrDoc发布</a>
+        </div>
+        <!-- 右下角广告块 -->
+        <!-- 广告代码开始 -->
+        
+            
+                <div class="ad-code">
+                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                </div>
+            
+        
+        <!-- 广告代码结束 -->
+    </div>
+    <!-- 左侧目录栏结束 -->
+
+    <!-- 右侧文档栏 -->
+    <div class="doc-body">
+        <!-- 文档导航 -->
+        <div class="doc-header" role="navigation">
+            <a class="btn pull-left js-toolbar-action" aria-label="" href="javascript:void(0);" title="切换侧边栏">
+                <i class="fa fa-align-justify"></i>
+            </a>
+            <a class="btn pull-left font-small" href="javascript:void(0);" title="缩小字体">
+                <i class="fa fa-font">-</i>
+            </a>
+            <a class="btn pull-left font-large" href="javascript:void(0);" title="放大字体">
+                <i class="fa fa-font">+</i>
+            </a>
+            <a class="btn pull-left font-switch" href="javascript:void(0);" title="切换字体类型">
+                <i class="fa fa-text-height"></i>
+            </a>
+            <!-- 顶部工具栏 -->
+            
+    
+    <!-- 文档目录 -->
+    <div id="toc-container" class='sidebar'></div>
+    
+
+
+            <a class="btn pull-right" aria-label="" href="../../index.htm">
+                <i class="fa fa-home"></i> <span class="layui-hide-xs">首页</span>
+            </a>
+        </div>
+        <!-- 文档主体 -->
+        <div class="doc-body-content">
+            <div class="doc-body-content-div">
+                <!-- 文档内容 -->
+                <div class="doc-content">
+                    <!-- 标题 -->
+                    <div class="doc-info">
+                        <!-- 页面主体头信息 -->
+                        
+    <h1>第一章-态度</h1><hr>
+
+
+                        <!-- 广告代码开始 -->
+                        
+                            
+                                <div class="ad-code">
+                                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                                </div>
+                            
+                        
+                        <!-- 广告代码结束 -->
+                    </div>
+                    <!-- 标题结束 -->
+                    <!-- 正文开始 -->
+                    <div class="markdown-body" id="content" style="padding: 20px;padding-top: 5px;">
+                        
+    <textarea style="display: none;">第一章-态度
+
+1.诱惑术的伦理道德问题
+
+2.把妹达人的坏名声
+
+3.要知道你想要什么
+
+4.要知道女人也喜欢性
+
+5.一个现实的展望--关于人生
+
+6.—般意义上的自信的迷思
+
+7.信念的威力
+
+8.最强大的信念
+
+9.控制框架和大框架
+
+10.控制你的物质和情感状态
+
+11.将其全部应用到实战中
+
+这个阶段不是遇到女人后的部分，而是一些在遇到女人前你必须搞定的东西。因为“内在（innergame)才是最重要的。所有的技术，策略和惯例都是没P用的，除非你有正确的心态。
+
+# 1.诱惑术的伦理道德问题
+
+当我开始学习泡学和诱惑的时候，我有一个困惑，就是到底我做的是不是对的。对于这些用“手段”来俘获女人的方法，我觉得有点亏心，甚至可以说是低俗。有时候我都会觉得自己还要依靠这些东西，真不像个男人。后来我发现，这样的疑惑必须在我变得牛B，在我成功之前就先想清楚。我在实战中遇到的一些男的，其实都是非常善良而且有分寸的人，所以，我想其他战友们应该也在某种程度上跟我有一样的感受。我想来分享一下帮我拜托那个疑惑的观点和想法，为了帮助在同样疑惑下挣扎的同胞们打开这个心结。
+
+首先，要知道，运用策略去跟女人交往没有任何不对的地方。大部分男人在这个方面都是毫无头绪的，这完全不是他们的错。这很多都跟我们是被老妈养大的，而且当今社会“男人不应该去寻求帮助和询问意见”的趋势。女人，在另一方面，从小到大都读八卦杂志，星座书，看泡沬剧，她们跟男人比起来更多的是将注意力集在研究人际交往上。当她们长大成人的时候，他们有一整套和策略来刁难，泡男人，设圈套。她们成为了操纵异性的“大师”。直到现在网络的普及和应用，男人依旧没有《时尚》《欲望都市》这样的东西来教我们如何结识与选择异性。所以，实际上，你只是学一些技巧来对付那些专家们，这并不会让你变得不够男人；这只是说明你正在学习她们广泛的经验，以达到能够陪他们玩儿的高度
+
+另一个重要的步骤就是删除所有你大脑里关于”控制(manipulation)别人是错误的“负面想法。我相信，所有人都需要一定程度上的领导与控制！广告试着催眠你让你去买那些饮料和新衣服。有试着强制你的朋友陪你去看你想看的电影。“控制”，这种行为（包括所用到的技术和方法）在道德上是中性的。它的对错是在于你如何运用它。比如，一个推销员试着操控你，让你买他的产品，这是他的工作。你很高兴，因为你觉得你买的那东西不错，他也很高兴，因为他做成了笔生意。这有什么不好的吗？
+
+觉得那些根本不是你，你是在表现一个假的你。这么说吧：假如你是个老师，上来就是老师的么？当然不是。你必须上高上大学，然后得到文凭，你是个老师了！泡妞也是同样的道理。如果你不断地学新材料，然后在实战中测试，最后，它就会变成你的，它就是你！同样，你也得知道，你在街上看到的那些浓妆艳抹，高根短裙的女人不是她花个5小时前在镜子面前，担心害怕的女孩，因为她今天头发不好看。高跟鞋，化妆，那种自信的感觉，所有这些都是她用来吸引异性的“工具”。所以，当你用“人格工具”去获得同样成果的时候，别觉得有负罪感或者懦。最重要的是，如果你尊重自己，尊重自己的人生（你必须这样，因为这是你的人生），那你必须相信，一个上天所能给的最好的生活，是你应得的。这个包括找到一个你能找到的最好的伴侣。如果学习泡妞技术能让你找到最好的伴侣，那么学习和掌握它们将会是对你人生最高尚的许诺。
+
+# 2.把妹达人的坏名声
+
+“把妹达人”，“泡妞”这些词好像都附带一些负面的名声。这些似乎都隐含着卑鄙和虚伪，因为这都是为了结识或者更进一步的发展才去和女人搭讪，所以做这些事的男人都是些王八蛋。”诱惑“这个词同样也含有一些负面的意思，有点”欺骗“一个女人和你睡的意思。最后，还有一个词”花花公子“，表示一个男的，玩弄一个女人的感情，把他们骗上床。
+
+在你做任何其他的事之前，你必须除去任何关于这些概念负面的想法。这些名声全都是胡扯，什么女人是贞洁的，什么坏男人摧残可怜的女人，女人都是受害者。这些都是P话。
+
+我们先来说清楚：虽然”把妹达人“或者”泡妞“这些词频繁出现在本指南之中，但是去”泡“某人，就是去认识他们。人们从有人类开始，就在不断地通过这样那样的方式遇到认识了解自己的伴侣。差不多在所有的情况中，总有一方，或者双方都期望去认识然后了解对方。现今当然也是这样。你舅舅认识了你嫂嫂，因为他们大学的时候是同桌；有一个美女不小心把咖啡撒到你朋友身上，现在他们已经结婚并且快乐地生活在一起了。这样固然很好，但是实在是太少了。你说从地球上这么多个女人中通过巧合遇到一个你的完美伴侣的几率有多大？我想一点也不高吧（虽然电影小说都在不断地给我们灌输这样的思想，让我们相信事情就是这样发生的）。。。
+
+实际上，“把妹达人”更应该比那些“妻管严”的男人们受到尊重。把妹达人，无情无畏地搭讪女人们，认识了一大帮人，建立了一大堆关系，是在“主动”地努力去寻找那个对的人（或者，最少是在锻炼技巧，似的自己在遇到“她”的时候知道该做什么）。他捏紧自己的蛋蛋，毫无畏惧地出去涉猎。在原始人的时代，这样的人，才会每天带这猎物回来给家人当晚餐，而其他的男人，只能守株待兔。
+
+“诱惑”这个次，同样有着不好的名声，基本就是因为那些过时的关于女性贞操的观念。实际上，女人就是想被勾引。要不要去勾
+
+引女人完全是看男人愿意不愿意起这个头，也完全是取决于女人是不是要矜持地设置一些障碍，直到男人展现了足够高的价值。这是求爱的一部分，而且永远都是这样。
+
+至于“玩家”“花花公子”这类词，暗示着男人们出去“玩”女人，通过欺骗或者给予假承诺的方式来骗到女性上床。但这就像鱼有自己的求爱舞，孔雀有花哨的尾巴，雄鹿有雄健的身姿一样，人类也有自己的方式。在国外，对这个方式有一个专门的俗语叫做“游戏”（thegame).理论上来讲，每个出去寻求配偶的人，都被称为“玩家”（player)。女人一直在玩这个游戏，但并不怀恶意--她们只是在这个仪式中扮演自己的角色而已。我们也要玩这个游戏，但这并不一定包括伤一个女人的心或者欺骗她。这只是表示在这个神圣的仪式中，用我们自己的方式和技巧扮演好我们自己的角色。
+
+在社会中的任何情形下，都是这样：只要你真诚地对待别人，你就不会招致侮辱。不要为一个愚蠢的标签让自己有负罪感。
+
+# 3.知道自己想要什么
+
+在你朝着自己的目标努力之前，你必须正确定位自己的目标。所以，如果你想要找一个理想对象，你就要想清楚，你需要拥有什么样特质的女人。
+
+你必须自己想清楚，以下这些是我自己的。知道自己想要什么，你就更能够得到自己想要的。
+
+有冒险精神
+
+不做作
+
+情商高
+
+乐于迎接挑战
+
+双性恋
+
+聪明
+
+成熟
+
+乐观
+
+不怕风险
+
+依旧保持一些小女生的特点
+
+我不想要的特质：
+
+做作
+
+饥渴
+
+没主见
+
+老爱放人鸽子
+
+(一亲芳泽说：以前听过swingcat的音频教程，里面也提到过这点。你要知道自己想要什么样的女人，这样你就不会太盲目。准备笔和纸，写下自己想要什么样的女人。不一定要一次写完。比如，你想要胸大腰细的女人，那就胸大腰细，记下来，出去搭讪这样的女人，晚上回家再修改添加。久而久之，你就会有一套自己的完整的标准，知道自己喜欢什么样的，到时候就不会一见到美女大脑就短路，就SB了。就能比较客观地评价和思考了。）
+
+但是！无论有多少女人复合你的“标准”，别把她看成是自己的女朋友。刚开始，要把她单纯地看成一个有趣，漂亮，但是只是你生命中的一个插曲。换句话说，就是跟她玩玩，大家开心就行，别把什么事情都看地太严肃等等。就跟她开开玩笑，做个爱，带她去看看电影，让她挽着你的胳膊到处走也不觉得尴尬等等。如果事情真的变得很严肃，那就顺其自然吧，你只要从容一点就行。很多情侣关系破灭就是因为有人太快变得太严肃，然后把幻想建立在一个不可能跟自己一起生活的人身上。真正持久的感情，就是大家互相调情一段时间，或者搞个几夜情的，然后经过时间的考验升华成更高层次的东西。
+
+小心属于“给我类“的女人，比如给我承诺，给我时间，给我精神支柱，说一些她们想说的东西等等。也就是说，她们的意愿，完全不考虑你的需要的那种人。就好像她们认为他们给了你性和关注，你作为一个男人已经获得了自己想要的，就得给她们任何她们想要的。一个懂得尊重你的需要和自己需要的女人才是一块能当长期伴侣的料。
+
+# 4.要知道女人也喜欢性
+
+女人跟男人一样热爱性。唯一的不同是她们怎么形容。记住，女人其实也喜欢性。别把他们看得跟没发育完全的小孩儿或者天真无邪的完全不知性为何物的天使一样。同样，要知道，她们玩游戏的方式，就是考验，考验你够不够格跟她发生关系。孚受这个游戏吧，当她们”废物测试“(shittest)你的时候，你应该高兴，因为这意味着他们把你看成了一个潜在伴侣来考验。女人需要一个比她们更强势的男人，一个能克服她的困难的男人。所以，你觉得她会怎么考验你？她会看你是不是一个废物。
+
+最重要的是，别试着去隐藏自己是也喜欢性的事实。女人知道我们喜欢她们而且喜欢性，所以别完全隐藏自己的欲望，也别为自己作为男人的欲望而感到抱歉。女人在要求爱和情感满足的时候从来
+
+不道歉或者表现得羞耻，所以为什么你要掩饰自己喜欢做爱的事实？
+
+我们男人通常没有意识到我们对女人有多大的性权利。我们好像觉得女人都全部的性权利，但如果我们意识到其实女人跟男人一样需要性爱的时候，我们就能把这个权利夺回来。我们可以选择跟谁说话，我们是做决定的人。如果能选择就是有权利的话，在这样的情况下，谁更有权利：一个女人从20个搭讪她的男人中选一个，还是其中一个男人在酒吧里有300个女人可以搭讪，却选择了她。
+
+这有个很少人知道的事实：其实如果你不去搭讪她的话，她失去得更多。她在自己打扮上花了很多时间和金钱。在她出去之前，她可能投资了20个小时来买一件适合她的衣服，然后整装待发。如果她给你发出信号，你却不搭她，这绝对是对她自尊心的一个重创。下次一定要记住，她的性权利全部取决于她的样貌。
+
+# 5.—个现实的展望--关于人生
+
+对成败的淡漠是最终极的能力。其实，定义成功和失败是不可能的，因为每件事都必须根据当时的情形，而且只能是根据回顾来评判。比如说，假如你跟一个女的谈恋爱，某天，她觉得你不是她要找的那个人，然后她就把你甩了，这是不是就意味着你失败了？可能在当时你觉得你是失败了。但是，如果第2天，为了散散心，你和你的几个好哥们儿一起出去了，正好泡到了让自己魂牵梦萦的那个女人，理论上从长期的角度来讲，你算失败了吗？绝对不是。如果你在一个女人身上“成功“了，你可能会失去了与自己更喜欢的女生发展的机会。所以，你应该停止用成败去衡量自己所做的事，然后开始用整体的角度来看待人生，而不是把事情分成一个一个的瞬间定义成败的泡泡来看。
+
+# 6.—般意义上的自信的迷思
+
+根本不存在一般意义上所谓自信这东西。自信也是因时制宜的。我来解释一下：打个比方，你是一个娴熟的外科手术医师。经过了几年的学习和训练，还有临床实验，你一上任就非常自信。你知道你是这个领域最强的。现在，你离开手术室的时候，走进候诊室发现一个恐怖分子在那儿留下了个炸弹包！只有2分钟就要爆炸了，也就是说根本没有时间去叫防爆组织了。你打开炸药包，发现里面有一堆的线和零件，当你发现自己束手无策的时候，你的自信心顿时降为0。突然，一个男人出现在你的面前，来帮助你，他告诉你要打开那个装置，然后输入一串数字，拔掉电线，那个计时器就会停止。他看起来一点也不紧张！反而看起来无比自信。你问他为什么他会知道这些，他很自豪地说“这种炸弹就是我设计的，我在这行干了25年了，拆这东西对我来说就跟弄玩具一样。现在你的心依旧飞快地跳动，那种压迫感还没消失，突然心脏病发，停止了呼吸。那个搞炸弹地男人没学过任何医学方面的东西，连急救知识都不懂。当他意识到自己束手无策地时候，顿时他的自信心就降为0，他只能求救。这个小故事阐述了我的观点：世界上根本不存在所谓”自信的人”，一个人只在自己熟悉地领域才会显得自信。如果你没有任何除了某样东西的经验和知识，你也不会对自己有自信。对付女人也是一样，因为你没有技巧和经验来对付他们，所以你没自信。没听过催眠录音带，没有学过恋爱技巧，没有学过NLP，没学过任何东西，没有经验的话，你根本不可能会有自信。唯一能给你自信地就是如果对付女人的一整套技巧（也是本指南的观点），还有处理与女人关系地经验（你出去，用你的所学来实际应用）。
+
+# 7.信念的威力
+
+强大地信念能为你的心态打好一个很好的基础。你不能控制事情地发生。但是，你可以控制事情的意义。为了控制自己对事情的反应，你必须告诉自己每件事是什么意思。生活没有什么东西是有意义的，除非你给它一个意义。你所给地意义就形成了信念的基础。你所相信的就变成了你的实际。如果你把自己看成是一个“奖品”一个牛人的话，比如“女人会情不自禁地爱上我”或者“女人只想跟我上床”，你的大脑将会自动的在现实生活中寻找证据。你大脑找到的证据越多，你的信念就越坚定，你的信念越坚定，你的信念在女人面前就越有说服力和协调性。这个信念是不是扯淡到底重要吗？当然不重要！反正我们所固有的信念大部分都是错的，比如我们不够好而不能做一件事，又比如我们不够聪明而学不好一样东西等等。如果你釆用了错误的信念，那为什么你不釆用一些能够让你变得牛X的错误信念？一旦釆用了，信念在你一生中能够自行运转然后把我们转变成一个完全不一样的人。想一想那些种族歧视的人，他们的地信念是狂傲和荒唐的，但是，对他们自己来说，那就是真的。他用他的信念来阐释每一件发生在自己身上的事，这让他们相信，某些种族就是比另一些种族强，甚至弱者应该在这个世界上消失。如果一个人能釆用这么极端的信念，那些，拥有“女人就想要你”的信念绝对是小菜一碟。这所需要的只是正确的想法和影响，还有你是否意识到这些完全是在你自己的掌控之中。
+
+# 8.最强大的信念
+
+你必须有的最重要的（其实是最必须的）信念是，你是一个“奖品”，女人想要得到你。相信能和你在一起是女人能做的最好的选择。当你釆用了这个信念，你其他关于女人的信念就自然而然的败落了。当你把自己看成是“奖品”的时候，你会自动的通过说话，行动，肢体语言等等媒介来传达这个信息。这里有几种信念展示自己的方式：当你搭讪一个美女，你不是想俘获她的芳心。而是，你在调查，看她是不是配得上你。男人典型的行为：男人们搭讪的时候非常紧张，担心她会不会不接受自己。男人们试着将自己证明给女人看。当一个女人对你不感兴趣的时候，这对你一点影响都没有，因为是她失去了像你这么好的一个男人。实际上，你为她感到遗憾，因为她不会再有机会享受跟你在一起的快乐了。男人典型的行为：这个打击了他的自身价值，他为自己感到遗憾，因为他再也没机会和她在一起了。如果跟你正在恋爱的女人要离开你，这没什么，因为你是奖品。这不仅是她的损失，而且比她更好的女人很快就会到来。男人典型的行为：男追女，求她回心转意，说世界上再也没有像她这么好的女孩了。
+
+你永远不追，恳求，哀求，乞求或者试图去通过礼物和晚餐来换得女人的注意和爱情。应该是她买礼物给你，希望你能给她一点爱。典型男人的行为：他通过追求她来背叛自己的”没安全感“，问她对他有什么感觉，给他买礼物，希望她动心等等。
+
+永远不要在一棵树上吊死，因为无论如何你都比她强，你是奖品！男人典型的行为：深受她就是”唯一“所害，在自己的脑子里充满了对她的幻想，因为他就是要这个女孩，在他面前，他将失去所有的权利。
+
+你有自己的生活，一个牛人的生活方式，充满了牛X的朋友，成功人士和良好的氛围。你持续投资在自己的爱好上，并且很享受生活。如果一个女人要和你在一起，她必须尊重你现有的生活。在你的地盘，她就得听你的。男人典型的行为：为了女人，拋弃了兄弟，她成了宇宙的中心，放弃了自己的爱好，而把时间花在她身上(或许更糟，把关于她的事情变成自己的爱好）。
+
+你同时和多个女人约会来觉得哪一个才是你最合适的长期伴侣。你能得到你最佳伴侣，因为你是奖品，你不可能找到最好的，如果你只花时间去只和一个女人相处，只去了解一个女人。你觉得跟女人搭讪会更自如，因为就算这不管用，你还是有其他女人可以玩。男人典型的行为：一次对一个女人承诺，通常是第一个接受他的，对她忍气吞声，稳定下来，知道她甩了他，然后他想“我在她身上看到了什么？”
+
+你不接受女人的坏行为。因为你是奖品，她得好好注意自己的言行，她得好好对你，否则她就出局了。男人典型的行为：让女人骑到他头上，他谢天谢地，因为上天赐给她一个这么性感的女人---他把她看成奖品。
+
+无论你多喜欢她或者多爱她，你要想象她爱你更多。你够幸运能跟她在一起，但是她更幸运，因为她能跟你在一起。男人典型的行为：男人拜倒在石榴裙下，让她掌控他，告诉她自己有多幸运能跟她在一起，或者自己再也不能没有她。
+
+当你第一次遇到一个女人，无论什么时候她告诉你她不喜欢你的什么什么什么，你要把那看成是她的问题，而不是你的问题。男人典型的行为：女人一指出他有什么不好的地方，他立马就开始警觉、注意、自卑，要么同意，要么就改变自己让她改观。
+
+看到差距了吗？大部分男人的行为暗示着女人是奖品。但当你把这个掉个头，在脑海里假设自己是这个奖品，你的言行举止将会很不一样。你的行为将会给女人暗示说你是奖品，她必须得赚到手，根本都不用说出来。再者，你真的是不是奖品很重要吗？不！一个相信自己是上天赐给女人的礼物的又肥又丑又秃头的老男人将会比一个“现实的”觉得没有女人会看上他的又肥又丑又秃头的老男人要成功得多。（很搞笑，消极的人通常会说自己的想法很“现实”）。我要再重复一遍：不论这个信念是不是真的并不重要；关键是这个信念有多强！观念就是一切！
+
+# 9.控制框架和大框架
+
+用一个正确的态度来对待女人对于你理解框架这个词是很重要的。Swinggcat在他的书“realworldseduc-tion&quot;里将这个概念解释得非常清楚。
+
+以下是一些解释:”框架“是一个大体的中心和方向，指引着你与人交流时的想法和行为。框架决定了你言行的潜在含义。一个”大框架“是一个为交流提供意义的总体的中心和方向。一个更加普遍的词来形容框架和大框架是”社交力学“。
+
+框架不存在于客观事实中。他们不是”真的“。它只存在于人的脑壳儿里。但是，他们对于和人交往来说是异常重要的。
+
+一般来说，当2个大框架相冲突的时候，一个更强大更自信的框架会更占优势。
+
+女人可能会也可能不会陷入你的大框架。但即使她不会，你也传达了你不想陷入她的框架的意愿。
+
+第1步：定义你自己的大框架：如果你不设置好，女人将会为你定义一个，然后固执己见。
+
+这里有一些不错的方式来定义交流的潜在含义:
+
+1.你是奖品。
+
+2.她再努力地试着让你喜欢上她或者试着得到你---无论是在”吸引“，”接受“，”考验“的任何一个阶段。
+
+3.她太想要你了，以至于她不断地想要跟你睡。
+
+4.你们两个终究是要一起睡的，但只是在她达到你的标准和期望的情况下。
+
+第2步：抢先成立大框架
+
+在你跟她说话之前就要先把大框架给设立好，定义她所有行为和举止的潜在含义，那么在你与她交谈的时候，她将会陷入你的框
+
+架。
+
+第3步：定义一些能够暗示大框架的小框架。有一些方法比如：
+
+1.把一个或者多个她的行为和举动定义为她不够好，没有达到你的标准，控制不住你（这暗示着你是奖品）
+
+2.把一个或多个她的行为和举动定义为她对你很感兴趣，想要追你。
+
+3.把一个或多个她的行为和举动定义为她做得有一点点过头了(你不买她账)
+
+4.把一个或多个她的行为和举动定义为她缺乏教养。
+
+5.把一个或多个她的行为和举动定义为她是个混蛋。
+
+6.损她，说她现在过的不是自己想过的生活，或者指责她羡慕你。
+
+7.把一个或多个她的行为和举动定义为她有点奇怪。
+
+8.把一个或多个她的行为和举动定义为她是个可怜虫。
+
+9.把一个或多个她的行为和举动定义为她很没礼貌。
+
+要看清，这里面有很多框架是女人定义男人的。所以，你是在把一些曾经让男人们沮丧伤心的框架，以其人之道，还治其人之身。
+
+记得要用一种幽默的方式来表达。当女人在笑的时候，他们的防御是最低的，这样他们更能够顺着你的框架走。
+
+# 10.控制你的物质和情感状态
+
+你是唯一能为你自己的感受负责的人。其他人不能让我们怎么样。是我们自己的理解使得他们说的话和行为影响自己。
+
+控制自己的感受很重要。是不是要让自己情绪稳定完全是看你自己。女人在这方面要靠我们，还会在他们歇斯底里的时候因此而感谢我们。控制自己的情感是”男人“的责任。女人不会被软弱无能的人所吸引。我不是说你不能表现出自己感性的一面，但是不要有被别人的情感所煽动下所产生的情感。每个女人在外面的时候总有一些缺乏安全感和恐惧的时候。
+
+记住，你有策略和逻辑作为优势陪着你，你所要做的就是控制自己的状态。
+
+当女人让你生气，伤心，难过的时候，你不能变得情绪化。这其实是女人给你的测试，你要是一中招，你就前功尽弃了。你要看清楚他们的花招，夸张的行为和想要通过你害怕失去他们的恐惧来控制你。女人需要一个能超越她们控制的男人，超过她们能让他做任何事的企图。怎么说吧，要是你连她的烂招都中了，你拿什么去保护她？一个强势的男人是能让女人感到安全和被保护的男人。
+
+那你要如何控制自己的状态呢？当一个女人对着你喊的时候，或者她当众鄙视你的时候，你要怎么保持镇静？
+
+朝积极的一面理解是一种办法。在某种程度上，你一定经历过一些情况让你感到丢人或者难过，然后有人跟你说“某一天你回头看看的时候一定会笑。”你很可能会这样！那当你今天遇到一个恶心的情形的时候，为什么不今天就笑一笑？为什么要等到“某一天”？也想想几年前发生在自己的身上的某些坏事其实有多可笑，对你来说是如何的P都不是。当一些不好的事今天发生在你身上的时候，为什么不让它今天就P都不是？这个可以通过积极理解来改善，为这个情形重新定义框架。
+
+这里还有一个控制你状态的方法：
+
+你的身体状态和精神状态是紧密联系在一起的。比如，当一些人难过的时候，他身体表面上会有什么表现？通常，他们会看起来很低迷消沉，步履缓慢，垂头丧气，脸上黯淡无光。而当一个人开心的时候，他就会活蹦乱跳的。
+
+当你发现自己垂头耷脑，注意力不集中的时候，你可以坐直或站直，然后深呼吸，然后你就会发现自己变得更清醒和警觉，注意力也更能能集了。当你发现自己担心某件事的时候，你可以抬头挺胸，看着天花板，大笑一个，然后保持姿势（实际上，在这样的姿势你想难过都难）。你可以深呼吸然后慢慢突起来释放这份紧张和焦虑。当一个女人要发疯给你制造麻烦的时候，你可以深呼吸，微笑，眯着眼看她，然后慢慢地交叉你的胳膊放在胸前。
+
+# 11.将其全部应用到实战中
+
+在实战里施展手脚之前，应用这些态度是极其重要的。虽然本书接下来讲的一些技巧非常有效，但如果你没有正确的心态，你很难能表现得很好。很多泡学新人都只想学技术和魔术，其实这并不是
+
+你长得巨肥无比的时候学柔道一样。你可能学了一些很牛的打击术和锁喉术能够一下搞定别人，但是如果你没有足够的力量和条件来运用这些招数的话，照样是瞎扯淡。</textarea>
+
+                    </div>
+                    <!-- 正文结束 -->
+                </div>
+                <hr>
+                <!-- 分享栏 -->
+                <div style="color: rgba(0,0,0,.65);padding-bottom: 10px;margin-top: 10px;">
+                
+<div class="layui-row" style="margin-bottom: 10px;padding-left: 20px;">
+    
+</div>
+
+<div class="layui-row layui-col-space20" style="padding-left: 20px;">
+    <span>
+        <i class="fa fa-user"></i>  PUAshow 
+    </span>
+    <span tooltip="更新于:2020年12月13日 10:18">
+        <i class="fa fa-clock-o"></i> 2020年12月13日 10:18
+    </span>
+
+    <button id="share" class="doc-bottom-btn" tooltip="分享本文档">
+        <i class="fa fa-share-alt"></i> 分享
+    </button>
+
+    
+</div>
+
+
+
+                </div>
+
+                <!-- 广告代码开始 -->
+                
+                    
+                        <div class="ad-code">
+                        <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                        </div>
+                    
+                
+                <!-- 广告代码结束 -->
+
+                
+    
+    <div class="layui-row" style="margin-top: 10px;padding:10px;display:flex;justify-content:space-around;">
+        <!-- <hr> -->
+        <div>
+            
+                <a href="../doc-151/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius"><i class="layui-icon layui-icon-prev "></i>上一篇</a>
+            
+        </div>
+        <div>
+            
+                <a href="../doc-153/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius">下一篇<i class="layui-icon layui-icon-next"></i></a>
+            
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 右侧文档栏结束 -->
+    <!-- 右下角工具按钮 -->
+    <div class="fixed-tool-bar">
+        <div class="toTop"><i class="fa fa-arrow-up"></i></div>
+        
+<!-- 目录 -->
+<div class="tocMenu" style="display: none;"><i class="fa fa-list"></i></div>
+<!-- 分享按钮 -->
+
+
+    </div>
+</div>
+
+<script src="../../static/jquery/3.1.1/jquery.min.js"></script>
+<script src="../../static/layui/layui.all.js"></script>
+<!-- 生成文集目录大纲 -->
+<script>
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: 'M2koxWetoXL3J62M8nrb2Fj6ZJompx5q9AmzU85OCltiLGldOBrFSzTac6LxUxfo' },
+    });
+    // 视频iframe域名白名单
+    var iframe_whitelist = ''.split(',')
+    // 异步生成文集目录
+    getProjectToc = function(){
+        $.post("/get_pro_doc_tree/",{'pro_id':'15'},function(r){
+            $("#loading-project-toc").hide();
+            if(r.status){
+                var toc_str = ""
+                layui.each(r.data,function(index,item){
+                    toc_str += "<li>"
+                    if(item['children'] != undefined){ // 存在二级文档
+                        li = '<div style="display:flex;justify-content:space-between;">' + 
+                            '<a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                            '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                        '</div>'+
+                        '<ul class="sub-menu toc-close">'
+                        toc_str += li
+                        layui.each(item['children'],function(index,item){// 遍历二级文档
+                            toc_str += '<li>'
+                            if(item['children'] != undefined){ //存在三级文档
+                                li = '<div style="display:flex;justify-content:space-between;">' + 
+                                    '<a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                                    '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                                '</div>'+'<ul class="sub-menu toc-close">'
+                                toc_str += li
+                                layui.each(item['children'],function(index,item){ // 遍历三级文档
+                                    li = '<li><a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a></li>'
+                                    toc_str += li
+                                })
+                                toc_str += '</ul>'
+                            }else{// 不存在三级文档
+                                li = '<a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                                toc_str += li
+                            }
+                            toc_str += '</li>'
+                        })    
+                        toc_str += '</ul>'
+                    }else{//不存在二级文档
+                       li = '<a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                       toc_str += li
+                    }
+                    toc_str += '</li>'
+                });
+                $('#project-toc').append(toc_str)
+                tagCurrentDoc();
+            }else{
+                layer.msg("获取文集目录失败！")
+            }
+        });
+    };
+    
+
+    //为当前页面的目录链接添加蓝色样式
+    tagCurrentDoc = function(){
+        $("nav li a").each(function (i) {
+            var $me = $(this);
+            var lochref = $.trim(window.location.href); // 获取当前URL
+            var mehref = $.trim($me.get(0).href); 
+            if (lochref.indexOf(mehref) != -1) {
+                // console.log($me,lochref,mehref)
+                $me.closest("li").addClass("active");
+                //展开当前文档的上级目录
+                if($me.parent("li").parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开二级文档目录")
+                    $me.parent("li").parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("div").parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开包含下级的二级文档目录")
+                    $me.parent("div").parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开三级目录")
+                    $me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                // 切换图标
+                $me.parents("ul.sub-menu").prevAll("div").each(function(i){
+                    var $link = $(this);
+                    if($link.children("i").hasClass("fa-chevron-left")){
+                        $link.children("i").toggleClass("fa-chevron-left fa-chevron-down");
+                    }
+                })
+                // 目录的当前文档滚动于目录顶端
+                this.scrollIntoView({ behavior: 'auto', block: "start" });
+            } else {
+                // console.log(lochref,mehref)
+                $me.closest("li").removeClass("active");
+            }
+        });
+    };
+    tagCurrentDoc();
+</script>
+
+<!-- 小屏自动收起左侧文集大纲 -->
+<script>
+    //加载页面时执行一次
+    changeSidebar();
+    //监听浏览器宽度的改变
+    window.onresize = function(){
+        changeSidebar();
+    };
+    function changeSidebar(){
+        // 获取匹配指定的媒体查询
+        var screen_width = window.matchMedia('(max-width: 768px)');
+        //判断匹配状态
+        if(screen_width.matches){
+            //如果匹配到，切换侧边栏
+            //console.log('小屏幕')
+            $("body").addClass("big-page");
+        }else{
+            $("body").removeClass("big-page");
+        }
+    }
+    // 监听文档div点击
+    document.querySelector('.doc-body').addEventListener('click', function (e) {
+        // console.log("点击了div")
+        changeSidebar();
+    });
+</script>
+
+
+<script src="../../static/editor.md/lib/marked.min.js"></script>
+<script src="../../static/editor.md/lib/prettify.min.js"></script>
+<script src="../../static/editor.md/lib/raphael.min.js"></script>
+<script src="../../static/editor.md/lib/underscore.min.js"></script>
+<!-- <script src="/static/editor.md/editormd.min.js?version=0.6.1"></script> -->
+<script src="../../static/editor.md/editormd.js?version=0.6.1"></script>
+
+<script src="../../static/qrcodejs/qrcode.min.js"></script>
+
+
+<!-- 解析Markdown -->
+<script>
+    // EditorMD模式
+    
+        //解析Markdown为HTML
+        editormd.markdownToHTML("content", {
+            htmlDecode      : "style,script,iframe",
+            emoji           : true,  //emoji表情
+            taskList        : true,  // 任务列表
+            tex             : true,  // 科学公式
+            flowChart       : true,  // 流程图
+            sequenceDiagram : true,  // 时序图
+            tocm            : true, //目录
+            toc             :true,
+            tocContainer : "#toc-container",
+            tocDropdown   : false,
+            atLink    : false,//禁用@链接
+
+        });
+    // Vditor模式
+    
+    // 显示分享弹出框
+    $("#share").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','350px'],
+            shadeClose: true,
+            content: $('#share_div')
+          });
+    });
+</script>
+
+<!-- 页面初始化字体设置 -->
+<script>
+    font_stauts = window.localStorage.getItem('font-sans')
+    if(font_stauts == 'serif'){// 字体类型
+        $(".doc-content").toggleClass("switch-font")
+        $("#content").toggleClass("switch-font")
+    }
+    if(window.localStorage.getItem('font-size')){// 字体大小
+        font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        $('#content').css({'font-size':font_size+'rem'})
+    }else{
+        window.localStorage.setItem('font-size',1.0)
+    }
+</script>
+
+<!-- 返回顶部 -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 初始时，“返回顶部”标签隐藏
+        $(".toTop").hide();
+        $(window).scroll(function() {
+            // 若滚动的高度，超出指定的高度后，“返回顶部”的标签出现。
+            if($(document).scrollTop() >= 140) {
+                $(".toTop").show();
+            } else {
+                $(".toTop").hide();
+            }
+        })
+        // 绑定点击事件，实现返回顶部的效果
+        $(".toTop").click(function() {
+            $(document).scrollTop(0);
+        });
+        // 生成当前网页链接
+        $("input[name=current_url]").val(document.URL)
+    });
+</script>
+
+<!-- 切换隐藏侧边栏 -->
+<script>
+    // 切换侧边栏
+    $(function(){
+        $(".js-toolbar-action").click(toggleSidebar);
+    });
+    //切换侧边栏显示隐藏
+    function toggleSidebar(){
+        console.log("切换侧边栏")
+        $("body").toggleClass("big-page");
+        return false;
+    }
+</script>
+
+<!-- 切换内容字体 -->
+<script>
+    //切换文档内容字体类型
+    $(function(){
+        $('.font-switch').click(switchFont);
+    });
+    function switchFont(){
+        if(font_stauts == 'serif'){
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','sans')
+        }else{
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','serif')
+        }
+    };
+    //放大字体
+    $(function(){
+        $('.font-large').click(largeFont);
+    });
+    function largeFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        if(parseFloat(font_size) < 1.4){
+            size = parseFloat(font_size) + 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+    //缩小字体
+    $(function(){
+        $('.font-small').click(smallFont);
+    });
+    function smallFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        if(parseFloat(font_size) >= 0.6){
+            size = parseFloat(font_size) - 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+
+    // 显示打赏图片
+    $("#dashang").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['480px','400px'],
+            shadeClose: true,
+            content: $('#dashang_img')
+          });
+    });
+</script>
+
+<!-- 分享选项卡模板 -->
+<div id="share_div" style="display: none;">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">微信扫一扫</li>
+            <li>复制链接</li>
+        </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        <div class="layui-tab-item layui-show" align='center'>
+            <p style="font-weight: 700;margin-bottom: 10px;">手机扫一扫进行分享</p>
+            <div id="url_qrcode"></div>
+        </div>
+        <div class="layui-tab-item" align='center'>
+            <input type="text" id="copy_crt_url" name="current_url" class="layui-input"><br>
+            <button class="layui-btn layui-btn-radius layui-btn-xs" style="background-color: #333;" onclick="copyUrl();">复制链接</button>
+        </div>
+    </div>
+    </div> 
+</div>
+
+<!-- 打赏选项卡模板 -->
+<div id="dashang_img" style="display: none;">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+          <li class="layui-this">微信</li>
+          <li>支付宝</li>
+          <li>QQ支付</li>
+          <li>PayPal</li>
+          <li>项目源码</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px;">
+          <div class="layui-tab-item layui-show" align='center'>
+            <img src="../../static/dashang/dashang_wx.webp" style="width: 300px;height: auto;">
+          </div>
+
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_alipay.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_qq.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <a href="https://paypal.me/zmister" target="_blank">
+                <img src="../../static/dashang/dashang_paypal.png" style="width: 280px;height: auto;">
+            </a>
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <p><a href="https://github.com/zmister2016/MrDoc" target="_blank">GitHub：https://github.com/zmister2016/MrDoc</a></p>
+            <br>
+            <p><a href="https://gitee.com/zmister/MrDoc" target="_blank">码云：https://gitee.com/zmister/MrDoc</a> </p>
+            <br>
+            <p><a href="https://zmister.com" target="_blank">作者博客：https://zmister.com</a></p>
+          </div>
+        </div>
+      </div> 
+  </div>
+  
+<script>
+    // 展开收起左边目录
+    $(function(){
+        // $(".switch-toc").click(SwitchToc);
+        $("body").on('click','.switch-toc',SwitchToc)
+    });
+    function SwitchToc(i){
+        console.log("点击了")
+        var $me = $(this);
+        $(this).parent().next("ul").toggleClass("toc-close"); //切换展开收起样式
+        $(this).toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+    };
+
+    // 展开文档树
+    function openDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).removeClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+        
+    };
+    // 收起文档树
+    function closeDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).addClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+    };
+    // 文档分享 - 复制链接
+    copyUrl = function(){
+        var crt_url_val = document.getElementById("copy_crt_url");
+        crt_url_val.select();
+        window.clipb
+        document.execCommand("Copy");
+        layer.msg("链接复制成功！")
+    }
+    // 生成二维码
+    var qrcode = new QRCode("url_qrcode", {
+        text: document.URL,
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
+<!-- 统计代码开始 -->
+    
+        <script type="text/javascript" src="//js.users.51.la/20830315.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+    
+<!-- 统计代码结束 -->
+
+<!-- 下载选项卡模板 -->
+<div id="download_div" style="display: none;">
+    <div class="layui-row" style="margin: 10px;">
+        <a class="" download='第一章-态度.md' href="../../download_doc_md/152/index.htm" target="_blank">
+            <i class="fa fa-download"></i> 下载Markdown文件
+        </a>
+    </div>
+</div>
+<!-- 分享文档选项卡模板 -->
+<div id="share_doc_div" style="display: none;">
+    <div class="layui-tab-content">
+        <div class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分享</label>
+                <div class="layui-input-block">
+                  <input type="checkbox" name="switch" lay-skin="switch" lay-text="开启|关闭" lay-filter="share-switch">
+                </div>
+            </div>
+            
+            <div class="layui-form" style="display: none;" id="share-link">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">链接</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="share_link" class="layui-input" id="share_link" disabled="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="layui-form-item" style="display:none;" id="share-type">
+                <label class="layui-form-label">类型</label>
+                <div class="layui-input-block">
+                    
+                    <input type="radio" name="share_type" value="0" title="公开" checked="" lay-filter="share_type">
+                    <input type="radio" name="share_type" value="1" title="私密" lay-filter="share_type">
+                    
+                </div>
+                
+            </div>
+            <div class="layui-form" style="display:none;" id="share_value_item">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="share_value" value='' disabled="" class="layui-input" id="share_doc_value">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        <button class="layui-btn layui-btn-xs layui-btn-primary" id="updateShareValue"><i class="fa fa-repeat"></i> 更新密码</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/toc/doctoc.js"></script>
+<script src="../../static/viewerjs/viewer.min.js"></script>
+<script>
+    var layer = layui.layer;
+    var form = layui.form;
+    // 手机屏幕上默认最小化目录
+    if(window.outerWidth < 1300){
+        $(".sidebar").toggleClass("doc-toc-hide");
+    }
+    // 切换文档目录显示与否
+    $(".tocMenu").click(function() {
+        console.log("隐藏文档目录")
+        $(".sidebar").toggleClass("doc-toc-hide");
+    });
+    
+    //修改a标签链接新窗口打开
+    $('#content').on('click','a',function(e){
+        e.target.target = '_blank';
+    });
+    
+    // 图片放大显示
+    var img_options = {
+        url: 'data-original',
+        fullscreen:false,//全屏
+        rotatable:false,//旋转
+        scalable:false,//翻转
+        button:false,//关闭按钮
+        toolbar:false,
+        title:false,
+      };
+    var viewer = new Viewer(document.getElementById('content'), img_options);
+
+    // 显示文档下载弹出框
+    $("#download_doc").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','150px'],
+            shadeClose: true,
+            content: $('#download_div')
+          });
+    });
+    
+    // 生成随机分享码
+    function randomWord(randomFlag, min, max){
+        var str = "",
+            range = min,
+            arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        // 随机产生
+        if(randomFlag){
+            range = Math.round(Math.random() * (max-min)) + min;
+        }
+        for(var i=0; i<range; i++){
+            pos = Math.round(Math.random() * (arr.length-1));
+            str += arr[pos];
+        }
+        return str;
+    };
+    
+    // 更新文档分享状态
+    function updateDocShare(data){
+        $.post("/share_doc/",data,function(r){
+            if(r.status){
+                layer.msg("设置成功",{offset: 't'})
+                console.log(r.data)
+                $("input[name=share_link]").val(document.domain + '/share_doc/?token=' + r.data.doc)
+            }else{
+                layer.msg("设置出错")
+            }
+        })
+    }
+
+    // 分享文档
+    $("#shareDoc").click(function(){
+        layer.open({
+            type:1,
+            title:'分享文档:第一章-态度',
+            content:$("#share_doc_div"),
+            area:'450px',
+            // btn:['创建分享','取消'],
+            success : function(index, layero) { // 成功弹出后回调
+                form.render();
+            },
+        })
+    })
+    
+
+    var share_data = {
+        'id':'152',
+    }
+
+    //监听分享框分享类型的单选事件
+    form.on('radio(share_type)', function(data){
+    //   console.log(data.value); //被点击的radio的value值
+      if(data.value == 0){ // 公开
+            $("#share_value_item").css("display","none");
+            share_data['share_type'] = 0;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+            
+      }else if(data.value == 1){ // 私密
+            $("#share_value_item").css("display","block");
+            
+                $("#share_doc_value").val(randomWord(false,4))
+            
+            share_data['share_type'] = 1;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+      }
+    });
+
+    // 监听分享开关事件
+    form.on('switch(share-switch)', function(data){
+        console.log(data.elem.checked); //开关是否开启，true或者false
+        if(data.elem.checked){ // 开启
+            console.log("开启分享")
+            $("#share-type").css('display',"block");
+            $("#share-expire").css('display',"block");
+            $("#share-link").css("display","block");
+            if($("input[name='share_type']:checked").val() == 1){
+                $("#share_value_item").css("display","block");
+            }
+            // 开启
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+        }else{
+            console.log("关闭分享")
+            layer.msg("关闭分享",{offset: 't'})
+            $("#share-type").css('display',"none")
+            $("#share-expire").css('display',"none")
+            $("#share_value_item").css("display","none");
+            $("#share-link").css("display","none");
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = false
+            updateDocShare(share_data);
+        }
+    });  
+
+    // 更新文档分享密码
+    $("#updateShareValue").click(function(){
+        $("#share_doc_value").val(randomWord(false,4));
+        share_data['share_type'] = 1;
+        share_data['share_value'] = $("#share_doc_value").val();
+        share_data['is_enable'] = true
+        updateDocShare(share_data);
+    })
+</script>
+
+
+
+</body>
+</html>

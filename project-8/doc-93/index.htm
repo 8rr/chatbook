@@ -1,0 +1,1291 @@
+﻿<!-- 继承自模板：app_doc/docs_base.html -->
+
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 14px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="max-age=7200">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="第十三章-第十五章,小王子-圣埃克苏佩里（法）,PUAshow,泡学,迷男方法,泡学chat">
+    <meta name="description" content="XIII
+
+第四个行星是一个实业家的星球。这个人忙得不可开交，小王子到来的时候，他甚至连头都没有抬一下。
+
+
+![](/media//202011/2020-11-25_121546.png)
+
+小王">
+    <title>第十三章-第十五章 - 小王子-圣埃克苏佩里（法） - 泡学chat书库 </title>
+    <link href="../../static/layui/css/layui-1.css?version=0.6.1" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/editor.md/css/editormd.css?version=0.6.1">
+    
+
+    <link href="../../static/viewerjs/viewer.min.css?version=0.6.1" rel="stylesheet">
+    <link rel="icon" href="../../static/search/mrdoc_logo_300.png" sizes="192x192">
+    <link href="../../static/mrdoc/mrdoc.css?version=0.6.1" rel="stylesheet">
+    <style>
+        /*一级无序li显示实心圆点*/
+        .doc-content ul li{
+            list-style:disc;
+        }
+        /*二级无序li显示空心圆点*/
+        .doc-content ul > li > ul > li{
+            list-style-type: circle;
+        }
+        /*有序li显示数字*/
+        .doc-content ol li{
+            list-style-type: decimal;
+        }
+        .doc-content ol ol ul,.doc-content ol ul ul,.doc-content ul ol ul,.doc-content ul ul ul {
+            list-style-type: square;
+        }
+        /* 三级及以下无序li显示小方块 */
+        .doc-content ul ul ul li{
+            list-style-type: square;
+        }
+        /* 下拉目录隐藏li样式 */
+        .editormd-toc-menu ul.markdown-toc-list li{
+            /*list-style:none;*/
+        }
+        /* 弹出框文档目录样式 */
+        ul.markdown-toc-list{
+            list-style-position:inside;
+        }
+        ul.markdown-toc-list li{
+            list-style: none!important;
+            line-height: 24px;
+        }
+        ul.markdown-toc-list > li > ul > li,ul.markdown-toc-list > li > ul li{
+            padding-left:15px;
+        }
+        ul.markdown-toc-list a{
+            /* text-decoration: underline!important; */
+        }
+        /* 块级代码和行内代码去除边框 */
+        .markdown-body p code{
+            border:none;
+        }
+        /* HTML预览样式 */
+        .markdown-body h1{ 
+            font-size: 1.7em;
+        }
+        .markdown-body h2{
+            font-size: 1.5em;
+        }
+        .markdown-body h3{
+            font-size: 1.25em;
+        }
+        .markdown-body h4{
+            font-size: 1em;
+        }
+        .markdown-body h5{
+            font-size: .875em;
+        }
+        .markdown-body h6{
+            font-size: .85em;
+        }
+        
+        .markdown-body p img{
+            max-width: 350px;
+        }
+        
+        #url_qrcode img{
+            margin: auto;
+        }
+        /* 文档代码块样式 */
+        ol.linenums li{ 
+            width: max-content;
+        }
+        pre.linenums{
+            max-height: 500px;
+        }
+        li.L1, li.L3, li.L5, li.L7, li.L9 {
+            background: none !important;
+        }
+
+        /* layui弹出框颜色 */
+        .layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+            border-bottom: 2px solid #333;
+        }
+        .layui-tab-brief>.layui-tab-title .layui-this{
+            color: #333;
+        }
+        /* 覆盖vditor样式 */
+        .vditor-outline__item{
+            padding: 0;
+            padding-bottom: 5px;
+            color: #333;
+        }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="doc layui-fluid" style="padding-left:0px;">
+    <!-- 左侧目录栏 -->
+    <div class="doc-summary">
+        <!-- 文档搜索 -->
+        <form action="/project-8/" method="get">
+            <div id="doc-search-input">
+                <input type="text" name="kw" placeholder="输入并回车搜索" value="" class="layui-input doc-search-input">
+            </div>
+        </form>
+        <!-- 文集名称 -->
+        <div class="project-title">
+            <a href="../index.htm">小王子-圣埃克苏佩里（法）
+                
+            </a>
+            <p>
+                
+            </p>
+        </div>
+        <hr>
+        <!-- <div style="margin-left:15px;">
+            <a href="javascript:void(0);" onclick="openDocTree()"><i class="fa fa-bars"></i> 展开</a>
+            <a href="javascript:void(0);" onclick="closeDocTree()"><i class="fa fa-bars"></i> 折叠</a>
+        </div> -->
+        
+        <!-- 遍历文集大纲 -->
+        <!-- 如果文集的文档数量超过999，使用异步加载文集目录 -->
+        
+        <!-- 文档数量小于999，使用同步加载文集目录 -->
+        <nav>
+            <ul class="summary">
+            <!-- 一级目录 -->
+            
+                <li>
+                    
+                        <a href="../doc-89/index.htm" title="第一章-第三章">第一章-第三章</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-90/index.htm" title="第四章-第六章">第四章-第六章</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-91/index.htm" title="第七章-第九章">第七章-第九章</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-92/index.htm" title="第十章-第十二章">第十章-第十二章</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="index.htm" title="第十三章-第十五章">第十三章-第十五章</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-94/index.htm" title="第十六章-第二十章">第十六章-第二十章</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-95/index.htm" title="第二十一章-第二十三章">第二十一章-第二十三章</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-96/index.htm" title="第二十四章-第二十五章">第二十四章-第二十五章</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-97/index.htm" title="第二十六章-第二十七章">第二十六章-第二十七章</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-98/index.htm" title="小王子解读与分析-作者：雪子">小王子解读与分析-作者：雪子</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-99/index.htm" title="小王子 电影 2015版">小王子 电影 2015版</a>
+                    
+                </li>
+            
+            </ul>
+        </nav>
+        
+        <div class="bq">
+            <a href="javascript:void(0);" class="mrdoc-link" id="dashang">本文档使用MrDoc发布</a>
+        </div>
+        <!-- 右下角广告块 -->
+        <!-- 广告代码开始 -->
+        
+            
+                <div class="ad-code">
+                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                </div>
+            
+        
+        <!-- 广告代码结束 -->
+    </div>
+    <!-- 左侧目录栏结束 -->
+
+    <!-- 右侧文档栏 -->
+    <div class="doc-body">
+        <!-- 文档导航 -->
+        <div class="doc-header" role="navigation">
+            <a class="btn pull-left js-toolbar-action" aria-label="" href="javascript:void(0);" title="切换侧边栏">
+                <i class="fa fa-align-justify"></i>
+            </a>
+            <a class="btn pull-left font-small" href="javascript:void(0);" title="缩小字体">
+                <i class="fa fa-font">-</i>
+            </a>
+            <a class="btn pull-left font-large" href="javascript:void(0);" title="放大字体">
+                <i class="fa fa-font">+</i>
+            </a>
+            <a class="btn pull-left font-switch" href="javascript:void(0);" title="切换字体类型">
+                <i class="fa fa-text-height"></i>
+            </a>
+            <!-- 顶部工具栏 -->
+            
+    
+    <!-- 文档目录 -->
+    <div id="toc-container" class='sidebar'></div>
+    
+
+
+            <a class="btn pull-right" aria-label="" href="../../index.htm">
+                <i class="fa fa-home"></i> <span class="layui-hide-xs">首页</span>
+            </a>
+        </div>
+        <!-- 文档主体 -->
+        <div class="doc-body-content">
+            <div class="doc-body-content-div">
+                <!-- 文档内容 -->
+                <div class="doc-content">
+                    <!-- 标题 -->
+                    <div class="doc-info">
+                        <!-- 页面主体头信息 -->
+                        
+    <h1>第十三章-第十五章</h1><hr>
+
+
+                        <!-- 广告代码开始 -->
+                        
+                            
+                                <div class="ad-code">
+                                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                                </div>
+                            
+                        
+                        <!-- 广告代码结束 -->
+                    </div>
+                    <!-- 标题结束 -->
+                    <!-- 正文开始 -->
+                    <div class="markdown-body" id="content" style="padding: 20px;padding-top: 5px;">
+                        
+    <textarea style="display: none;">XIII
+
+第四个行星是一个实业家的星球。这个人忙得不可开交，小王子到来的时候，他甚至连头都没有抬一下。
+
+
+![](/media//202011/2020-11-25_121546.png)
+
+小王子对他说：“您好。您的烟卷灭了。”
+
+“三加二等于五。五加七等于十二。十二加三等于十五。你好。十五加七，二十二。二十二加六，二十八。没有时间去再点着它。二十六加五，三十一。哎哟！一共是五亿一百六十二万二千七百三十一。”
+
+“五亿什么呀？”
+
+“嗯？你还待在这儿那？五亿一百万……我也不知道是什么了。我的工作很多……我是很严肃的，我可是从来也没有功夫去闲聊！二加五得七……”
+
+“五亿一百万什么呀？”小王子重复问道。一旦他提出了一个问题，是从来也不会放弃的。
+
+这位实业家抬起头，说：
+
+“我住在这个星球上五十四年以来，只被打搅过三次。第一次是二十二年前，不知从哪里跑来了一只金龟子来打搅我。它发出一种可怕的噪音，使我在一笔帐目中出了四个差错。第二次，在十一年前，是风湿病发作，因为我缺乏锻炼所致。我没有功夫闲逛。我可是个严肃的人。现在……这是第三次！我计算的结果是五亿一百万……”
+“几百万什么？”
+
+这位实业家知道要想安宁是无望的了，就说道：
+
+“几百万个小东西，这些小东西有时出现在天空中。”
+
+“苍蝇吗？”
+
+“不是，是些闪闪发亮的小东西。”
+
+“是蜜蜂吗？”
+
+“不是，是金黄色的小东西，这些小东西叫那些懒汉们胡思乱想。我是个严肃的人。我没有时间胡思乱想。”
+
+“啊，是星星吗？”
+
+“对了，就是星星。”
+
+“你要拿这五亿星星做什么？”
+
+“五亿一百六十二万七百三十一颗星星。我是严肃的人，我是非常精确的。”
+
+“你拿这些星星做什么？”
+
+“我要它做什么？”
+
+“是呀。”
+
+“什么也不做。它们都是属于我的。”
+
+“星星是属于你的？”
+
+“是的。”
+
+“可是我已经见到过一个国王，他……”
+
+“国王并不占有，他们只是进行‘统治’。这不是一码事。”
+
+“你拥有这许多星星有什么用？”
+
+“富了就可以去买别的星星，如果有人发现了别的星星的话。”
+
+小王子自言自语地说：“这个人想问题有点象那个酒鬼一样。”
+
+可是他又提了一些问题：
+
+“你怎么能占有星星呢？”
+
+“那么你说星星是谁的呀？”实业家不高兴地顶了小王子一句。
+
+“我不知道，不属于任何人。”
+
+“那么，它们就是我的，因为是我第一个想到了这件事情的。”
+
+“这就行了吗？”
+
+“那当然。如果你发现了一颗没有主人的钻石，那么这颗钻石就是属于你的。当你发现一个岛是没有主的，那么这个岛就是你的。当你首先想出了一个办法，你就去领一个专利证，这个办法就是属于你的。既然在我之前不曾有任何人想到要占有这些星星，那我就占有这些星星。”
+
+“这倒也是。可是你用它们来干什么？”小王子说。
+
+“我经营管理这些星星。我一遍又一遍地计算它们的数目。这是一件困难的事。但我是一个严肃认真的人！”
+
+小王子仍然还不满足，他说：
+
+“对我来说，如果我有一条围巾，我可以用它来围着我的脖子，并且能带走它。我有一朵花的话，我就可以摘下我的花，并且把它带走。可你却不能摘下这些星星呀！”
+
+“我不能摘，但我可以把它们存在银行里。”
+
+“这是什么意思呢？”
+
+“这就是说，我把星星的数目写在一片小纸头上，然后把这片纸头锁在一个抽屉里。”
+
+“这就算完事了吗？”
+
+“这样就行了。”
+
+小王子想道：“真好玩。这倒蛮有诗意，可是，并不算是了不起的正经事。”
+
+关于什么是正经事，小王子的看法与大人们的看法非常不同。他接着又说：
+
+“我有一朵花，我每天都给她浇水。我还有三座火山，我每星期把它们全都打扫一遍。连死火山也打扫。谁知道它会不会再复活。我拥有火山和花，这对我的火山有益处，对我的花也有益处。但是你对星星并没有用处……”
+
+实业家张口结舌无言以对。于是小王子就走了。
+
+在旅途中，小王子只是自言自语地说了一句：“这些大人们真是奇怪极了。”
+
+# XIV
+
+第五颗行星非常奇怪，是这些星星中最小的一颗。行星上刚好能容得下一盏路灯和一个点路灯的人。小王子怎么也解释不通：这个坐落在天空某一角落，既没有房屋又没有居民的行星上，要一盏路灯和一个点灯的人做什么用。
+
+![](/media//202011/2020-11-25_121759.png)
+
+但他自己猜想：“可能这个人思想不正常。但他比起国王，比起那个爱虚荣的人，那个实业家和酒鬼，却要好些。至少他的工作还有点意义。当他点着了他的路灯时，就象他增添了一颗星星，或是一朵花。当他熄灭了路灯时，就象让星星或花朵睡着了似的。这差事真美妙，就是真正有用的了。”
+
+小王子一到了这个行星上，就很尊敬地向点路灯的人打招呼：
+
+“早上好。——你刚才为什么把路灯灭了呢？”
+
+“早上好。——这是命令。”点灯的回答道。
+
+“命令是什么？”
+
+“就是熄掉我的路灯。——晚上好。”
+
+于是他又点燃了路灯。
+
+“那么为什么你又把它点着了呢？”
+
+“这是命令。”点灯的人回答道。
+
+“我不明白。”小王子说。
+
+“没什么要明白的。命令就是命令。”点灯的回答说。“早上好。”
+
+于是他又熄灭了路灯。
+
+然后他拿一块有红方格子的手绢擦着额头。
+
+“我干的是一种可怕的职业。以前还说得过去，早上熄灯，晚上点灯，剩下时间，白天我就休息，夜晚我就睡觉……”
+
+“那么，后来命令改变了，是吗？”
+
+点灯的人说：“命令没有改，惨就惨在这里了！这颗行星一年比一年转得更快，而命令却没有改。”
+
+“结果呢？”小王子问。
+
+“结果现在每分钟转一圈，我连一秒钟的休息时间都没有了。每分钟我就要点一次灯，熄一次灯！”
+
+“真有趣，你这里每天只有一分钟长？”
+
+“一点趣味也没有，”点灯的说，“我们俩在一块说话就已经有一个月的时间了。”
+
+“一个月？”
+
+“对。三十分钟。三十天！——晚上好。”
+
+于是他又点着了了他的路灯。
+
+小王子瞅着他，他喜欢这个点灯人如此忠守命令。这时，他想起了他自己从前挪动椅子寻找日落的事。他很想帮助他的这位朋友。“告诉你，我知道一种能使你休息的办法，你要什么时候休息都可以。”
+
+“我老是想休息。”点灯人说。
+
+因为，一个人可以同时是忠实的，又是懒惰的。
+
+小王子接着说：
+
+“你的这颗行星这样小，你三步就可以绕它一圈。你只要慢慢地走，就可以一直在太阳的照耀下，你想休息的时候，你就这样走……那么，你要白天又多长它就有多长。”
+
+“这办法帮不了我多打忙，生活中我喜欢的就是睡觉。”点灯人说。
+
+“真不走运。”小王子说。
+
+“真不走运。”点灯人说。“早上好。”
+
+于是他又熄灭了路灯。
+小王子在他继续往前旅行的途中，自言自语地说道：
+
+“这个人一定会被其他那些人，国王呀，爱虚荣的呀，酒鬼呀，实业家呀，所瞧不起。可是唯有他不使我感到荒唐可笑。这可能是因为他所关心的是别的事，而不是他自己。”
+
+他惋惜地叹了口气，并且又对自己说道：
+
+“本来这是我唯一可以和他交成朋友的人。可是他的星球确实太小了，住不下两个人……”
+
+小王子没有勇气承认的是：他留恋这颗令人赞美的星星，特别是因为在那里每二十四小时就有一千四百四十次日落！
+
+# XV
+
+第六颗行星则要大十倍。上面住着一位老先生，他在写作大部头的书。
+
+![](/media//202011/2020-11-25_121957.png)
+
+“瞧！来了一位探险家。”老先生看到小王子时，叫了起来。
+
+小王子在桌旁坐下，有点气喘吁吁。他跑了多少路啊！
+
+“你从哪里来的呀？”老先生问小王子。
+
+“这一大本是什么书？你在这里干什么？”小王子问道。
+
+“我是地理学家。”老先生答道。
+
+“什么是地理学家？”
+
+“地理学家，就是一种学者，他知道哪里有海洋，哪里有江河、城市、山脉、沙漠。”
+
+“这倒挺有意思。”小王子说。“这才是一种真正的行当。”他朝四周围看了看这位地理学家的星球。他还从来没有见过一颗如此壮观的行星。
+
+“您的星球真美呀。上面有海洋吗？”
+
+“这我没法知道。”地理学家说。
+
+“啊！”小王子大失所望。“那么，山脉呢？”
+
+“这，我没法知道。”地理学家说。
+
+“那么，有城市、河流、沙漠吗？”
+“这，我也没法知道。”地理学家说。
+
+“可您还是地理学家呢！”
+
+“一点不错，”地理学家说，“但是我不是探察家。我手下一个探察家都没有。地理学家是不去计算城市、河流、山脉、海洋、沙漠的。地理学家很重要，不能到处跑。他不能离开他的办公室。但他可以在办公室里接见探察家。他询问探察家，把他们的回忆记录下来。如果他认为其中有个探察家的回忆是有意思的，那么地理学家就对这个探察家的品德做一番调查。”
+
+“这是为什么呢？”
+
+“因为一个说假话的探察家会给地理书带来灾难性的后果。同样，一个太爱喝酒的探察家也是如此。”
+
+“这又是为什么？”小王子说。
+
+“因为喝醉了酒的人把一个看成两个，那么，地理学家就会把只有一座山的地方写成两座山。”
+
+“我认识一个人，他要是搞探察的话，就很可能是个不好的探察员。”小王子说。
+
+“这是可能的。因此，如果探察家的品德不错，就对他的发现进行调查。”
+
+“去看一看吗？”
+
+“不。那太复杂了。但是要求探察家提出证据来。例如，假使他发现了一座大山，就要求他带来一些大石头。”
+
+地理学家忽然忙乱起来。
+
+“正好，你是从老远来的么！你是个探察家！你来给我介绍一下你的星球吧！”
+
+于是，已经打开登记簿的地理学家，削起他的铅笔来。他首先是用铅笔记下探察家的叙述，等到探察家提出了证据以后再用墨水笔记下来。
+
+“怎么样？”地理学家询问道。
+
+“啊！我那里，”小王子说道，“没有多大意思，那儿很小。我有三座火山，两座是活的，一座是熄灭了的。但是也很难说。”
+
+“很难说。”地理学家说道。
+
+“我还有一朵花。”
+
+“我们是不记载花卉的。”地理学家说。
+
+“这是为什么？花是最美丽的东西。”
+
+“因为花卉是短暂的。”
+
+“什么叫短暂？”
+
+“地理学书籍是所有书中最严肃的书。”地理学家说道，“这类书是从不会过时的。很少会发生一座山变换了位置，很少会出现一个海洋干涸的现象。我们要写永恒的东西。”
+
+“但是熄灭的火山也可能会再复苏的。”小王子打断了地理学家。“什么叫短暂？”
+
+“火山是熄灭了的也好，苏醒的也好，这对我们这些人来讲都是一回事。”地理学家说，“对我们来说，重要的是山。山是不会变换位置的。”
+
+“但是，‘短暂’是什么意思？”小王子再三地问道。他一旦提出一个问题是从不放过的。
+
+“意思就是：有很快就会消失的危险。”
+
+“我的花是很快就会消失的吗？”
+
+“那当然。”
+
+小王子自言自语地说：“我的花是短暂的，而且她只有四根刺来防御外侮！可我还把她独自留在家里！”
+
+这是他第一次产生了后悔，但他又重新振作起来：
+
+“您是否能建议我去看些什么？”小王子问道。
+
+“地球这颗行星，”地理学家回答他说，“它的名望很高……”
+
+于是小王子就走了，他一边走一边想着他的花。</textarea>
+
+                    </div>
+                    <!-- 正文结束 -->
+                </div>
+                <hr>
+                <!-- 分享栏 -->
+                <div style="color: rgba(0,0,0,.65);padding-bottom: 10px;margin-top: 10px;">
+                
+<div class="layui-row" style="margin-bottom: 10px;padding-left: 20px;">
+    
+</div>
+
+<div class="layui-row layui-col-space20" style="padding-left: 20px;">
+    <span>
+        <i class="fa fa-user"></i>  PUAshow 
+    </span>
+    <span tooltip="更新于:2020年11月25日 12:20">
+        <i class="fa fa-clock-o"></i> 2020年11月25日 12:20
+    </span>
+
+    <button id="share" class="doc-bottom-btn" tooltip="分享本文档">
+        <i class="fa fa-share-alt"></i> 分享
+    </button>
+
+    
+</div>
+
+
+
+                </div>
+
+                <!-- 广告代码开始 -->
+                
+                    
+                        <div class="ad-code">
+                        <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                        </div>
+                    
+                
+                <!-- 广告代码结束 -->
+
+                
+    
+    <div class="layui-row" style="margin-top: 10px;padding:10px;display:flex;justify-content:space-around;">
+        <!-- <hr> -->
+        <div>
+            
+                <a href="../doc-92/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius"><i class="layui-icon layui-icon-prev "></i>上一篇</a>
+            
+        </div>
+        <div>
+            
+                <a href="../doc-94/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius">下一篇<i class="layui-icon layui-icon-next"></i></a>
+            
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 右侧文档栏结束 -->
+    <!-- 右下角工具按钮 -->
+    <div class="fixed-tool-bar">
+        <div class="toTop"><i class="fa fa-arrow-up"></i></div>
+        
+<!-- 目录 -->
+<div class="tocMenu" style="display: none;"><i class="fa fa-list"></i></div>
+<!-- 分享按钮 -->
+
+
+    </div>
+</div>
+
+<script src="../../static/jquery/3.1.1/jquery.min.js"></script>
+<script src="../../static/layui/layui.all.js"></script>
+<!-- 生成文集目录大纲 -->
+<script>
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: 'kHnQI6BvMaYCDbZzlBBhvUut8xmuHYvYHfp15isQ0yGRFLi01PBLlO4xlUJFcYFW' },
+    });
+    // 视频iframe域名白名单
+    var iframe_whitelist = ''.split(',')
+    // 异步生成文集目录
+    getProjectToc = function(){
+        $.post("/get_pro_doc_tree/",{'pro_id':'8'},function(r){
+            $("#loading-project-toc").hide();
+            if(r.status){
+                var toc_str = ""
+                layui.each(r.data,function(index,item){
+                    toc_str += "<li>"
+                    if(item['children'] != undefined){ // 存在二级文档
+                        li = '<div style="display:flex;justify-content:space-between;">' + 
+                            '<a href="/project-'+'8'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                            '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                        '</div>'+
+                        '<ul class="sub-menu toc-close">'
+                        toc_str += li
+                        layui.each(item['children'],function(index,item){// 遍历二级文档
+                            toc_str += '<li>'
+                            if(item['children'] != undefined){ //存在三级文档
+                                li = '<div style="display:flex;justify-content:space-between;">' + 
+                                    '<a href="/project-'+'8'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                                    '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                                '</div>'+'<ul class="sub-menu toc-close">'
+                                toc_str += li
+                                layui.each(item['children'],function(index,item){ // 遍历三级文档
+                                    li = '<li><a href="/project-'+'8'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a></li>'
+                                    toc_str += li
+                                })
+                                toc_str += '</ul>'
+                            }else{// 不存在三级文档
+                                li = '<a href="/project-'+'8'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                                toc_str += li
+                            }
+                            toc_str += '</li>'
+                        })    
+                        toc_str += '</ul>'
+                    }else{//不存在二级文档
+                       li = '<a href="/project-'+'8'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                       toc_str += li
+                    }
+                    toc_str += '</li>'
+                });
+                $('#project-toc').append(toc_str)
+                tagCurrentDoc();
+            }else{
+                layer.msg("获取文集目录失败！")
+            }
+        });
+    };
+    
+
+    //为当前页面的目录链接添加蓝色样式
+    tagCurrentDoc = function(){
+        $("nav li a").each(function (i) {
+            var $me = $(this);
+            var lochref = $.trim(window.location.href); // 获取当前URL
+            var mehref = $.trim($me.get(0).href); 
+            if (lochref.indexOf(mehref) != -1) {
+                // console.log($me,lochref,mehref)
+                $me.closest("li").addClass("active");
+                //展开当前文档的上级目录
+                if($me.parent("li").parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开二级文档目录")
+                    $me.parent("li").parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("div").parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开包含下级的二级文档目录")
+                    $me.parent("div").parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开三级目录")
+                    $me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                // 切换图标
+                $me.parents("ul.sub-menu").prevAll("div").each(function(i){
+                    var $link = $(this);
+                    if($link.children("i").hasClass("fa-chevron-left")){
+                        $link.children("i").toggleClass("fa-chevron-left fa-chevron-down");
+                    }
+                })
+                // 目录的当前文档滚动于目录顶端
+                this.scrollIntoView({ behavior: 'auto', block: "start" });
+            } else {
+                // console.log(lochref,mehref)
+                $me.closest("li").removeClass("active");
+            }
+        });
+    };
+    tagCurrentDoc();
+</script>
+
+<!-- 小屏自动收起左侧文集大纲 -->
+<script>
+    //加载页面时执行一次
+    changeSidebar();
+    //监听浏览器宽度的改变
+    window.onresize = function(){
+        changeSidebar();
+    };
+    function changeSidebar(){
+        // 获取匹配指定的媒体查询
+        var screen_width = window.matchMedia('(max-width: 768px)');
+        //判断匹配状态
+        if(screen_width.matches){
+            //如果匹配到，切换侧边栏
+            //console.log('小屏幕')
+            $("body").addClass("big-page");
+        }else{
+            $("body").removeClass("big-page");
+        }
+    }
+    // 监听文档div点击
+    document.querySelector('.doc-body').addEventListener('click', function (e) {
+        // console.log("点击了div")
+        changeSidebar();
+    });
+</script>
+
+
+<script src="../../static/editor.md/lib/marked.min.js"></script>
+<script src="../../static/editor.md/lib/prettify.min.js"></script>
+<script src="../../static/editor.md/lib/raphael.min.js"></script>
+<script src="../../static/editor.md/lib/underscore.min.js"></script>
+<!-- <script src="/static/editor.md/editormd.min.js?version=0.6.1"></script> -->
+<script src="../../static/editor.md/editormd.js?version=0.6.1"></script>
+
+<script src="../../static/qrcodejs/qrcode.min.js"></script>
+
+
+<!-- 解析Markdown -->
+<script>
+    // EditorMD模式
+    
+        //解析Markdown为HTML
+        editormd.markdownToHTML("content", {
+            htmlDecode      : "style,script,iframe",
+            emoji           : true,  //emoji表情
+            taskList        : true,  // 任务列表
+            tex             : true,  // 科学公式
+            flowChart       : true,  // 流程图
+            sequenceDiagram : true,  // 时序图
+            tocm            : true, //目录
+            toc             :true,
+            tocContainer : "#toc-container",
+            tocDropdown   : false,
+            atLink    : false,//禁用@链接
+
+        });
+    // Vditor模式
+    
+    // 显示分享弹出框
+    $("#share").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','350px'],
+            shadeClose: true,
+            content: $('#share_div')
+          });
+    });
+</script>
+
+<!-- 页面初始化字体设置 -->
+<script>
+    font_stauts = window.localStorage.getItem('font-sans')
+    if(font_stauts == 'serif'){// 字体类型
+        $(".doc-content").toggleClass("switch-font")
+        $("#content").toggleClass("switch-font")
+    }
+    if(window.localStorage.getItem('font-size')){// 字体大小
+        font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        $('#content').css({'font-size':font_size+'rem'})
+    }else{
+        window.localStorage.setItem('font-size',1.0)
+    }
+</script>
+
+<!-- 返回顶部 -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 初始时，“返回顶部”标签隐藏
+        $(".toTop").hide();
+        $(window).scroll(function() {
+            // 若滚动的高度，超出指定的高度后，“返回顶部”的标签出现。
+            if($(document).scrollTop() >= 140) {
+                $(".toTop").show();
+            } else {
+                $(".toTop").hide();
+            }
+        })
+        // 绑定点击事件，实现返回顶部的效果
+        $(".toTop").click(function() {
+            $(document).scrollTop(0);
+        });
+        // 生成当前网页链接
+        $("input[name=current_url]").val(document.URL)
+    });
+</script>
+
+<!-- 切换隐藏侧边栏 -->
+<script>
+    // 切换侧边栏
+    $(function(){
+        $(".js-toolbar-action").click(toggleSidebar);
+    });
+    //切换侧边栏显示隐藏
+    function toggleSidebar(){
+        console.log("切换侧边栏")
+        $("body").toggleClass("big-page");
+        return false;
+    }
+</script>
+
+<!-- 切换内容字体 -->
+<script>
+    //切换文档内容字体类型
+    $(function(){
+        $('.font-switch').click(switchFont);
+    });
+    function switchFont(){
+        if(font_stauts == 'serif'){
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','sans')
+        }else{
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','serif')
+        }
+    };
+    //放大字体
+    $(function(){
+        $('.font-large').click(largeFont);
+    });
+    function largeFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        if(parseFloat(font_size) < 1.4){
+            size = parseFloat(font_size) + 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+    //缩小字体
+    $(function(){
+        $('.font-small').click(smallFont);
+    });
+    function smallFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        if(parseFloat(font_size) >= 0.6){
+            size = parseFloat(font_size) - 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+
+    // 显示打赏图片
+    $("#dashang").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['480px','400px'],
+            shadeClose: true,
+            content: $('#dashang_img')
+          });
+    });
+</script>
+
+<!-- 分享选项卡模板 -->
+<div id="share_div" style="display: none;">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">微信扫一扫</li>
+            <li>复制链接</li>
+        </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        <div class="layui-tab-item layui-show" align='center'>
+            <p style="font-weight: 700;margin-bottom: 10px;">手机扫一扫进行分享</p>
+            <div id="url_qrcode"></div>
+        </div>
+        <div class="layui-tab-item" align='center'>
+            <input type="text" id="copy_crt_url" name="current_url" class="layui-input"><br>
+            <button class="layui-btn layui-btn-radius layui-btn-xs" style="background-color: #333;" onclick="copyUrl();">复制链接</button>
+        </div>
+    </div>
+    </div> 
+</div>
+
+<!-- 打赏选项卡模板 -->
+<div id="dashang_img" style="display: none;">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+          <li class="layui-this">微信</li>
+          <li>支付宝</li>
+          <li>QQ支付</li>
+          <li>PayPal</li>
+          <li>项目源码</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px;">
+          <div class="layui-tab-item layui-show" align='center'>
+            <img src="../../static/dashang/dashang_wx.webp" style="width: 300px;height: auto;">
+          </div>
+
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_alipay.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_qq.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <a href="https://paypal.me/zmister" target="_blank">
+                <img src="../../static/dashang/dashang_paypal.png" style="width: 280px;height: auto;">
+            </a>
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <p><a href="https://github.com/zmister2016/MrDoc" target="_blank">GitHub：https://github.com/zmister2016/MrDoc</a></p>
+            <br>
+            <p><a href="https://gitee.com/zmister/MrDoc" target="_blank">码云：https://gitee.com/zmister/MrDoc</a> </p>
+            <br>
+            <p><a href="https://zmister.com" target="_blank">作者博客：https://zmister.com</a></p>
+          </div>
+        </div>
+      </div> 
+  </div>
+  
+<script>
+    // 展开收起左边目录
+    $(function(){
+        // $(".switch-toc").click(SwitchToc);
+        $("body").on('click','.switch-toc',SwitchToc)
+    });
+    function SwitchToc(i){
+        console.log("点击了")
+        var $me = $(this);
+        $(this).parent().next("ul").toggleClass("toc-close"); //切换展开收起样式
+        $(this).toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+    };
+
+    // 展开文档树
+    function openDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).removeClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+        
+    };
+    // 收起文档树
+    function closeDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).addClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+    };
+    // 文档分享 - 复制链接
+    copyUrl = function(){
+        var crt_url_val = document.getElementById("copy_crt_url");
+        crt_url_val.select();
+        window.clipb
+        document.execCommand("Copy");
+        layer.msg("链接复制成功！")
+    }
+    // 生成二维码
+    var qrcode = new QRCode("url_qrcode", {
+        text: document.URL,
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
+<!-- 统计代码开始 -->
+    
+        <script type="text/javascript" src="//js.users.51.la/20830315.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+    
+<!-- 统计代码结束 -->
+
+<!-- 下载选项卡模板 -->
+<div id="download_div" style="display: none;">
+    <div class="layui-row" style="margin: 10px;">
+        <a class="" download='第十三章-第十五章.md' href="../../download_doc_md/93/index.htm" target="_blank">
+            <i class="fa fa-download"></i> 下载Markdown文件
+        </a>
+    </div>
+</div>
+<!-- 分享文档选项卡模板 -->
+<div id="share_doc_div" style="display: none;">
+    <div class="layui-tab-content">
+        <div class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分享</label>
+                <div class="layui-input-block">
+                  <input type="checkbox" name="switch" lay-skin="switch" lay-text="开启|关闭" lay-filter="share-switch">
+                </div>
+            </div>
+            
+            <div class="layui-form" style="display: none;" id="share-link">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">链接</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="share_link" class="layui-input" id="share_link" disabled="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="layui-form-item" style="display:none;" id="share-type">
+                <label class="layui-form-label">类型</label>
+                <div class="layui-input-block">
+                    
+                    <input type="radio" name="share_type" value="0" title="公开" checked="" lay-filter="share_type">
+                    <input type="radio" name="share_type" value="1" title="私密" lay-filter="share_type">
+                    
+                </div>
+                
+            </div>
+            <div class="layui-form" style="display:none;" id="share_value_item">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="share_value" value='' disabled="" class="layui-input" id="share_doc_value">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        <button class="layui-btn layui-btn-xs layui-btn-primary" id="updateShareValue"><i class="fa fa-repeat"></i> 更新密码</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/toc/doctoc.js"></script>
+<script src="../../static/viewerjs/viewer.min.js"></script>
+<script>
+    var layer = layui.layer;
+    var form = layui.form;
+    // 手机屏幕上默认最小化目录
+    if(window.outerWidth < 1300){
+        $(".sidebar").toggleClass("doc-toc-hide");
+    }
+    // 切换文档目录显示与否
+    $(".tocMenu").click(function() {
+        console.log("隐藏文档目录")
+        $(".sidebar").toggleClass("doc-toc-hide");
+    });
+    
+    //修改a标签链接新窗口打开
+    $('#content').on('click','a',function(e){
+        e.target.target = '_blank';
+    });
+    
+    // 图片放大显示
+    var img_options = {
+        url: 'data-original',
+        fullscreen:false,//全屏
+        rotatable:false,//旋转
+        scalable:false,//翻转
+        button:false,//关闭按钮
+        toolbar:false,
+        title:false,
+      };
+    var viewer = new Viewer(document.getElementById('content'), img_options);
+
+    // 显示文档下载弹出框
+    $("#download_doc").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','150px'],
+            shadeClose: true,
+            content: $('#download_div')
+          });
+    });
+    
+    // 生成随机分享码
+    function randomWord(randomFlag, min, max){
+        var str = "",
+            range = min,
+            arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        // 随机产生
+        if(randomFlag){
+            range = Math.round(Math.random() * (max-min)) + min;
+        }
+        for(var i=0; i<range; i++){
+            pos = Math.round(Math.random() * (arr.length-1));
+            str += arr[pos];
+        }
+        return str;
+    };
+    
+    // 更新文档分享状态
+    function updateDocShare(data){
+        $.post("/share_doc/",data,function(r){
+            if(r.status){
+                layer.msg("设置成功",{offset: 't'})
+                console.log(r.data)
+                $("input[name=share_link]").val(document.domain + '/share_doc/?token=' + r.data.doc)
+            }else{
+                layer.msg("设置出错")
+            }
+        })
+    }
+
+    // 分享文档
+    $("#shareDoc").click(function(){
+        layer.open({
+            type:1,
+            title:'分享文档:第十三章-第十五章',
+            content:$("#share_doc_div"),
+            area:'450px',
+            // btn:['创建分享','取消'],
+            success : function(index, layero) { // 成功弹出后回调
+                form.render();
+            },
+        })
+    })
+    
+
+    var share_data = {
+        'id':'93',
+    }
+
+    //监听分享框分享类型的单选事件
+    form.on('radio(share_type)', function(data){
+    //   console.log(data.value); //被点击的radio的value值
+      if(data.value == 0){ // 公开
+            $("#share_value_item").css("display","none");
+            share_data['share_type'] = 0;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+            
+      }else if(data.value == 1){ // 私密
+            $("#share_value_item").css("display","block");
+            
+                $("#share_doc_value").val(randomWord(false,4))
+            
+            share_data['share_type'] = 1;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+      }
+    });
+
+    // 监听分享开关事件
+    form.on('switch(share-switch)', function(data){
+        console.log(data.elem.checked); //开关是否开启，true或者false
+        if(data.elem.checked){ // 开启
+            console.log("开启分享")
+            $("#share-type").css('display',"block");
+            $("#share-expire").css('display',"block");
+            $("#share-link").css("display","block");
+            if($("input[name='share_type']:checked").val() == 1){
+                $("#share_value_item").css("display","block");
+            }
+            // 开启
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+        }else{
+            console.log("关闭分享")
+            layer.msg("关闭分享",{offset: 't'})
+            $("#share-type").css('display',"none")
+            $("#share-expire").css('display',"none")
+            $("#share_value_item").css("display","none");
+            $("#share-link").css("display","none");
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = false
+            updateDocShare(share_data);
+        }
+    });  
+
+    // 更新文档分享密码
+    $("#updateShareValue").click(function(){
+        $("#share_doc_value").val(randomWord(false,4));
+        share_data['share_type'] = 1;
+        share_data['share_value'] = $("#share_doc_value").val();
+        share_data['is_enable'] = true
+        updateDocShare(share_data);
+    })
+</script>
+
+
+
+</body>
+</html>

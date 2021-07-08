@@ -1,0 +1,1476 @@
+﻿<!-- 继承自模板：app_doc/docs_base.html -->
+
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 14px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="max-age=7200">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="第七章-close阶段,骄傲与风趣指南-大卫.D,PUAshow,泡学,迷男方法,泡学chat">
+    <meta name="description" content="close阶段
+
+1.主动引导
+
+2.联系方式close
+
+3.Kissclose
+
+4.见面close
+
+5.SCclose
+
+6.退出
+
+Close这个词源自营销，用来形容最后一次甩卖。在泡妞和诱">
+    <title>第七章-close阶段 - 骄傲与风趣指南-大卫.D - 泡学chat书库 </title>
+    <link href="../../static/layui/css/layui-1.css?version=0.6.1" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/editor.md/css/editormd.css?version=0.6.1">
+    
+
+    <link href="../../static/viewerjs/viewer.min.css?version=0.6.1" rel="stylesheet">
+    <link rel="icon" href="../../static/search/mrdoc_logo_300.png" sizes="192x192">
+    <link href="../../static/mrdoc/mrdoc.css?version=0.6.1" rel="stylesheet">
+    <style>
+        /*一级无序li显示实心圆点*/
+        .doc-content ul li{
+            list-style:disc;
+        }
+        /*二级无序li显示空心圆点*/
+        .doc-content ul > li > ul > li{
+            list-style-type: circle;
+        }
+        /*有序li显示数字*/
+        .doc-content ol li{
+            list-style-type: decimal;
+        }
+        .doc-content ol ol ul,.doc-content ol ul ul,.doc-content ul ol ul,.doc-content ul ul ul {
+            list-style-type: square;
+        }
+        /* 三级及以下无序li显示小方块 */
+        .doc-content ul ul ul li{
+            list-style-type: square;
+        }
+        /* 下拉目录隐藏li样式 */
+        .editormd-toc-menu ul.markdown-toc-list li{
+            /*list-style:none;*/
+        }
+        /* 弹出框文档目录样式 */
+        ul.markdown-toc-list{
+            list-style-position:inside;
+        }
+        ul.markdown-toc-list li{
+            list-style: none!important;
+            line-height: 24px;
+        }
+        ul.markdown-toc-list > li > ul > li,ul.markdown-toc-list > li > ul li{
+            padding-left:15px;
+        }
+        ul.markdown-toc-list a{
+            /* text-decoration: underline!important; */
+        }
+        /* 块级代码和行内代码去除边框 */
+        .markdown-body p code{
+            border:none;
+        }
+        /* HTML预览样式 */
+        .markdown-body h1{ 
+            font-size: 1.7em;
+        }
+        .markdown-body h2{
+            font-size: 1.5em;
+        }
+        .markdown-body h3{
+            font-size: 1.25em;
+        }
+        .markdown-body h4{
+            font-size: 1em;
+        }
+        .markdown-body h5{
+            font-size: .875em;
+        }
+        .markdown-body h6{
+            font-size: .85em;
+        }
+        
+        .markdown-body p img{
+            max-width: 350px;
+        }
+        
+        #url_qrcode img{
+            margin: auto;
+        }
+        /* 文档代码块样式 */
+        ol.linenums li{ 
+            width: max-content;
+        }
+        pre.linenums{
+            max-height: 500px;
+        }
+        li.L1, li.L3, li.L5, li.L7, li.L9 {
+            background: none !important;
+        }
+
+        /* layui弹出框颜色 */
+        .layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+            border-bottom: 2px solid #333;
+        }
+        .layui-tab-brief>.layui-tab-title .layui-this{
+            color: #333;
+        }
+        /* 覆盖vditor样式 */
+        .vditor-outline__item{
+            padding: 0;
+            padding-bottom: 5px;
+            color: #333;
+        }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="doc layui-fluid" style="padding-left:0px;">
+    <!-- 左侧目录栏 -->
+    <div class="doc-summary">
+        <!-- 文档搜索 -->
+        <form action="/project-15/" method="get">
+            <div id="doc-search-input">
+                <input type="text" name="kw" placeholder="输入并回车搜索" value="" class="layui-input doc-search-input">
+            </div>
+        </form>
+        <!-- 文集名称 -->
+        <div class="project-title">
+            <a href="../index.htm">骄傲与风趣指南-大卫.D
+                
+            </a>
+            <p>
+                
+            </p>
+        </div>
+        <hr>
+        <!-- <div style="margin-left:15px;">
+            <a href="javascript:void(0);" onclick="openDocTree()"><i class="fa fa-bars"></i> 展开</a>
+            <a href="javascript:void(0);" onclick="closeDocTree()"><i class="fa fa-bars"></i> 折叠</a>
+        </div> -->
+        
+        <!-- 遍历文集大纲 -->
+        <!-- 如果文集的文档数量超过999，使用异步加载文集目录 -->
+        
+        <!-- 文档数量小于999，使用同步加载文集目录 -->
+        <nav>
+            <ul class="summary">
+            <!-- 一级目录 -->
+            
+                <li>
+                    
+                        <a href="../doc-151/index.htm" title="简介">简介</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-152/index.htm" title="第一章-态度">第一章-态度</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-153/index.htm" title="第二章-寻找/打开阶段">第二章-寻找/打开阶段</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-154/index.htm" title="第三章-吸引阶段">第三章-吸引阶段</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-155/index.htm" title="大师流一公然性骄傲与风趣">大师流一公然性骄傲与风趣</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-156/index.htm" title="第四章-考验阶段">第四章-考验阶段</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-157/index.htm" title="第五章-舒适感">第五章-舒适感</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-158/index.htm" title="第六章-扩张">第六章-扩张</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="index.htm" title="第七章-close阶段">第七章-close阶段</a>
+                    
+                </li>
+            
+            </ul>
+        </nav>
+        
+        <div class="bq">
+            <a href="javascript:void(0);" class="mrdoc-link" id="dashang">本文档使用MrDoc发布</a>
+        </div>
+        <!-- 右下角广告块 -->
+        <!-- 广告代码开始 -->
+        
+            
+                <div class="ad-code">
+                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                </div>
+            
+        
+        <!-- 广告代码结束 -->
+    </div>
+    <!-- 左侧目录栏结束 -->
+
+    <!-- 右侧文档栏 -->
+    <div class="doc-body">
+        <!-- 文档导航 -->
+        <div class="doc-header" role="navigation">
+            <a class="btn pull-left js-toolbar-action" aria-label="" href="javascript:void(0);" title="切换侧边栏">
+                <i class="fa fa-align-justify"></i>
+            </a>
+            <a class="btn pull-left font-small" href="javascript:void(0);" title="缩小字体">
+                <i class="fa fa-font">-</i>
+            </a>
+            <a class="btn pull-left font-large" href="javascript:void(0);" title="放大字体">
+                <i class="fa fa-font">+</i>
+            </a>
+            <a class="btn pull-left font-switch" href="javascript:void(0);" title="切换字体类型">
+                <i class="fa fa-text-height"></i>
+            </a>
+            <!-- 顶部工具栏 -->
+            
+    
+    <!-- 文档目录 -->
+    <div id="toc-container" class='sidebar'></div>
+    
+
+
+            <a class="btn pull-right" aria-label="" href="../../index.htm">
+                <i class="fa fa-home"></i> <span class="layui-hide-xs">首页</span>
+            </a>
+        </div>
+        <!-- 文档主体 -->
+        <div class="doc-body-content">
+            <div class="doc-body-content-div">
+                <!-- 文档内容 -->
+                <div class="doc-content">
+                    <!-- 标题 -->
+                    <div class="doc-info">
+                        <!-- 页面主体头信息 -->
+                        
+    <h1>第七章-close阶段</h1><hr>
+
+
+                        <!-- 广告代码开始 -->
+                        
+                            
+                                <div class="ad-code">
+                                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                                </div>
+                            
+                        
+                        <!-- 广告代码结束 -->
+                    </div>
+                    <!-- 标题结束 -->
+                    <!-- 正文开始 -->
+                    <div class="markdown-body" id="content" style="padding: 20px;padding-top: 5px;">
+                        
+    <textarea style="display: none;">close阶段
+
+1.主动引导
+
+2.联系方式close
+
+3.Kissclose
+
+4.见面close
+
+5.SCclose
+
+6.退出
+
+Close这个词源自营销，用来形容最后一次甩卖。在泡妞和诱惑的世界里，它代表从女人身上得到你想要的，可以是电话号码，一个QQ号，一个吻，一次约会，或者SC。
+
+在想要获得任何形式的close的时候，你要做的最重要的事就是放松！当你意识到你并不需要每次都close的时候，你就感受不到任何压力，变得更加放松了。但是很奇怪的是，你越不在乎close，你close的成功几率就越比你想象的要大。
+
+关键在于，继往开来，总是迈向下一步。如果你们聊得非常来，那就弄个联系方式close。如果你们在你家看电影，并且开始接吻了，牵起她的手，带她去你的房间，来个SCclose。要持续提升！女人喜欢且期待。如果她们觉得不自在，她们会告诉你的。但是不要担心，只要继续你的游戏，下次再找机会进行下一步，不要急于一时。
+
+关于close，有一样东西你要记住。如果有人不给你你想要的，永远不要祈求，辩解，争论，有负罪感，或者觉得讲些逻辑上的东西能说服她给你。你需要集中注意力在改变她的情绪而不是想法上。如果她不愿意给你电话号码，那你就逗逗她，发展点舒适感，然后再试试号码close—次。如果她还没准备好跟你SC，那你就加强些打压和给她多点心理准备，然后迟一点再试试。
+
+1•主动引导
+
+有时候，你可能能够把一个女人弄到一个她主动想要给你电话的点。有时候她会主动邀请你出去玩，有时候她会毫无预兆的吻你。不过很少会主动要求跟你SC。但实际是大部分女人是被动的，而你，作为一个男人，作为一个爷们儿，必须主动引导。你必须是那个主动搭讪的人，主动要号码的人，安排约会的人，主动要去亲，抱她上床的人。这只是事情该有的样子。在大部分女人的天性中就是服从，她们需要一个强势的男人来引导她们走过每一步。
+
+如果你发现你自己在报怨女人应该搭讪，要你号码，跳到你身上吻你，或者抓你的裤裆，那你应该乘早打消这个想法。我们这个社会就是要这样，在大部分动物的世界里也是这样。你必须勇敢地迈出一步，承担起被拒绝的风险，你要接受这个现实。就好像你不可
+
+能认识女人，除非你从房间里走出来，主动尝试去认识女人；你不会得到一个吻或者SC的机会，除非你尝试去得到。
+
+有一点很不错，就是一旦你和女人通过了任何一步，她们会更加放开，更有可能倾向于主动。她们会主动吻你，或者在你看电视的时候，跪下来对你的裤裆干一点邪恶的事。她们只是想要你做那个第一次主动的人。
+
+2.联系方式close
+
+男人主动引导后，第2重要的事就是要对阻力有心理准备。在每一步，即使一个女人真的喜欢你，她都会给你一点阻力。没有一个女人会想让人觉得她是一个随便的人，无论她有多么想亲你抱你吻给你电话跟你ML，她都会设一点障碍或者小拒绝一下来说服自己曾经试着去阻止你了。这个阻力就是大家普遍提到的ASD，或者说反荡妇
+
+联系方式close就是让一个女人把她的联系方式告诉你，比如她的QQ，手机号，家里电话，MSN，email等等。到底哪种联系方式最好，众说纷纟云，但总的来说还是要看你个人喜好和那个女人。
+
+当前市面上最流行的就是QQ流，短信流。所以，要到一个QQ号，或者手机号都不错。正所谓术业有专攻，关键是看你哪方面比较在行，选择自己比较在行的领域要联系方式。如果你捨也不在行，那就随便要把，手机啊，QQ的，要来再说，慢慢练。不过有-点，别要电子邮箱，除非你们都用MSN。
+
+Close闲话
+
+你可以通过闲聊来达到联系方式close的目的。这里有2个例子：
+
+(她告诉你一件事）“我得走了，下次再完整的告诉我吧！比如下次我给你按摩的时候！”（然后按一下她的肩膀，让她提前享受一下）“把你的电话号码告诉我吧，下次咱可以接着聊。”
+
+(看下自己的手表）“好了，我已经跟你聊了2分钟了，而且我还让你握了我的手。。。我得收20块，不包括消费。”（她回复）“我真的得走了，钱咱下次见面的时候你再付吧。”（开始走开）“嘿！你有QQ吗？”
+
+得到她的联系方式
+
+记住这个原则，“永远不要向女人要求任何东西”。别说“能给我你的手机号吗？”而说“你手机号多少？”或者用一些比较软的命令，像“给我你的手机号”。不要担心这会太直接或者有点早，因为如果一个女人想给你号码，她就会给你的。如果你不“要求”什么，这能让整个过程变得更好。
+
+F面是一个比较简单有效的要到联系方式的方法:
+
+“好了，认识你很高兴。我得回我朋友那边了/或者随便什么理由。”然后你转身离开，表现好像突然想起什么，再转回来说：“嘿！你有QQ号吗？”如果她说“有”，你就拿出笔和纸说：“太好了，写下来给我吧”让她写下来。然后在她写的时候，说“把你的手机号也写上吧。”（这比直接问她手机号效果要好，因为在你要QQ号的时候，就已经进入和“好”状态，你让她干什么她都会偏向于说“好”）。她写完电话的时候，说“这个号码能打通吗？”如果她看起来很犹豫之类，或者说被你识破了。你就说“把你的真号码写下来。没事的，我每天只打9个电话给你。”接着说“其实我比较偏向QQ号，不过你还是把电话给写了吧。这年头，想要打通个电话实在太不容易了。”
+
+这里有一些C&amp;F联系方式close的方法：
+
+“我们下次一起去XXX吧。我会打电话给你的但是你没我电话埃”）“哦，对！”（然后拿出一只笔）“你知道吗？我想让
+
+你成为我的新女友。”（啊。。什么？）“对，我决定让你成为我的新女友。”（巴拉巴拉）“好，我跟你说。。。我会让你成为我最宠幸的女朋友。把你的号码给我。”（如果她不给）“如果我连你电话都没有，你怎么能成为我最宠幸的女朋友呢？”
+
+(如果她之前说过你只是想泡她）“好，我现在正式地泡你了。你电话多少？”
+
+“好了。。。现在我们得开个会，你得问我一个问题。”（什么？）“拜〜〜托〜！这都想不出来吗？”（你手机号多少？）“看吧，我就知道你能明白的！来，我们互留个电话。”
+
+“你不能走。。。你还没给我你的电话呢！”
+
+(如果一切都非常顺利）“那，是你给我你的电话号码呢，还是我得跟踪你？”
+
+掏出手机，开始很好奇地看它。“我在想这部奇怪的设备是怎么让我们继续联系的。当然，一定是有办法的。。。只要我们能解开这个谜。。。”
+
+群组号码close：同时close多个美女的终极又有趣的方法就是说：“你们几个都挺一般的，与其我把你们都拒绝了，不如这样，我让你们每个人都给我你们的号码，有机会我们可以一起出去玩。。。到时候我会教你们如何变得像我一样帅。”
+
+联系方式close之后
+
+如果你怀疑她可能给了你一个假号码。你就说“好了，我得走了”然后看看这个号码，说：“能说一遍你的号码吗？我只是想看看我有没有看错。”如果她第2次给你的号码不符，那她就是在诓你！要么直接打这个号码，或者更好的方法，把它揉成一团，然后
+
+拍拍她的肩膀，说：“没事儿，我不想要了。”这是一个正确的做法，因为反正她无论如何都会放你鸽子的。
+
+如果她觉得给你她的号码是多么不得了的事，你就可以C&amp;F地说：“挖哦，我很荣幸得到了你如此神圣的新人。。。你的号码很神圣。我感觉就好像有人把她的贞操给了我一样。”
+
+最后，当你做联系方式close的时候，不要只换号码就行。幽默地补一句：“但是，我打你的电话的时候，我不想听到你说‘啊？哪位？啊。。。是你啊。。额。。怎么样。。。’我希望你表现得很热情很开心，比如‘哦〜〜你终于打电话了！天那！我太开心了！！’成不？”同样，你挂电话的时候也可以类似这么说：“那下次咱见面的时候，我希望你微笑，给我一个友好的拥抱然后牵起我的手。懂？”
+
+联系方式close的阻碍
+
+如果她很不情愿，或者直接拒绝给你号码，你得C&amp;F—下。你得改变她的心情，让她缓一缓。这里有一些不错的方法：
+
+“别担心！我每天只会给你打9个电话。我不是很粘人的那种人。”
+
+“什么？你在订外卖的时候会把电话给那个送外卖的吧？”（当然）“太好了。把你的号码给我，改天咱一起定外卖吃。”
+
+“哦，拜托！放一放你的架子。我都放下了。。。”（不是一句很好的台词，因为这会降低你的价值，但是实在没办法的时候用一用效果还算不错。）
+
+通常女人会主动要你电话。不要高兴的太早，记住，女人是被动的，她不会主动打电话给你，除非你真的给她留下了很深的印象(如果她真的想给你，她反正会给你的，对不？）。以下有一些类似“为什么不是你给我你的号码呢？”的反驳：
+
+直接：“别废话，给我你的号码。”
+
+“这么说吧，我可以没那么容易。让我们互留电话。”
+
+(女人说：给我你的号码）“你们女人的把戏我太了解了！你收集了很多电话号码，然后到你的女朋友们面前炫耀，一旦你的虚荣心被满足了，你就会把这些号码扔了。”（不会，我保证）“好吧，为了证明我的误判，把你的号码写下来。”
+
+如果她真的拒绝给你她的号码，你可以选以下的一句话说：
+
+“我还是挺像了解一下你的，我觉得你也应该在你做出决定以前先了解一下我。”
+
+“好，我都努力了解决了这么多困难了，你最少得给我个电话吧。”
+
+当然这2句话的框架都很弱（因为她是那个给你机会的人），但是，轻而易举就把对方的拒绝给打败了。如果这么说能要到号码，记住拿到号码之后立马调转框架。
+
+如果事情发展确实非常糟糕，以上的招数没一个有用，试试这个最后的杀手锏：
+
+“其实也没什么大不了的，但你有好的单身的朋友能介绍么吗？”
+
+她可能会有一堆美女朋友可以介绍给你。你可以把这个小损失看成一个潜在的收获！
+
+【一亲芳泽说两句：这。。。最后几招在中国好像不太适用，我个人觉得要不到号码也没什么，女人有的是。】
+
+3. kissclose
+
+如果你对肢体语言的分辨能力挺强的话，你就能看出来女人什么时候是能接受或者准备好了甚至等待一个吻。她会毫无顾忌地让你碰她，她也会碰你，稍微舔湿自己的嘴唇/或者看着你的嘴唇，特别是当你们俩将要分开的时候。但在很多情况下，事情是没那么明了的，你不确定她是不是在那个状态，或者事情没发展得那么好等等。最次的方法就是直接走人；即使你已经要到了号码。
+
+当然，你得认清你的情况；比如，你不能在她朋友或者亲戚面前要一个kissclose(即使她想亲你想疯了，她也不会在别人面前亲你一这就是为什么把她从其他人中隔离出来显得那么重要）但你应该总是把目标定在kissclose。
+
+要求kissclose
+
+不要说“我能吻你吗？”一这有点恳求的意思在里面，把她放在了一个高高在上的位置，这样她更容易拒绝你。你可以用试试迷男的风格“你想吻我吗？”只要回答不是很直接的“不要”，你就贴过去吻她。别指望她说“要”，你基本不可能得到。但是没有直接的拒绝（比如，我不知道）通常意味着她真的是想亲你，她只是觉得接吻有太多暗示包含在里面，她还没准备好，或者这个地方不太适合接吻等等。但是不要在乎那些，只要说：“那我们来试试看”然后直接去吻她一她会很享受的！就算她的回答是“不要！”，你也可以用迷男的方式去回复“天那，你毁了刚才那个气氛，我敢打赌你前男友一定很恨你这一点。。。”这是一个很不错的打压，能让她重新审视自己，下次你再试的时候，成功的可能性会很高。（记住“坚持”的重要性）
+
+烧痒kissclose
+
+如果她承认她怕痒，你就开始挠她！越闹越起劲，很快她就会受不了，边笑边说停！停！到了顶峰的时候，当她笑得充满了良好的
+
+感觉的时候，用你的手温柔地捧起她的脸，用你的手指温柔地抚摸她的嘴唇，然后开始吻她，过了10秒左右，你停下来问她，“还想我停吗？”不要等她回答，直接继续吻她。
+
+挑战洋姐kissclose
+
+跟她闲扯一阵，建立了一点舒适感，然后kino了一小会儿，你问她喜欢老外还是喜欢中国男的，因为你更喜欢外国女的（不一定是真的）。然后等她问你“为什么”之后，你就告诉她因为中国女人接吻技术不行。然后再争论一小会儿，你就把她拉过来说“我们来试试！”或者“证明给我看！”然后贴上去吻她。
+
+打赌kissclose
+
+跟女人说，你跟她打赌，赌10块钱（或者一杯饮料）你可以不用嘴唇和舌头就能吻到她。
+
+女人通常以为你有什么阴谋，所以，有时候需要劝服她们跟你赌。这个过程会花去你1/3的时间。如果对方是你的好朋友，她不打这个赌，你就说：“好。没事。。。我就演示一遍这个我刚学会的方法。。。然后你就可以靠这招去赚钱了。”然后就好像你是在帮她忙似的，做给她看。然后如果她接受打这个赌或者你要演示给她看，你就说：“准备好了么？看着！”然后你贴过去，就好像你要吻她的嘴唇一样。这里很重要。当你到达那个无法回头的点的时候，你要温柔地吻，我的意思是说得是她体验过的最温柔的。然后你说，“靠，你的吻技不错！我欠你10块钱了！”如果你吻得够好的话，你肯定会得到更多的吻，甚至是孩子！（如果你需要一条好的C&amp;F的台词的话，你就睡：“我觉得这个吻价值不到5块，你还欠我一个吻”）
+
+10分挑战kissclose
+
+“如果10分是满分，你会给自己的吻技打多少分？”她们通常会说10分（美女通常会保持她们自身的价值）。然后吻她。为什么这
+
+招有用？因为你是在挑战她的吻技。吻完之后，C&amp;F地说：“太差了！再来一次，让我看看你的真本事！”
+
+拥抱kissclose
+
+如果你们还没接吻，这招在约会结束的时候很好用。“好了，
+
+来，抱一下，因为现在接吻还太早了。”抱她，然后说：“好，现在我们已经过了拥抱的极短了，我们能接吻了。”（吻她！）
+
+玩笑式kinokissclose
+
+你们打情骂俏，她说了句很调皮的话，稍微用力地拍一下她的腿。当她报怨，进入下一步说“亲一下就好了”。然后看着她的眼镜，微笑着说：“我希望我不用打你的嘴唇之后才能吻你”。然后吻她。
+
+无性kissclose
+
+如果一个女人暗示要跟你SC，或者聊到性话题：“我不能就那样和你SC。。。我甚至还不知道你的吻技怎么样！”然后贴过去吻她。
+
+闭眼kissclose
+
+让她给她的吻技从1-10打个分。当她问你给自己打多少分的时候，你就说：“我吻过很多女人，我闭着眼都能接吻。看着。”然后贴过去吻她。
+
+描述接吻kissclose
+
+“你知道最完美的吻是什么吗？是从两个人嘴唇接触以前就开始了一就是你心里的一种感觉。然后它会从你的眼睛里闪现出来，给双方一个信号，然后两个人慢慢靠近。比接吻更剌激的就是在接吻
+
+前的一瞬间。。。当你们的嘴唇快要碰到的时候，你会有那种触电的感觉。。。就像我们是在吻我们之间的空气一样。。。”在你说这些的时候，慢慢靠近她，把握好时间，当你说到“就像吻我们之间的空气”的时候，你们的嘴唇正好只有一点点距离。再你说完之后立马吻她。
+
+Kissclose意图声明（statementsofintent，SOI)
+
+“你有一双知道如何吻一个男人的嘴唇。”
+
+“你肯定知道过会儿我们是要接吻的。”说的时候，脸上摆上一种巨严肃的表情。
+
+“我想去借盘DVD，然后去你家。这样我们就可以假装在看电影，等到感觉就够了，我们就可以疯狂地舌吻了。”
+
+“我现在正很努力地控制自己不去吻你。”
+
+她问你：“你想问我吗？”你回：“没你想。”
+
+处理kissclose阻力
+
+大部分kissclose阻力都由这几个原因引起的：
+
+1. 你对自己不自信
+
+2. 有朋友在场（记住ASD！)
+
+3. 吸引不够或者过早建立舒适感
+
+4. 她觉得自己没法吻你（你不是她的菜，你的嘴唇太干，你生病了等等）
+
+很明显，第4条你是没办法解决的，但是对于前3条，解决的办法就是退一步，继续做你之前做的，找出问题所在，解决它，然后再试着去吻一ici。
+
+不要因为被拒绝kissclose而表现得生气或者伤心。微笑，C&amp;F地调侃一下：“天那，你很懂怎么破坏气氛，对不？”。或者用一次讽剌又迷人的方式说：“如果你不想吻我，那你干嘛损我？你想跟我玩游戏？你太坏了。我敢打赌你一定特别喜欢损每一个你遇到的男人。”这样你通常能再试一次，然而如果你的反应很差劲，你可能会失去将来kissclose的所有机会。
+
+2人组合kissclose
+
+对，你可以kissclose—个2人组合，如果那俩女孩很有冒险精神或者是双性恋。
+
+“你们俩谁的吻技更好？”如果其中一个说“我！”，你就可以立马kissclose她。然后你就说“恩，不错，但是我想看看她如何。”然后去kiss-close她的朋友。这完全符合对话时的情景，所以是自然而然的。“恩，你也不错，但是我都不知道你们俩谁更好。让
+
+我想想。”然后去吻原来那个，然后再吻她的朋友。指着那个稍微没那么漂亮的对那个漂亮的说，“她的吻技比你好。”这样，那个漂亮的很可能会为了证明的价值，尽她最大的努力吻你。如果你感觉不错的话，“她不错，你可以试试。”如果你遇到了对的人，她们俩就会立马吻到一起，你就可以说“看到了吧！”你接着说，“你们试过3个人接吻吗？”然后吻其中一个，立马换到下一个。在这个过程中的任何阶段，如果任何一个女的表现得被吓到了或者装正经，你就可以打压她说你只是开个玩笑，她竟然这么当真。
+
+5.见面close
+
+好，到这一步，你已经做好了前面的一切，联系方式close了一个女人（甚至kissclose)。现在你得约个时间见她，让你们的发展更进
+
+一步。
+
+也没有规定说你一定要回家以后给她打一电话约出来，整个见面close。你可以在见到她的地方立马这么做，C&amp;F地说：“你觉得如果我们去喝个咖啡或者冷饮什么的，你还能让我继续保持对你的兴趣么？”然后带她去最近的咖啡店或者其他什么地方。
+
+约会
+
+可能现在大部分会把见面当成约会。要尽量避免说或用“约会”这个词，跳出“约会”这个框架。因为“约会”把两个人放进了一个特别的背景之下。典型的“约会”是男人带女人出去，然后为女人买所有的单，为了赢得女人的欢心做很多好事等等，直到这个女人决定该不该跟这个男的睡。你一定要跳出这个框架，因为你把她看成了奖品，你渴望赢得她。在任何情况下，你必须把自己堪称奖品，或者最少跟她站在一条水平线上。
+
+而且“约会”可能会要花很多钱。你买个花，洗个车，加个油，再在一家不错的餐馆买瓶红酒，付了晚饭钱，带她去夜店，帮她付个入场费和酒水费，前前后后零零总总轻轻松松就能花上千把块。或者说你要带她去恋爱专家推荐的那些比较有创意的约会，比如蹦极、激流勇进什么的，这类活动最少得花个快1000块，而且这钱花起来是没个底的。再让我们来看看那些比较“简单”的约会，比如看电影。电影票大概几十块，进去之后还有贵得要死的爆米花跟可乐，想想一晚上你得花多少钱。
+
+这样的话，如果你一星期要见几个美女，然后再安排和她们之中的2个或3个约会，这样花销你觉得你能撑多久？（很多男同胞们都报怨交女朋友很费钱，或者当问为什么他们不和女人约会，他们会说没钱！）所以说，为什么你要把这些钱花在你甚至还不了解的人身上？
+
+在第一次约会中，男人为什么要带女人出去吃饭？是为了评估女人的餐桌礼仪和如何嚼东西吗？不是，这是为了通过好吃的食物和良好的气氛给女人带来一种愉快的感觉，然后期望她能把这些好的感觉和他挂上钩。男人为什么要带女人女人去激流勇进？是为了让水弄湿女人的上衣，然后他就能看到她的胸部了吗？不是，这是为了让她玩得开心，享受一下剌激，然后把这些感觉都跟他挂上钩。
+
+那男人为什么要带女人去电影院看那些巨无聊的“浪漫喜剧”？是他自己想去看男主角跟女主角刚开始仇人相见，然后在电影的最后毫无悬念地幸福地在一起吗？当然不是，这是为了让跟他在一起的女人随着电影体验不同的感受，然后把这些感受都和他挂上钩。
+
+来，让我们说点实话。做以上的这些事，其实就是控制一个人(当然，大部分女人不会这么想，因为他们太习以为常了）。而且这样做毫无意义！当你离开那个豪华的参观，当你从激流那儿开车回家，或者当你看完电影回家，必然是只有你一个人。所以，与其用一些外在的因素来影响一个女人对你的感受，你有没有想过你只展示一下你自己是什么样人？如果你一个有趣幽默的人，那你只要坐在公园里的长椅上，随便聊个天就已经够有意思了。
+
+我不是说你不能带一个女人去吃饭或者在她身上花钱。如果你想要这么做，当然也可以，但是必须得在你了解她之后，而且她确实值得你去这么做的时候。记住，你的框架是，你是那个评估考核她的人，看她有没有满足你的标准和要求。无论什么时候，你努力试着去向她证明某事的时候，你就把框架反过来了，她就掌握了主动
+
+权。在男女关系中，女人不想要所有的控制权一引导一个强大的框架是男人该做的事！
+
+搞定“吃完闪”一族
+
+小心那些期望和要求你带她出去约一次很贵的会的女人。如果你听到一个女人对你说：“你星期5带我去XX吧（某昂贵餐馆）。”你就说：“你知道吗？我觉得这样不太好。我还不是很了解你，怎么就能这么宠你呢？这说不通吧。”真的，即使你的钱是大风刮来的，这种女人绝对不值得你在她身上花钱。
+
+如果她说自己漂亮，应该得到这样的待遇，你就说：“现在你是在我的世界。你的长相给不了你免费的任何东西。”
+
+如果她说到自己有一些很奢侈的品味（如喜欢LV，gucci等）：“如果你有这么高档的品味，那你需要的是一份工作，而不是一个男人。”
+
+无论什么情况，要把握住一些信号，避免那种吸血鬼型的女人一她们给你带不来任何好处（除非她们已经嫁给了一个无聊但很有钱的男人满足了她对金钱的欲望，你说不定能跟她有一腿）
+
+第1次相约见面的选择
+
+(一亲芳泽注：以下部分内容大家稍微看看就行，尤其是电话部分，要注意区分，因为国外的情况跟国内还是有很大区别的，比如我们在约对方见面的时候，会先发短信聊上一段时间。但是外国人好像就没有这样的习惯）
+
+好了，我们已经确立了这样一个观点，带女人出去砸钱约会是一个坏主意。话是这么说，那第1次出去你该干些什么呢？这里有一些选择：
+
+1. 去喝咖啡或者喝茶：这可能是最好的选择，因为这些茶座相对比较安静（没有吵闹的音乐），比较私人（有专门的包厢或者座位等），大部分这种类型的地方，东西都是你自己点，所以在你们打得火热的时候，不会有服务员过来打扰你。成本：小于50元。
+
+2. 去酒吧（一亲芳泽说：不推荐，所以不翻译了）
+
+3. 在公园见面：如果天气不错，你可以和她约在公园见面，找张长椅坐下，如果有桌子的话，你们甚至可以一起野餐。带点三明治，酒杯，一杯红酒或者其他饮料。成本：小于100元。
+
+4. 带她去购物：在这里，我的意思不是说带她出去买东西给她。我的意思是说“嘿，我明天要上街买X(可以是鞋啊衣服啊，任何东西），我可以一起来，给我点女性的建议。”成本：就你买的X可能要花点钱，其他根本花不了钱。
+
+这只是一些基本的建议。你可以上网搜一下“Y200—下的300个创意约会”（可惜是英文的哦）。多积累一点想法是好的，因为你们还要见第2次，第3次你才能确定这个人值不值得你进一步发展。
+
+该什么时候打电话
+
+一旦你想到该做什么，你会想打电话给她，约个机会见面。
+
+那要等多久才能给她打电话呢？通常是等2到4天。大部分人的想法是：“我要过X天之后打电话过去才会显得我不那么饥渴。”这么想是不对的。如果你在搭讪她的时候没有表现得很饥渴或者猥琐，那你任何时候打电话过去都不会怎么样。
+
+在现实中，这和你们初次见面建立了多少舒适感有关。如果你觉得你们已经建立了很深的舒适感，那意思就是说你可以等久一点再打也无所谓。但如果你的舒适感比较浅的话，那就不要等太久，她可能已经忘了你了。如果你在夜店的环境下见到她，这种最容易被放鸽子的环境，你最好在酒吧关门的时候就打电话过去，因为她们可能隔天就不记得你了（特别是她们喝醉了以后）。可以在酒吧关门以后打她手机，约她去吃夜宵，24小时麦当劳或者便宜的宾馆什么的。（最后一个开玩笑的，呵呵）
+
+无论你过了多久才打，或者她看起来好像对你这么久才打来感到很生气，或者你本来说要给她打的，但是你没打，你就C&amp;F的说：“（名字），我是男人。我们从来不会在时机还未成熟的时候
+
+约个时间见面
+
+第1次给她打电话的目的是聊一聊，互相了解一下，约个时间见个面。不要聊太久一10来分钟就差不多了。约个时间见面，越早越好―这能减少她到时候放你鸽子的可能性。在你打电话的时候，你要处于“半忙碌”状态，也就是说，如果在打电话的时候，对方说现在有空，你可以立马约她出来。
+
+基本流程:
+
+1.打电话给她
+
+2.在头5秒内逗她笑或者勾起她的兴趣
+
+3. 用吸引-考验-舒适-
+
+扩展来在一起提高她对你的兴趣等级（最多15分钟一不要在电话上磨好几个小时）
+
+4. 约好时间
+
+5. 挂电话
+
+打电话的过程中，千万不要掉进反复解释让她想起你是谁的死胡同。直接告诉她你是谁，在哪见的面，然后直接进入你的电话游戏。“嘿，我是Richy的那个小黑。跟你说，昨天散场的时候，发生了一件很不可思议的事。。。”这样说的话，就算她不记得你，她也会对你很感兴趣，想看看你是谁。如果你卡在让她想起你是谁这一步，她会一直说：“我不记得了”然后挂电话。如果无论她想起来没，你都一语带过的话，她会对你产生兴趣，你就可以跳过那个部分。而且，你试着让她想起你是谁，会把自己踢出你是奖品的框架。当你在奖品的框架里的时候，你已经假定了她不可能忘记你，她对你印象非常深刻。游戏她，然后在挂电话前完成见面close。
+
+执行见面close
+
+让她参与并投资。让她一起考虑见面的时候去哪，能够增加她的参与感同时减少了她放你鸽子的可能。这里有一些过渡到见面主题的例子：
+
+“那你在考虑约我出去吗？别去麦当劳埃。。。我要喝够酒吃饱饭！别没创意到带我去看电影！”她会笑笑，此时，你可以话锋一转，说：“算了，你在我身上花太多钱我会良心不安的。我们去！听起来不错吧？”
+
+“我们这星期得见个面。星期X和我一起去—。”
+
+“我星期X，X还有星期X下午都挺忙的，星期X傍晚怎么样？你就说‘好’就行了。”（展现出你很忙，你的时间很珍贵。如果她当晚有安排了）“你已经有安排了吗？全推了吧！和我一起更有意
+
+思！”她很可能不会，但是你提到让她取消那些安排就已经把你放在了奖品的位置上了。
+
+“我明天有事，但是如果你的想法足够有诱惑力的话，我可以考虑考虑把明天晚上安排给你。”
+
+顺便见面close：
+
+顺便见面close用在她的兴致很低的时候（无论什么原因，毕竟电话游戏是比较难的）你得表现得你不饥渴：“我明天要和我朋友去X，如果你要过来我们很欢迎。”
+
+见面close可能遇到的冋题
+
+如果她拒绝了你的邀请，她很可能只是比较忙。你最多只能再提供一次机会给她。如果她说自己忙，并没有提出另外一个时间（主动提出一个时间就说明她确实想见你），你就说：
+
+“好吧，我听到了。（停顿）但是我没听到你的建议啊。赶紧提一个！（她说没有：）你知道吗？这听起来好像你不是很严肃。这太差了，因为我本来以为你挺不错的。。。算了，我还有其他计划，下次再聊吧。”然后挂电话。不能表现得很难过或者生气；要像陈述一件事实一样。
+
+有一点很重要，如果一个女人拒绝了你的邀请，不要直接把她踢出去。永远不要破坏你们之间的桥梁，除非她完全是一个垃圾或者婊子！因为很可能她只是太累，或者今天过得不太顺心，可能她在跟其他男人约会，等等。你该做的是把这些女的放入一个名单，每过个2星期，打一遍电话，试着见面close。这么做有2个好处：第1，能以一种很酷的形式表现出你的坚持。你没有每天打电话给她，非常渴望她跟你见面。第2,这会让她觉得一想象一下一你是真的喜欢她，你不是想约她出去立马TD！大部分女人很担心这一点，他们会跟一个男的保持距离，知道她们确定他不是那种干一炮就走人的那种。你过个把星期打电话过去没有任何损失，你得到的最糟的结果也只是她表现得很不热情，说现在很忙之类的。
+
+当你成功的见面close之后，你还没完全成功；你可能是被女人测试了。这里有两个例子，你可能会在见面close的时候遇到：
+
+.“你约我去哪？”她假定你是在约她一她试着把约会框架强加给你。你就C&amp;F地回答说：“我没‘约’你去哪儿，我们是见个面喝个咖啡，记得吗？”
+
+.“你星期X打个电话给我确认一下吧。”这是女人给自己留的后门一不要这么轻易地放过她！这句话的意思是：“好的，我那天晚上会跟你出去。。。但是，要是有更好的人约我，我就不保证了”。你就C&amp;F地回答说：“确认？天主教徒才要人确认。星期X在XX见面，就这么定了！”这样你就立马进入了防鸽子状态了。
+
+防鸽子：“这样，我问你一个问题：如果满分是10分，你星期X不来的可能性是几分？”
+
+如果她的回答是超过0的任何一个数，你就说：
+
+“你知道么？算了。如果你有一点点不去的可能的话，那我根本就会去了。我最讨厌的事之一就是有人在最后一刻才告诉我不来或者放我鸽子。我不会这样对别人，因为我觉得说话要算话。。。因为如果有一样东西能个在开始之前就结束了我们的游戏，那一定就是爽约。”
+
+给她点时间理解一下你说话的意思，然后接着说：
+
+另外一个防鸽子的方法:
+
+“跟你说个事儿，这个地方离我家很近，所以咱在我家见吧，到时候你按门铃，我就过去开门，然后我们走。这样的话，如果你迟到了，或者放我鸽子了，我就可以呆家里，而不是跟白痴一样站在
+
+当确定了见面close，你每次都要加一句类似这样的话：“如果计划有什么变更的话，我会打电话告诉你的，不然的话，我们就在XX见咯。”这你就处于了引导地位，让她知道你是那个改变计划的人，而不是她。
+
+结束电话
+
+当每件事都说完了，你就C&amp;F地说：“太好了！我们出去玩会很不错。被人看到和我在一起对你的名声有好处〜”
+
+在准备好挂电话的时候，说“能进一步了解你应该很有意思。你最好能成为一个不错的朋友。”（友谊框架会让她很惊讶，降低她的防备心，同时也能在见面的时候给你减少压力）。这不是说她会把你划入朋友去，不是这样的，这会让你看起来不饥渴。
+
+5. SCclose
+
+“女人跟男人一样想SC。她们只是比我们晚15分钟来感觉。所以，你忍20分钟，她就会追着你5分钟。”一电影《追女至尊》
+
+考验一个女人的对性兴趣和开放度，还有她做的条件和时间是很重要的。当你知道她的立场之后，你就可以作出相应的反应，而不是在她需要更多接触，见更多面，或者听更多甜言蜜语的时候就触碰到这些敏感的话题。
+
+有用很强的框架并引导对方使用这个框架是很重要的。不要对做某一步考虑太多，尽管做就是了。交给你的直觉和本能来管。不要等待某种迹象。如果她粘在你身边或者吻你，这就是迹象了。如果她和你躺在床上，这就是迹象。一旦你看到以上这些迹象，要尽一切所能跟她在双方同意的前提下来一场轰轰烈烈的ML。如果她当晚不能或不想SC，她会很坚决的告诉你的。否则，你就坚持到底。你不试，你就永远不会知道。
+
+试着对好的结果有所期望。让她兴奋起来，然后推开。做点别的再让她兴奋起来，再推开。当你发现她真的很享受这个过程的时候(可以是任何时候，比如接吻等等），你就直接停止。轻轻地在她耳边说“你还想来，对不？”（对）“那你得说麻烦你。”或者如果她说“我们SC吧/f*ck我”，你就回答说“我还没吻够呢。”
+
+对SC的阻力
+
+如果你强迫一个女人违背她自己的意愿与你发生性行为，那你就得被关进监狱里受点惩罚！！当一个女人坚决地告诉你不要，那就是不要。
+
+有这么个说法，一个坚决的不和“不。。。不行。。。我不能这样。。。”是有区别的。这种软弱，小小的反抗是很正常的。在我们理解这个之前（从现在开始，这个叫“最后一分钟的抵抗”/LMR)，我们先来谈一谈它从哪来的。
+
+首先，荡妇是什么？对于一个女天主教徒，小甜甜是荡妇，因为她曾经把自己的胯部露出来过。对于一个我认识的哥们儿，所有的女人都是荡妇（当然，除了他准备结婚的那个）。我认识的一个女人（至今有过40个性伴侣，经常在第1次见面就SC)觉得一个在一段正式的感情中出轨的女人是荡妇。另一个我认识的女人觉得同时有3个或以上的性伴侣的女人是很放荡的（2个还OK)。
+
+我的观点是，除非你严格尊重某个宗教的教规，觉得人只能从一而终，不然“荡妇”这个词是非常主观且毫无意义的。但是，每个女人都很怕被看成荡妇！其实没有一个正确的定义，是不可能设立一个适当的标准来评价一个女人是不是荡妇的，但她们就是常常为这个问题而疑惑。这就限制了我们SC—个女人。
+
+女人不但不想被人看成是荡妇，而且自己也不想把自己看成荡妇。即使她是单独跟你在一起，不论你让她有多兴奋或者她有多么想要你，你同样也会受到一点抵抗。克服抵抗的方法就是给她一个借口让她和你SC，一个她能怪罪的借口，而不是怪罪自己。这就是
+
+为什么女人要先喝几瓶啤酒才跟魔神人SC，然后怪啤酒让她失去了判断能力。或者这就是为什么女人逆向合理化一夜情的时候说：“哦，那是我表弟的朋友的好朋友的单身派对，所以，这是一个特殊情况”。换句话说，她得为自己的行为找借口。
+
+一个非常有效的克服抵抗的技巧就是把一切责任推给自己。你声称一切都是你的错，她当时只是毫无抵抗力地放弃，就能够帮你卸下她的反荡妇机制一这完全正常。因为她的借口是你！
+
+另外一个技巧其实就是同意抵抗，退回去，再重新积累，这样她心理上会更舒适。比如，她呻吟着说“不。。。别摸那里。。。”然后你说，“对，我不应该摸你那儿”然后把你的手拿开。然后做点别的事让她更兴奋，然后再去摸她那里，你就会发现这次没有反抗了。
+
+一个女人常用的抵抗方法就是时间概念：“我只认识了你2天/
+
+1个月/随便什么”。这时候你可以用一下型男的“没遇到到”惯例：
+
+“我从来都不对任何事情有期望的。。。我曾经交过一个女朋友，我们谈了3个月，然后SC了。另外一个女的认识当晚就SC了，因为那是即刻的激情。这两个女的我都很喜欢，因为因为一切感觉都很自然，没有任何强迫或者什么。”
+
+如果她反抗到底，看起来好像没法破解，这时候，最重要的是你要真正地对和她SC表现冷漠。女人通常通过别人期望和她SC的程度来活得对自己的外表的认可，如果一个女人知道一个男的想上她，那她的认可需求就被满足了，知道自己“搞定”他了。但是，如果最后你表现出对和她SC不感兴趣，那她唯一能认可自己的需求度的方法就是和你SC。
+
+“好，我们不SC了。我们还是做朋友吧。”认真地说。不要吻她，不要抱她。就像跟自己的一个男性朋友相处一样。在这时候，她就会强烈地想要被认可，她可能会妥协，然后开始追你。特别是在她拒绝你之前，你们营造了很有趣，打情骂俏的气氛一她会想念原来美好的时光。
+
+“我已经不再是小孩了，我不喜欢爱放鸽子，而且不敢要自己想要的东西的女人。”
+
+“ML是双方释放自己的时刻。如果你想保护自己的话，你就不能释放自己。这就是为什么信任很重要。你信任我吗？”
+
+“不期望事情发生很好，让一切顺其自然。”如果需要的话，把这个框架从她那儿偷来。
+
+可能乍一看，这些像是思维游戏，实际上他们就是！但是它们是没有恶意的。你所要做的就是不要“欺骗”她跟你SC;在那个时候，她已经是想要了！你所做的只是打破那些顽固的阻碍她享受她该有的快乐传统思想（然后你也顺便捡了个便宜）。
+
+有一件事：一旦她感觉很舒适，尽可能不要换地方，这点很重要。如果她在你的车里，你房间等地方感觉很舒适，你应该就在那
+
+个地方把该做的做了。换个地方会让她失去原来的状态，ASD可能立
+
+马就被启动，你很有可能失去对局面的控制。
+
+另外一些让她觉得舒适的方法
+
+我不想说得这么直接，但是，除非你想当着别人的面f*ck她，隔离是关键。带她去一些隐蔽的地方，这样她就不用担心被人发现了。
+
+你带她会你家之后，你就去厕所。这样能够给她一个机会看一看你房间的环境，听听音乐，看看房间里的装修等等。她呆在你的环境里会更加舒适和放松。
+
+幽默/暗示SCclose(“他到底是认真的还是在开玩笑？”）
+
+“我专业的看法就是你有一个能够疯狂ML—晚上的身体。”
+
+“我家有2瓶香槟。一瓶是用来喝的，另外一瓶是用来倒满你全身
+
+的。。。
+
+你在她家，她说自己的地方很乱，你就说“嘿，我是男的。我又不是来看摆在你房间里的东西，我只是想让你身上穿的东西变成其
+
+中的一样。。。”
+
+“我很乐意带你回家做一点少儿不宜的事。”
+
+“为什么你试试今晚别回去，给你的室友一个惊喜？”
+
+“你喜欢比人咬你的脖子吗？（为什么这么问？）因为我现在想做的就是咬你脖子。”
+
+“我个人认为，你的想法很邪恶，我的想法也很邪恶，我们正好可以成为一个邪恶的组合。”
+
+“我真的很喜欢聪明的女人。。。我觉得她们更有意思，更性感，而且床上功夫更好。。。一个聪明的女人不会拒绝一个好东西。。。除了按摩！”
+
+“我们要干什么？好吧，我们可以可以玩26个字母的游戏！你不知道？你就算了，会玷污你纯洁的心灵的。”（让她求你解释）“好吧，26个字母的游戏是和一个裸体的女人玩的游戏。你让她平躺，两腿分开，然后在她的那个部位用你的舌头写完26个字
+
+母。”
+
+“你知道汉堡跟口交有什么区别吗？你不知道？好吧，这样的话，你中午有兴趣一起吃饭不？”
+
+问你问题，你回答：“等会儿在床上我再告诉你。”
+
+“咱俩混在一起会很危险。要是咱真的很来电，然后结婚生孩子了呢？然后过了几年咱可能会离婚，咱的孩子就太可怜了！所以对孩子最好的方法就是让我们保持纯性的关系。为孩子想想，（她的名字）！为孩子想想！”
+
+“我觉得对于一个像你这样的女孩子来讲，最重要的是有人能让她‘快乐’。这样很难，你知道的。。。单身生活其实就是手头活儿！我知道很不容易！”
+
+公然SCclose
+
+在约会的时候，看着她，然后说：“到了这个地步，我知道会有男的靠向你，然后说‘我想想你回家，让你体验一下你从没享受过的疯狂！’如果她兴奋了，瞳孔放大，甚至说‘对！’你应该知道该干嘛！但如果她看起来有点反感或者什么的，你就说：“但是我知道现在你需要从我这里得到更敏感，微妙的做法。”
+
+“我想让你躺下，然后把你从头到脚吻一遍，然后倒着再来一
+
+次。”
+
+“我想用我的手和嘴唇探索你每一寸肌肤。我沉醉于跟你在一起的时刻，无论是精神上还是肉体上。如果我现在是单独跟你在一起，我会想融化到你的身体里。。。”
+
+“我有问题想问你”。（问吧）“你多久没享受过那种超爽的按摩了？多久没有一个男的舔你的脖子让你全身跟着发抖了？”（回答）“跟我来吧，我们会大大缩短这个时间的。”
+
+其他男人式拒绝（我已经约了别的男人了）
+
+在这个情况中，她已经“约”了别人了，你可以用之前介绍的标准的男朋友摧毁法或者以下其中一个方法。
+
+“哦，那太不好了，我为你感到可惜。。。”（为什么？）“因为那个男的在网上读体育版的时候，我在读一本关于如何更好地给女人高潮的书。。。或者性爱游戏。但是没什么，好好把握你所拥
+
+有的吧。。。”
+
+“他每次都能满足你的需要吗，还是只有在他感觉到你觉得他无聊的时候？”
+
+事后说法
+
+“谢谢你和我分享你的身体。”
+
+“你给我留下了不错的印象。。。我是说我背后的抓痕！”
+
+6•抽离（eject)
+
+抽离来自于飞行员属于，意思就是说从坠毁的飞机中逃离出来。
+
+另外一个和抽离一个意思的词是“无close”，没有获得任何实际的目的地close你和女人或组合的交流。
+
+别依依不舍！如果没有SCclose的希望的话，高调地结束对话然后离开。这给将来的交流留了下一点点可能性，不然的话，那个女人会无聊地离开你（不好）。你同样展示了你并不饥渴而且还有其他事可做。还有，你下一次可能会遇到更好的！这里有一个迷男介绍的抽离的例子，用于酒吧及夜店等环境：“我还有事。。。很高兴认识你。”如果你半路被打枪，就说：“很高兴认识你。”要真诚地说一用一种友好，尊重，还有同情的方式说。这样你就把自己和那些报怨“臭女人都一样。。。”的失败者们区分开来了。你仍然保持了你的风度和自信。她会因为意识到自己失去了你而觉得很失落！如果她直接无视你，你就加一句“。。。不好意思，我刚才不知道你是个聋子！”
+
+《.全书完.》</textarea>
+
+                    </div>
+                    <!-- 正文结束 -->
+                </div>
+                <hr>
+                <!-- 分享栏 -->
+                <div style="color: rgba(0,0,0,.65);padding-bottom: 10px;margin-top: 10px;">
+                
+<div class="layui-row" style="margin-bottom: 10px;padding-left: 20px;">
+    
+</div>
+
+<div class="layui-row layui-col-space20" style="padding-left: 20px;">
+    <span>
+        <i class="fa fa-user"></i>  PUAshow 
+    </span>
+    <span tooltip="更新于:2020年12月13日 12:05">
+        <i class="fa fa-clock-o"></i> 2020年12月13日 12:05
+    </span>
+
+    <button id="share" class="doc-bottom-btn" tooltip="分享本文档">
+        <i class="fa fa-share-alt"></i> 分享
+    </button>
+
+    
+</div>
+
+
+
+                </div>
+
+                <!-- 广告代码开始 -->
+                
+                    
+                        <div class="ad-code">
+                        <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                        </div>
+                    
+                
+                <!-- 广告代码结束 -->
+
+                
+    
+    <div class="layui-row" style="margin-top: 10px;padding:10px;display:flex;justify-content:space-around;">
+        <!-- <hr> -->
+        <div>
+            
+                <a href="../doc-158/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius"><i class="layui-icon layui-icon-prev "></i>上一篇</a>
+            
+        </div>
+        <div>
+            
+                <button class="layui-btn layui-btn-disabled layui-btn-sm layui-btn-radius">下一篇<i class="layui-icon layui-icon-next"></i></button>
+            
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 右侧文档栏结束 -->
+    <!-- 右下角工具按钮 -->
+    <div class="fixed-tool-bar">
+        <div class="toTop"><i class="fa fa-arrow-up"></i></div>
+        
+<!-- 目录 -->
+<div class="tocMenu" style="display: none;"><i class="fa fa-list"></i></div>
+<!-- 分享按钮 -->
+
+
+    </div>
+</div>
+
+<script src="../../static/jquery/3.1.1/jquery.min.js"></script>
+<script src="../../static/layui/layui.all.js"></script>
+<!-- 生成文集目录大纲 -->
+<script>
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: 'zAwmlPkW9qvJdB0s2w5Ithr5nfGaztEWW8yxI1bhnOdYfbjTIK5cjb19AC3l4tOU' },
+    });
+    // 视频iframe域名白名单
+    var iframe_whitelist = ''.split(',')
+    // 异步生成文集目录
+    getProjectToc = function(){
+        $.post("/get_pro_doc_tree/",{'pro_id':'15'},function(r){
+            $("#loading-project-toc").hide();
+            if(r.status){
+                var toc_str = ""
+                layui.each(r.data,function(index,item){
+                    toc_str += "<li>"
+                    if(item['children'] != undefined){ // 存在二级文档
+                        li = '<div style="display:flex;justify-content:space-between;">' + 
+                            '<a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                            '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                        '</div>'+
+                        '<ul class="sub-menu toc-close">'
+                        toc_str += li
+                        layui.each(item['children'],function(index,item){// 遍历二级文档
+                            toc_str += '<li>'
+                            if(item['children'] != undefined){ //存在三级文档
+                                li = '<div style="display:flex;justify-content:space-between;">' + 
+                                    '<a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                                    '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                                '</div>'+'<ul class="sub-menu toc-close">'
+                                toc_str += li
+                                layui.each(item['children'],function(index,item){ // 遍历三级文档
+                                    li = '<li><a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a></li>'
+                                    toc_str += li
+                                })
+                                toc_str += '</ul>'
+                            }else{// 不存在三级文档
+                                li = '<a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                                toc_str += li
+                            }
+                            toc_str += '</li>'
+                        })    
+                        toc_str += '</ul>'
+                    }else{//不存在二级文档
+                       li = '<a href="/project-'+'15'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                       toc_str += li
+                    }
+                    toc_str += '</li>'
+                });
+                $('#project-toc').append(toc_str)
+                tagCurrentDoc();
+            }else{
+                layer.msg("获取文集目录失败！")
+            }
+        });
+    };
+    
+
+    //为当前页面的目录链接添加蓝色样式
+    tagCurrentDoc = function(){
+        $("nav li a").each(function (i) {
+            var $me = $(this);
+            var lochref = $.trim(window.location.href); // 获取当前URL
+            var mehref = $.trim($me.get(0).href); 
+            if (lochref.indexOf(mehref) != -1) {
+                // console.log($me,lochref,mehref)
+                $me.closest("li").addClass("active");
+                //展开当前文档的上级目录
+                if($me.parent("li").parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开二级文档目录")
+                    $me.parent("li").parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("div").parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开包含下级的二级文档目录")
+                    $me.parent("div").parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开三级目录")
+                    $me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                // 切换图标
+                $me.parents("ul.sub-menu").prevAll("div").each(function(i){
+                    var $link = $(this);
+                    if($link.children("i").hasClass("fa-chevron-left")){
+                        $link.children("i").toggleClass("fa-chevron-left fa-chevron-down");
+                    }
+                })
+                // 目录的当前文档滚动于目录顶端
+                this.scrollIntoView({ behavior: 'auto', block: "start" });
+            } else {
+                // console.log(lochref,mehref)
+                $me.closest("li").removeClass("active");
+            }
+        });
+    };
+    tagCurrentDoc();
+</script>
+
+<!-- 小屏自动收起左侧文集大纲 -->
+<script>
+    //加载页面时执行一次
+    changeSidebar();
+    //监听浏览器宽度的改变
+    window.onresize = function(){
+        changeSidebar();
+    };
+    function changeSidebar(){
+        // 获取匹配指定的媒体查询
+        var screen_width = window.matchMedia('(max-width: 768px)');
+        //判断匹配状态
+        if(screen_width.matches){
+            //如果匹配到，切换侧边栏
+            //console.log('小屏幕')
+            $("body").addClass("big-page");
+        }else{
+            $("body").removeClass("big-page");
+        }
+    }
+    // 监听文档div点击
+    document.querySelector('.doc-body').addEventListener('click', function (e) {
+        // console.log("点击了div")
+        changeSidebar();
+    });
+</script>
+
+
+<script src="../../static/editor.md/lib/marked.min.js"></script>
+<script src="../../static/editor.md/lib/prettify.min.js"></script>
+<script src="../../static/editor.md/lib/raphael.min.js"></script>
+<script src="../../static/editor.md/lib/underscore.min.js"></script>
+<!-- <script src="/static/editor.md/editormd.min.js?version=0.6.1"></script> -->
+<script src="../../static/editor.md/editormd.js?version=0.6.1"></script>
+
+<script src="../../static/qrcodejs/qrcode.min.js"></script>
+
+
+<!-- 解析Markdown -->
+<script>
+    // EditorMD模式
+    
+        //解析Markdown为HTML
+        editormd.markdownToHTML("content", {
+            htmlDecode      : "style,script,iframe",
+            emoji           : true,  //emoji表情
+            taskList        : true,  // 任务列表
+            tex             : true,  // 科学公式
+            flowChart       : true,  // 流程图
+            sequenceDiagram : true,  // 时序图
+            tocm            : true, //目录
+            toc             :true,
+            tocContainer : "#toc-container",
+            tocDropdown   : false,
+            atLink    : false,//禁用@链接
+
+        });
+    // Vditor模式
+    
+    // 显示分享弹出框
+    $("#share").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','350px'],
+            shadeClose: true,
+            content: $('#share_div')
+          });
+    });
+</script>
+
+<!-- 页面初始化字体设置 -->
+<script>
+    font_stauts = window.localStorage.getItem('font-sans')
+    if(font_stauts == 'serif'){// 字体类型
+        $(".doc-content").toggleClass("switch-font")
+        $("#content").toggleClass("switch-font")
+    }
+    if(window.localStorage.getItem('font-size')){// 字体大小
+        font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        $('#content').css({'font-size':font_size+'rem'})
+    }else{
+        window.localStorage.setItem('font-size',1.0)
+    }
+</script>
+
+<!-- 返回顶部 -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 初始时，“返回顶部”标签隐藏
+        $(".toTop").hide();
+        $(window).scroll(function() {
+            // 若滚动的高度，超出指定的高度后，“返回顶部”的标签出现。
+            if($(document).scrollTop() >= 140) {
+                $(".toTop").show();
+            } else {
+                $(".toTop").hide();
+            }
+        })
+        // 绑定点击事件，实现返回顶部的效果
+        $(".toTop").click(function() {
+            $(document).scrollTop(0);
+        });
+        // 生成当前网页链接
+        $("input[name=current_url]").val(document.URL)
+    });
+</script>
+
+<!-- 切换隐藏侧边栏 -->
+<script>
+    // 切换侧边栏
+    $(function(){
+        $(".js-toolbar-action").click(toggleSidebar);
+    });
+    //切换侧边栏显示隐藏
+    function toggleSidebar(){
+        console.log("切换侧边栏")
+        $("body").toggleClass("big-page");
+        return false;
+    }
+</script>
+
+<!-- 切换内容字体 -->
+<script>
+    //切换文档内容字体类型
+    $(function(){
+        $('.font-switch').click(switchFont);
+    });
+    function switchFont(){
+        if(font_stauts == 'serif'){
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','sans')
+        }else{
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','serif')
+        }
+    };
+    //放大字体
+    $(function(){
+        $('.font-large').click(largeFont);
+    });
+    function largeFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        if(parseFloat(font_size) < 1.4){
+            size = parseFloat(font_size) + 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+    //缩小字体
+    $(function(){
+        $('.font-small').click(smallFont);
+    });
+    function smallFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        if(parseFloat(font_size) >= 0.6){
+            size = parseFloat(font_size) - 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+
+    // 显示打赏图片
+    $("#dashang").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['480px','400px'],
+            shadeClose: true,
+            content: $('#dashang_img')
+          });
+    });
+</script>
+
+<!-- 分享选项卡模板 -->
+<div id="share_div" style="display: none;">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">微信扫一扫</li>
+            <li>复制链接</li>
+        </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        <div class="layui-tab-item layui-show" align='center'>
+            <p style="font-weight: 700;margin-bottom: 10px;">手机扫一扫进行分享</p>
+            <div id="url_qrcode"></div>
+        </div>
+        <div class="layui-tab-item" align='center'>
+            <input type="text" id="copy_crt_url" name="current_url" class="layui-input"><br>
+            <button class="layui-btn layui-btn-radius layui-btn-xs" style="background-color: #333;" onclick="copyUrl();">复制链接</button>
+        </div>
+    </div>
+    </div> 
+</div>
+
+<!-- 打赏选项卡模板 -->
+<div id="dashang_img" style="display: none;">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+          <li class="layui-this">微信</li>
+          <li>支付宝</li>
+          <li>QQ支付</li>
+          <li>PayPal</li>
+          <li>项目源码</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px;">
+          <div class="layui-tab-item layui-show" align='center'>
+            <img src="../../static/dashang/dashang_wx.webp" style="width: 300px;height: auto;">
+          </div>
+
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_alipay.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_qq.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <a href="https://paypal.me/zmister" target="_blank">
+                <img src="../../static/dashang/dashang_paypal.png" style="width: 280px;height: auto;">
+            </a>
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <p><a href="https://github.com/zmister2016/MrDoc" target="_blank">GitHub：https://github.com/zmister2016/MrDoc</a></p>
+            <br>
+            <p><a href="https://gitee.com/zmister/MrDoc" target="_blank">码云：https://gitee.com/zmister/MrDoc</a> </p>
+            <br>
+            <p><a href="https://zmister.com" target="_blank">作者博客：https://zmister.com</a></p>
+          </div>
+        </div>
+      </div> 
+  </div>
+  
+<script>
+    // 展开收起左边目录
+    $(function(){
+        // $(".switch-toc").click(SwitchToc);
+        $("body").on('click','.switch-toc',SwitchToc)
+    });
+    function SwitchToc(i){
+        console.log("点击了")
+        var $me = $(this);
+        $(this).parent().next("ul").toggleClass("toc-close"); //切换展开收起样式
+        $(this).toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+    };
+
+    // 展开文档树
+    function openDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).removeClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+        
+    };
+    // 收起文档树
+    function closeDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).addClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+    };
+    // 文档分享 - 复制链接
+    copyUrl = function(){
+        var crt_url_val = document.getElementById("copy_crt_url");
+        crt_url_val.select();
+        window.clipb
+        document.execCommand("Copy");
+        layer.msg("链接复制成功！")
+    }
+    // 生成二维码
+    var qrcode = new QRCode("url_qrcode", {
+        text: document.URL,
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
+<!-- 统计代码开始 -->
+    
+        <script type="text/javascript" src="//js.users.51.la/20830315.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+    
+<!-- 统计代码结束 -->
+
+<!-- 下载选项卡模板 -->
+<div id="download_div" style="display: none;">
+    <div class="layui-row" style="margin: 10px;">
+        <a class="" download='第七章-close阶段.md' href="../../download_doc_md/159/index.htm" target="_blank">
+            <i class="fa fa-download"></i> 下载Markdown文件
+        </a>
+    </div>
+</div>
+<!-- 分享文档选项卡模板 -->
+<div id="share_doc_div" style="display: none;">
+    <div class="layui-tab-content">
+        <div class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分享</label>
+                <div class="layui-input-block">
+                  <input type="checkbox" name="switch" lay-skin="switch" lay-text="开启|关闭" lay-filter="share-switch">
+                </div>
+            </div>
+            
+            <div class="layui-form" style="display: none;" id="share-link">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">链接</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="share_link" class="layui-input" id="share_link" disabled="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="layui-form-item" style="display:none;" id="share-type">
+                <label class="layui-form-label">类型</label>
+                <div class="layui-input-block">
+                    
+                    <input type="radio" name="share_type" value="0" title="公开" checked="" lay-filter="share_type">
+                    <input type="radio" name="share_type" value="1" title="私密" lay-filter="share_type">
+                    
+                </div>
+                
+            </div>
+            <div class="layui-form" style="display:none;" id="share_value_item">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="share_value" value='' disabled="" class="layui-input" id="share_doc_value">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        <button class="layui-btn layui-btn-xs layui-btn-primary" id="updateShareValue"><i class="fa fa-repeat"></i> 更新密码</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/toc/doctoc.js"></script>
+<script src="../../static/viewerjs/viewer.min.js"></script>
+<script>
+    var layer = layui.layer;
+    var form = layui.form;
+    // 手机屏幕上默认最小化目录
+    if(window.outerWidth < 1300){
+        $(".sidebar").toggleClass("doc-toc-hide");
+    }
+    // 切换文档目录显示与否
+    $(".tocMenu").click(function() {
+        console.log("隐藏文档目录")
+        $(".sidebar").toggleClass("doc-toc-hide");
+    });
+    
+    //修改a标签链接新窗口打开
+    $('#content').on('click','a',function(e){
+        e.target.target = '_blank';
+    });
+    
+    // 图片放大显示
+    var img_options = {
+        url: 'data-original',
+        fullscreen:false,//全屏
+        rotatable:false,//旋转
+        scalable:false,//翻转
+        button:false,//关闭按钮
+        toolbar:false,
+        title:false,
+      };
+    var viewer = new Viewer(document.getElementById('content'), img_options);
+
+    // 显示文档下载弹出框
+    $("#download_doc").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','150px'],
+            shadeClose: true,
+            content: $('#download_div')
+          });
+    });
+    
+    // 生成随机分享码
+    function randomWord(randomFlag, min, max){
+        var str = "",
+            range = min,
+            arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        // 随机产生
+        if(randomFlag){
+            range = Math.round(Math.random() * (max-min)) + min;
+        }
+        for(var i=0; i<range; i++){
+            pos = Math.round(Math.random() * (arr.length-1));
+            str += arr[pos];
+        }
+        return str;
+    };
+    
+    // 更新文档分享状态
+    function updateDocShare(data){
+        $.post("/share_doc/",data,function(r){
+            if(r.status){
+                layer.msg("设置成功",{offset: 't'})
+                console.log(r.data)
+                $("input[name=share_link]").val(document.domain + '/share_doc/?token=' + r.data.doc)
+            }else{
+                layer.msg("设置出错")
+            }
+        })
+    }
+
+    // 分享文档
+    $("#shareDoc").click(function(){
+        layer.open({
+            type:1,
+            title:'分享文档:第七章-close阶段',
+            content:$("#share_doc_div"),
+            area:'450px',
+            // btn:['创建分享','取消'],
+            success : function(index, layero) { // 成功弹出后回调
+                form.render();
+            },
+        })
+    })
+    
+
+    var share_data = {
+        'id':'159',
+    }
+
+    //监听分享框分享类型的单选事件
+    form.on('radio(share_type)', function(data){
+    //   console.log(data.value); //被点击的radio的value值
+      if(data.value == 0){ // 公开
+            $("#share_value_item").css("display","none");
+            share_data['share_type'] = 0;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+            
+      }else if(data.value == 1){ // 私密
+            $("#share_value_item").css("display","block");
+            
+                $("#share_doc_value").val(randomWord(false,4))
+            
+            share_data['share_type'] = 1;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+      }
+    });
+
+    // 监听分享开关事件
+    form.on('switch(share-switch)', function(data){
+        console.log(data.elem.checked); //开关是否开启，true或者false
+        if(data.elem.checked){ // 开启
+            console.log("开启分享")
+            $("#share-type").css('display',"block");
+            $("#share-expire").css('display',"block");
+            $("#share-link").css("display","block");
+            if($("input[name='share_type']:checked").val() == 1){
+                $("#share_value_item").css("display","block");
+            }
+            // 开启
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+        }else{
+            console.log("关闭分享")
+            layer.msg("关闭分享",{offset: 't'})
+            $("#share-type").css('display',"none")
+            $("#share-expire").css('display',"none")
+            $("#share_value_item").css("display","none");
+            $("#share-link").css("display","none");
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = false
+            updateDocShare(share_data);
+        }
+    });  
+
+    // 更新文档分享密码
+    $("#updateShareValue").click(function(){
+        $("#share_doc_value").val(randomWord(false,4));
+        share_data['share_type'] = 1;
+        share_data['share_value'] = $("#share_doc_value").val();
+        share_data['is_enable'] = true
+        updateDocShare(share_data);
+    })
+</script>
+
+
+
+</body>
+</html>

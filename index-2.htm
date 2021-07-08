@@ -1,0 +1,1103 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="max-age=7200">
+    <meta name="keywords" content="PUAshow,泡学,迷男方法,泡学chat">
+    <meta name="description" content="收尽天下恋爱秘籍，在线阅读所有的书籍，让每个人都不会为情所困。">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>泡学chat书库  - 泡学chat书库 </title>
+    <link href="static/layui/css/layui.css" rel="stylesheet">
+    <link href="static/mrdoc/mrdoc.css?version=0.6.1" rel="stylesheet">
+    <link rel="icon" href="static/search/mrdoc_logo_300.png" sizes="192x192">
+    <style>
+        .layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree, .layui-nav-itemed:after {
+            background-color: #333 !important;
+        }
+        .layui-nav .layui-nav-child dd.layui-this a, .layui-nav-child dd.layui-this{
+            background-color: #333 !important;
+        }
+        /* layui分页组件样式 */
+        .layui-laypage .layui-laypage-curr .layui-laypage-em{
+            background-color: #333 !important;
+        }
+        /* 控制栏表单下拉框样式 */
+        .index-control .layui-input-inline{
+                width: 100px;
+        }
+        .index-control .layui-input{
+            height: 25px;
+            border: none;
+        }
+        .index-control .layui-form-select dl {
+            top: 30px;
+        }
+        .index-control .layui-form-item{
+            margin-bottom: 0px;
+        }
+        /* 文集列表样式 */
+        .project-item-list{
+            /* float: left; */
+            min-width: 0;
+            width: 100vw;
+            height: 120px;
+            /* margin-top: 20px; */
+            /* margin-left: 20px; */
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.055);
+        }
+        /* 移动端筛选控制栏样式 */
+        @media screen and (max-width: 768px){
+            /* 控制栏样式 */
+            .index-control .layui-form-item .layui-inline{
+                display: -webkit-inline-box;
+            }
+            .index-control .layui-form-item .layui-input-inline{
+                display: -webkit-inline-box;
+                float: none;
+                left: -3px;
+                /* width: auto; */
+                margin: 0;
+            }
+
+        }
+        
+    </style>
+</head>
+<body class="layui-container">
+<!-- 页头 -->
+
+<div class="layui-header layui-fluid">
+    <div class="" style="display:flex;flex-direction:row;justify-content:space-between;">
+        <!-- LOGO -->
+        <div class="">
+            <a class="logo" href="index.htm">
+                <img src="static/logo.jpg" style="height: 32px;width: auto;">
+                <!-- <h1><strong>MrDoc</strong></h1> -->
+            </a>
+        </div>
+        <!-- 搜索框 -->
+        <div style="margin:12px;" class="layui-hide-xs">
+            <form method="get" action="/search/" target="_blank">
+            <div class="layui-input-inline">
+                <input class="layui-input mrdoc-search-input" placeholder="搜索文集或文档" name="kw">
+                <button type="submit" style="position: absolute;top:12px;right: 8px;border: none;background-color: white;">
+                    <i class="layui-icon layui-icon-search"></i>
+                </button>
+            </div>
+            </form>
+        </div>
+        <div class="layui-hide-lg layui-hide-md layui-hide-sm" style="margin:20px;">
+            <a href="search/index.htm">
+                <i class="layui-icon layui-icon-search" style="font-size: 24px;"></i>
+            </a>
+        </div>
+        
+        <!-- 新建文档按钮 -->
+        <div class="layui-hide-xs" style="">
+            <ul class="layui-nav" style="">
+                <li class="layui-nav-item">
+                    <a>
+                        <i class="layui-icon layui-icon-add-circle" style="color:black;"></i> <span>新建</span>
+                    </a>
+                    <dl class="layui-nav-child">
+                        
+                        <dd>
+                            <a href="user/login/index.htm" target="_blank">
+                                <img src="static/icon_img/create-doc-icon.svg" height="14px" width="14px">
+                                <span class="layui-hide-xs">新建文档</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <!-- 用户菜单 -->
+        <div class="">
+            <ul class="layui-nav layui-layout-right">
+                
+                <li class="layui-nav-item">
+                <a href="javascript:void(0);">
+                <i class="layui-icon layui-icon-username"></i> 游客
+                </a>
+                <dl class="layui-nav-child">
+                <!-- <dd><a href="">基本资料</a></dd> -->
+                    
+                    <dd><a href="user/register/index.htm">注册</a></dd>
+                    <dd><a href="user/login/index-1.htm">登录</a></dd>
+                    
+                </dl>
+            </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 页头结束 -->
+
+<!-- 筛选栏 -->
+<div class="layui-container" style="margin-top: 10px;">
+    <!-- 表单风格开始 -->
+    <div class="layui-row">
+        <form class="index-control layui-form" style="float: right;" lay-filter="filter-project-form">
+            <div class="layui-form-item">
+                <!-- 筛选开始 -->
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                        <select name="role" lay-verify="" id="sel-role">
+                            <option value="">筛选</option>
+                            
+                            <option value="0">公开文集</option>
+                            <option value="3">访问码文集</option>
+                            
+                        </select>
+                    </div>
+                    <div class="layui-input-inline">
+                        <select name="sort" lay-verify="" id="sel-sort">
+                            <option value="">排序</option>
+                            <option value="0">时间升序</option>
+                            <option value="1">时间降序</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- 筛选结束 -->
+                <!-- 切换开始 -->
+                <div class="layui-inline">
+                    <div class="layui-input-inline" style="width: 40px;">
+                        <a href="javascript:void(0);" id="switch-grid-list"><i class="layui-icon layui-icon-align-left"></i></a>
+                    </div>
+                </div>
+                <!-- 切换结束 -->
+            </div>
+        </form>
+    </div>
+    <!-- 表单风格结束 -->
+</div>
+
+<!-- 搜索结果提示 -->
+
+
+<!-- 主体 -->
+<div class="layui-container project-list-content" style="display:flex;flex-wrap:wrap;">
+    <!-- 遍历文集列表 -->
+    
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-1/index.htm" title="迷男方法">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> 迷男方法</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：迷男方法 视频课程 售价10元</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">《谜男方法》是大辣出版股份有限公司2007年出版的图书，作者…</span>
+                          <span class="tooltip-content clearfix">《谜男方法》是大辣出版股份有限公司2007年出版的图书，作者是谜男。《谜男方法》该书详细讲解了男人把妹的流程M3模型，把从认识到发生关系分解为三个阶段：吸引、舒适感和诱惑，让把妹成为一门系统的科学。 </span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-1/index.htm" title="迷男方法">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">迷男方法</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">《谜男方法》是大辣出版股份有限公司2007年出版的图书，作者…</span> -->
+                                《谜男方法》是大辣出版股份有限公司2007年出版的图书，作者是谜男。《谜男方法》该书详细讲解了男人把妹的流程M3模型，把从认识到发生关系分解为三个阶段：吸引、舒适感和诱惑，让把妹成为一门系统的科学。 
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-3/index.htm" title="神撩术-欧阳浮夸">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> 神撩术-欧阳浮夸</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：神撩术 视频课程 售价20元</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">一本聊天的启蒙书。…</span>
+                          <span class="tooltip-content clearfix">一本聊天的启蒙书。</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-3/index.htm" title="神撩术-欧阳浮夸">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">神撩术-欧阳浮夸</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">一本聊天的启蒙书。…</span> -->
+                                一本聊天的启蒙书。
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-4/index.htm" title="挽回的本质及如何挽回">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> 挽回的本质及如何挽回</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：前言</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">挽回的本质及如何挽回…</span>
+                          <span class="tooltip-content clearfix">挽回的本质及如何挽回</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-4/index.htm" title="挽回的本质及如何挽回">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">挽回的本质及如何挽回</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">挽回的本质及如何挽回…</span> -->
+                                挽回的本质及如何挽回
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-5/index.htm" title="挽回">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> 挽回</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：四，详解“二次吸引”</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">挽回…</span>
+                          <span class="tooltip-content clearfix">挽回</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-5/index.htm" title="挽回">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">挽回</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">挽回…</span> -->
+                                挽回
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-6/index.htm" title="诫律-全球最经典恋爱圣经">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> 诫律-全球最经典恋爱圣经</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：12项重点提示</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">女性恋爱教程…</span>
+                          <span class="tooltip-content clearfix">女性恋爱教程</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-6/index.htm" title="诫律-全球最经典恋爱圣经">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">诫律-全球最经典恋爱圣经</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">女性恋爱教程…</span> -->
+                                女性恋爱教程
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="check_viewcode/index.htm" title="把妹那些事儿-jacob">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #1E9FFF;"></i> 把妹那些事儿-jacob</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：第七章 特殊案例下两性关系的突变 </p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">把妹那些事儿-jacob…</span>
+                          <span class="tooltip-content clearfix">把妹那些事儿-jacob</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="check_viewcode/index.htm" title="把妹那些事儿-jacob">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-key" style="font-size: 30px;color: #1E9FFF;"></i> 
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">把妹那些事儿-jacob</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">把妹那些事儿-jacob…</span> -->
+                                把妹那些事儿-jacob
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-8/index.htm" title="小王子-圣埃克苏佩里（法）">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> 小王子-圣埃克苏佩里（法）</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：小王子 电影 2015版</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">遥远星球上的小王子与玫瑰吵架负气出走，在各星球漫游中，小王子…</span>
+                          <span class="tooltip-content clearfix">遥远星球上的小王子与玫瑰吵架负气出走，在各星球漫游中，小王子遇到了很多人，最后来到地球上，试图治愈孤独和痛苦。他遇到狐狸。懂得了只有爱，才是最高的哲学。
+</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-8/index.htm" title="小王子-圣埃克苏佩里（法）">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">小王子-圣埃克苏佩里（法）</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">遥远星球上的小王子与玫瑰吵架负气出走，在各星球漫游中，小王子…</span> -->
+                                遥远星球上的小王子与玫瑰吵架负气出走，在各星球漫游中，小王子遇到了很多人，最后来到地球上，试图治愈孤独和痛苦。他遇到狐狸。懂得了只有爱，才是最高的哲学。
+
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-9/index.htm" title="手把手教你玩脱口秀 -〔美〕格雷格·迪安">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> 手把手教你玩脱口秀 -〔美〕格雷格·迪安</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：它还没有文档……</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">如何讲笑话…</span>
+                          <span class="tooltip-content clearfix">如何讲笑话</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-9/index.htm" title="手把手教你玩脱口秀 -〔美〕格雷格·迪安">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">手把手教你玩脱口秀 -〔美〕格雷格·迪安</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">如何讲笑话…</span> -->
+                                如何讲笑话
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-10/index.htm" title="冷读术 ">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> 冷读术 </p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：冷读常用的100例句</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">此文集没有填写简介</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-10/index.htm" title="冷读术 ">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">冷读术 </strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                此文集没有填写简介
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="check_viewcode/index-1.htm" title="极限话术">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #1E9FFF;"></i> 极限话术</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：灵魂创造者情感经历</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">极限话术…</span>
+                          <span class="tooltip-content clearfix">极限话术</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="check_viewcode/index-1.htm" title="极限话术">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-key" style="font-size: 30px;color: #1E9FFF;"></i> 
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">极限话术</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">极限话术…</span> -->
+                                极限话术
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-12/index.htm" title="PALY连招-乌鸦救赎">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> PALY连招-乌鸦救赎</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：PALY连招第一招----自我引导</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">以下内容为本人情感经历感想，当你做到足够自信，足够Man的时…</span>
+                          <span class="tooltip-content clearfix">以下内容为本人情感经历感想，当你做到足够自信，足够Man的时候，九连招实际可以一气呵成。</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-12/index.htm" title="PALY连招-乌鸦救赎">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">PALY连招-乌鸦救赎</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">以下内容为本人情感经历感想，当你做到足够自信，足够Man的时…</span> -->
+                                以下内容为本人情感经历感想，当你做到足够自信，足够Man的时候，九连招实际可以一气呵成。
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+        <!-- 网格布局 -->
+        <div class="layui-col-md3 layui-col-xs12 project-item">
+            <a href="project-13/index.htm" title="泡学达人圣经-型男">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        
+                        <p class="layui-elip" style="font-weight: 700;"><i class="layui-icon layui-icon-circle-dot" style="color: #5FB878;"></i> 泡学达人圣经-型男</p>
+                        
+                    </div>
+                  <div class="layui-card-body" style="font-size: 12px;">
+                      <p class="layui-word-aux layui-elip">作者： PUAshow </p>
+                      <p class="layui-word-aux layui-elip">最新：第五章 第二十一天~第二十五天</p>
+                      <p class="tooltip layui-word-aux">简介：
+                          
+                          <span class="">我们在这里干嘛？
+
+我原本不想写这本书。
+
+其实，我以为我绝…</span>
+                          <span class="tooltip-content clearfix">我们在这里干嘛？
+
+我原本不想写这本书。
+
+其实，我以为我绝对不会写这本书。
+
+我写这本书跟你拿起来阅读一样不好意思。没关系，这表示我们是同一挂的。
+
+容我告诉你为什么我觉得很糗，你也觉得很糗，然后进</span>
+                          
+                      </p>
+                  </div>
+                </div>
+            </a>
+        </div>
+        <!-- 网格布局结束 -->
+        <!-- 列表布局开始 -->
+        <div class="project-item-list layui-row layui-hide">
+            <a href="project-13/index.htm" title="泡学达人圣经-型男">
+                <div class="layui-col-md1 layui-col-xs2" style="height: 100%;;text-align: center;display: flex;display: -webkit-flex;justify-content: center;align-items:center;">
+                    
+                    <i class="layui-icon layui-icon-read" style="font-size: 30px;color: #5FB878;"></i>
+                    
+                </div>
+                <div class="layui-col-md11 layui-col-xs10">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-elip">
+                            <strong class="layui-elip">泡学达人圣经-型男</strong>
+                        </div>
+                      <div class="layui-card-body layui-word-aux layui-elip">
+                            <p class="">
+                              <i class="layui-icon layui-icon-user"></i> baizss
+                            </p>
+                            <p class="tooltip layui-word-aux">
+                                
+                                <!-- <span class="">我们在这里干嘛？
+
+我原本不想写这本书。
+
+其实，我以为我绝…</span> -->
+                                我们在这里干嘛？
+
+我原本不想写这本书。
+
+其实，我以为我绝对不会写这本书。
+
+我写这本书跟你拿起来阅读一样不好意思。没关系，这表示我们是同一挂的。
+
+容我告诉你为什么我觉得很糗，你也觉得很糗，然后进
+                                
+                            </p>
+                      </div>
+                    </div>
+                </div>
+                
+            </a>
+        </div>
+        <!-- 列表布局结束 -->
+    
+    
+</div>
+
+<!-- 主体结束 -->
+<!-- 分页 -->
+<div class="layui-row project-list-page" style="text-align: center;">
+    <div class="layui-box layui-laypage layui-laypage-default">
+            <!-- 上一页 -->
+            
+                <a href="javascript:;" class="layui-btn layui-btn-xs layui-btn-disabled">上一页</a>
+            
+            <!-- 当前页 -->
+            <span class="layui-laypage-curr">
+                <em class="layui-laypage-em"></em>
+                <em>1/2</em>
+            </span>
+            <!-- 下一页 -->
+            
+                <a href="index-1.htm?page=2&kw=&sort=&role=-1" class="layui-btn layui-btn-xs layui-btn-normal">下一页</a>
+            
+    </div>
+</div>
+<!-- 分页结束 -->
+
+<!-- 页脚 -->
+<div class="layui-footer" style="border-top: 1px #e6e6e6 solid;text-align:center;margin-top:10px;width:100%;">
+    <div style="margin-top:10px;">
+        © <a href="https://zmister.com/mrdoc/">MrDoc 2019-2020</a>&nbsp;|&nbsp;
+        <a href="https://zmister.com" target="_blank">州的先生</a>出品 |
+        <a href="sitemap.xml" target="_blank">网站地图</a>
+    </div>
+    
+    <div style="margin-top:5px;margin-bottom: 5px;">
+        <a href="http://beian.miit.gov.cn/" target="_blank">浙ICP备17042667号-4</a>
+    </div>
+    
+</div>
+<!-- 页脚结束 -->
+
+<script src="static/jquery/3.1.1/jquery.min.js"></script>
+<script src="static/layui/layui.all.js"></script>
+
+    <script>
+        $.ajaxSetup({
+            data: {csrfmiddlewaretoken: 'msHRKLJ478DQXcSz8mLrW20Di1L7WFr2J0J27XAplwl5ZMb0OALVMWAHvo8irFB0' },
+        });
+        var layer = layui.layer;
+        var form = layui.form;
+        function positionFooter() {
+            // 获取页脚的高度
+            footerHeight = $(".layui-footer").height();
+            // 获取页脚的高度
+            /*
+                scrollTop() 设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离
+            */
+            footerTop = ($(window).scrollTop() + $(window).height() - footerHeight - 20)+"px";
+            // console.log("页脚高度：",footerHeight)
+            // console.log(footerTop)
+            // console.log($(".layui-header").height()+$(".layui-container").height())
+            // console.log("窗口高度：",$(window).height())
+            //如果页面内容高度小于屏幕高度，div#footer将绝对定位到屏幕底部，否则div#footer保留它的正常静态定位
+            if(($(".layui-header").height() + $(".index-control").height() + $(".project-list-content").height() + $(".project-list-page").height() + 16) < $(window).height()) {
+                console.log("页脚置底")
+                $(".layui-footer").css({ position: "absolute",left:"0" }).stop().css({top:footerTop});
+            }else{
+                $(".layui-footer").css({ position: ""})
+            }
+        };
+        $(window).bind("load", function() {
+            // 设置页脚位置
+            var footerHeight = 0;
+            var footerTop = 0;
+            positionFooter();
+            //$(window).scroll(positionFooter).resize(positionFooter);
+            //设置条件栏选中值
+            var url = layui.url();
+            // console.log(url)
+            $("#sel-role").val(url.search.role);
+            $("#sel-sort").val(url.search.sort);
+            layui.form.render('select');
+        });
+
+        // 侦听Select下拉框的选择事件
+        form.on('select()', function(data){
+            var filter_data = form.val("filter-project-form");
+            console.log(filter_data)
+            window.location.href = '/?sort=' + filter_data['sort'] + '&role=' + filter_data['role'] + '&kw=' 
+        });  
+    </script>
+    <script>
+        
+        //创建新文集
+        createPro = function () {
+            layer.open({
+                type:1,
+                title:'新建文集',
+                area:'300px;',
+                id:'createPro',//配置ID
+                content: $('#create-project-div'),
+                btn:['确定','取消'], //添加按钮
+                btnAlign:'c', //按钮居中
+                yes:function (index,layero) {
+                    layer.load(1)
+                    data = {
+                        'pname':$("#pname").val(),
+                        'desc':$("#desc").val(),
+                        'role':$("#project-role").val(),
+                    }
+                    $.post("/create_project/",data,function(r){
+                        if(r.status){
+                            window.location.reload();
+                        }else{
+                            //创建失败，提示
+                            console.log(r)
+                            layer.closeAll('loading')
+                            layer.msg(r.data)
+                        }
+                    })
+                },
+            });
+        };
+        //修改文集
+        modifyPro = function(pro_id){
+            layer.open({
+                type:1,
+                title:'修改文集',
+                area:'300px;',
+                id:'createPro',//配置ID
+                content:'<div style="padding: 20px;"><input class="layui-input" type="text" id="pname" style="margin-bottom:10px;" placeholder="输入文集名" required  lay-verify="required"><textarea name="desc" id="desc" placeholder="输入文集简介" class="layui-textarea"></textarea></div>',
+                btn:['确定','取消'], //添加按钮
+                btnAlign:'c', //按钮居中
+                yes:function (index,layero) {
+                    layer.load(1);
+                    data = {
+                        'pro_id':pro_id,
+                        'name':$("#pname").val(),
+                        'desc':$("#desc").val(),
+                    }
+                    $.post("/modify_pro/",data,function(r){
+                        layer.closeAll("loading");
+                        if(r.status){
+                            //修改成功，刷新页面
+                            window.location.reload();
+                        }else{
+                            //修改失败，提示
+                            // console.log(r)
+                            layer.msg(r.data)
+                        }
+                    })
+                },
+            });
+        };
+        //修改用户密码
+        changePwd = function(uid,username){
+            layer.open({
+                type:1,
+                title:'修改密码',
+                area:'300px;',
+                id:'changePwd',
+                content:'<div style="padding:10px 0 0 20px;">修改用户[' + username + ']的密码：</div><div style="padding: 20px;"><input class="layui-input" type="password" id="newPwd1" style="margin-bottom:10px;" placeholder="输入新密码" required  lay-verify="required"><input class="layui-input" type="password" id="newPwd2" placeholder="再次确认新密码" required  lay-verify="required"></div>',
+                btn:['确认修改','取消'],
+                yes:function (index,layero) {
+                    layer.load(1);
+                    data = {
+                        'password':$("#newPwd1").val(),
+                        'password2':$("#newPwd2").val(),
+                    }
+                    $.post("/user/modify_pwd",data,function(r){
+                        layer.closeAll("loading");
+                        if(r.status){
+                            //修改成功
+                            window.location.reload();
+                            //layer.close(index)
+                        }else{
+                            //修改失败，提示
+                            //console.log(r)
+                            layer.msg(r.data)
+                        }
+                    })
+                },
+            })
+        };
+        //切换文集列表和网格
+        $("#switch-grid-list").click(function(){
+            // 切换按钮图标
+            $(this).children("i").toggleClass("layui-icon-align-left layui-icon-app");//切换图标
+            // 切换class
+            $(".project-item").toggleClass("layui-hide")
+            $(".project-item-list").toggleClass("layui-hide")
+            // 重新计算底部
+            var footerHeight = 0;
+            var footerTop = 0;
+            positionFooter();
+        });
+    </script>
+    <!-- 统计代码开始 -->
+        
+            <script type="text/javascript" src="//js.users.51.la/20830315.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+        
+    <!-- 统计代码结束 -->
+
+    <!-- 新建文集div块 -->
+    <div style="padding: 20px;display:none;" id="create-project-div">
+        <input class="layui-input" type="text" id="pname" style="margin-bottom:10px;" placeholder="输入文集名" required="" lay-verify="required">
+        <textarea name="desc" id="desc" placeholder="输入文集简介，不超过100个字，超出将被截断" maxlength="100" class="layui-textarea"></textarea>
+        <div class="layui-form-item" style="margin-top:10px;">
+            <label class="layui-form-label" style="text-align:left;padding:9px 0px;">文集权限</label>
+            <div class="layui-input-block">
+                <select name="project-role" lay-verify="" class="layui-select" id="project-role">
+                    <!--<option value="">选择文集权限</option>-->
+                    <option value="0">公开</option>
+                    <option value="1">私密</option>
+                </select>
+            </div>
+        </div>
+        <div style="color:red;font-size:12px;">*在可个人中心对文集权限进行进一步控制</div>
+    </div>
+    <!-- 结束新建文集div块 -->
+
+</body>
+</html>

@@ -1,0 +1,1368 @@
+﻿<!-- 继承自模板：app_doc/docs_base.html -->
+
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 14px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="max-age=7200">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="第七章 增加联系感,神撩术-欧阳浮夸,PUAshow,泡学,迷男方法,泡学chat">
+    <meta name="description" content="当你前面和妹子相互交换了彼此之间的信息之后，妹子的潜意识就会默认你和她是熟人，不再是陌生人，因为你们相互了解，而且你们的聊天还在交换性的去聊你们日常的生活，就能建立出一个舒适的聊天氛围。
+
+有了舒适的">
+    <title>第七章 增加联系感 - 神撩术-欧阳浮夸 - 泡学chat书库 </title>
+    <link href="../../static/layui/css/layui-1.css?version=0.6.1" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/editor.md/css/editormd.css?version=0.6.1">
+    
+
+    <link href="../../static/viewerjs/viewer.min.css?version=0.6.1" rel="stylesheet">
+    <link rel="icon" href="../../static/search/mrdoc_logo_300.png" sizes="192x192">
+    <link href="../../static/mrdoc/mrdoc.css?version=0.6.1" rel="stylesheet">
+    <style>
+        /*一级无序li显示实心圆点*/
+        .doc-content ul li{
+            list-style:disc;
+        }
+        /*二级无序li显示空心圆点*/
+        .doc-content ul > li > ul > li{
+            list-style-type: circle;
+        }
+        /*有序li显示数字*/
+        .doc-content ol li{
+            list-style-type: decimal;
+        }
+        .doc-content ol ol ul,.doc-content ol ul ul,.doc-content ul ol ul,.doc-content ul ul ul {
+            list-style-type: square;
+        }
+        /* 三级及以下无序li显示小方块 */
+        .doc-content ul ul ul li{
+            list-style-type: square;
+        }
+        /* 下拉目录隐藏li样式 */
+        .editormd-toc-menu ul.markdown-toc-list li{
+            /*list-style:none;*/
+        }
+        /* 弹出框文档目录样式 */
+        ul.markdown-toc-list{
+            list-style-position:inside;
+        }
+        ul.markdown-toc-list li{
+            list-style: none!important;
+            line-height: 24px;
+        }
+        ul.markdown-toc-list > li > ul > li,ul.markdown-toc-list > li > ul li{
+            padding-left:15px;
+        }
+        ul.markdown-toc-list a{
+            /* text-decoration: underline!important; */
+        }
+        /* 块级代码和行内代码去除边框 */
+        .markdown-body p code{
+            border:none;
+        }
+        /* HTML预览样式 */
+        .markdown-body h1{ 
+            font-size: 1.7em;
+        }
+        .markdown-body h2{
+            font-size: 1.5em;
+        }
+        .markdown-body h3{
+            font-size: 1.25em;
+        }
+        .markdown-body h4{
+            font-size: 1em;
+        }
+        .markdown-body h5{
+            font-size: .875em;
+        }
+        .markdown-body h6{
+            font-size: .85em;
+        }
+        
+        .markdown-body p img{
+            max-width: 350px;
+        }
+        
+        #url_qrcode img{
+            margin: auto;
+        }
+        /* 文档代码块样式 */
+        ol.linenums li{ 
+            width: max-content;
+        }
+        pre.linenums{
+            max-height: 500px;
+        }
+        li.L1, li.L3, li.L5, li.L7, li.L9 {
+            background: none !important;
+        }
+
+        /* layui弹出框颜色 */
+        .layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+            border-bottom: 2px solid #333;
+        }
+        .layui-tab-brief>.layui-tab-title .layui-this{
+            color: #333;
+        }
+        /* 覆盖vditor样式 */
+        .vditor-outline__item{
+            padding: 0;
+            padding-bottom: 5px;
+            color: #333;
+        }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="doc layui-fluid" style="padding-left:0px;">
+    <!-- 左侧目录栏 -->
+    <div class="doc-summary">
+        <!-- 文档搜索 -->
+        <form action="/project-3/" method="get">
+            <div id="doc-search-input">
+                <input type="text" name="kw" placeholder="输入并回车搜索" value="" class="layui-input doc-search-input">
+            </div>
+        </form>
+        <!-- 文集名称 -->
+        <div class="project-title">
+            <a href="../index.htm">神撩术-欧阳浮夸
+                
+            </a>
+            <p>
+                
+            </p>
+        </div>
+        <hr>
+        <!-- <div style="margin-left:15px;">
+            <a href="javascript:void(0);" onclick="openDocTree()"><i class="fa fa-bars"></i> 展开</a>
+            <a href="javascript:void(0);" onclick="closeDocTree()"><i class="fa fa-bars"></i> 折叠</a>
+        </div> -->
+        
+        <!-- 遍历文集大纲 -->
+        <!-- 如果文集的文档数量超过999，使用异步加载文集目录 -->
+        
+        <!-- 文档数量小于999，使用同步加载文集目录 -->
+        <nav>
+            <ul class="summary">
+            <!-- 一级目录 -->
+            
+                <li>
+                    
+                        <a href="../doc-16/index.htm" title="神撩术 视频课程 售价20元">神撩术 视频课程 售价20元</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-17/index.htm" title="前言">前言</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-18/index.htm" title="第一章 聊天的模型">第一章 聊天的模型</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-19/index.htm" title="第二章 聊天的思维">第二章 聊天的思维</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-20/index.htm" title="第三章 聊天的雷区">第三章 聊天的雷区</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-21/index.htm" title="第四章 聊天开场白">第四章 聊天开场白</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-22/index.htm" title="第五章 聊天的话题">第五章 聊天的话题</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-23/index.htm" title="第六章 给予安全感">第六章 给予安全感</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="index.htm" title="第七章 增加联系感">第七章 增加联系感</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-25/index.htm" title="第八章 建立情感">第八章 建立情感</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-26/index.htm" title="第九章 约">第九章 约</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-27/index.htm" title="第十章 聊骚套路">第十章 聊骚套路</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-28/index.htm" title="第十一章 约炮套路">第十一章 约炮套路</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-29/index.htm" title="第十二章 房中秘术">第十二章 房中秘术</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-30/index.htm" title="第十三章 男神蜕变">第十三章 男神蜕变</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-31/index.htm" title="后记 ">后记 </a>
+                    
+                </li>
+            
+            </ul>
+        </nav>
+        
+        <div class="bq">
+            <a href="javascript:void(0);" class="mrdoc-link" id="dashang">本文档使用MrDoc发布</a>
+        </div>
+        <!-- 右下角广告块 -->
+        <!-- 广告代码开始 -->
+        
+            
+                <div class="ad-code">
+                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                </div>
+            
+        
+        <!-- 广告代码结束 -->
+    </div>
+    <!-- 左侧目录栏结束 -->
+
+    <!-- 右侧文档栏 -->
+    <div class="doc-body">
+        <!-- 文档导航 -->
+        <div class="doc-header" role="navigation">
+            <a class="btn pull-left js-toolbar-action" aria-label="" href="javascript:void(0);" title="切换侧边栏">
+                <i class="fa fa-align-justify"></i>
+            </a>
+            <a class="btn pull-left font-small" href="javascript:void(0);" title="缩小字体">
+                <i class="fa fa-font">-</i>
+            </a>
+            <a class="btn pull-left font-large" href="javascript:void(0);" title="放大字体">
+                <i class="fa fa-font">+</i>
+            </a>
+            <a class="btn pull-left font-switch" href="javascript:void(0);" title="切换字体类型">
+                <i class="fa fa-text-height"></i>
+            </a>
+            <!-- 顶部工具栏 -->
+            
+    
+    <!-- 文档目录 -->
+    <div id="toc-container" class='sidebar'></div>
+    
+
+
+            <a class="btn pull-right" aria-label="" href="../../index.htm">
+                <i class="fa fa-home"></i> <span class="layui-hide-xs">首页</span>
+            </a>
+        </div>
+        <!-- 文档主体 -->
+        <div class="doc-body-content">
+            <div class="doc-body-content-div">
+                <!-- 文档内容 -->
+                <div class="doc-content">
+                    <!-- 标题 -->
+                    <div class="doc-info">
+                        <!-- 页面主体头信息 -->
+                        
+    <h1>第七章 增加联系感</h1><hr>
+
+
+                        <!-- 广告代码开始 -->
+                        
+                            
+                                <div class="ad-code">
+                                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                                </div>
+                            
+                        
+                        <!-- 广告代码结束 -->
+                    </div>
+                    <!-- 标题结束 -->
+                    <!-- 正文开始 -->
+                    <div class="markdown-body" id="content" style="padding: 20px;padding-top: 5px;">
+                        
+    <textarea style="display: none;">当你前面和妹子相互交换了彼此之间的信息之后，妹子的潜意识就会默认你和她是熟人，不再是陌生人，因为你们相互了解，而且你们的聊天还在交换性的去聊你们日常的生活，就能建立出一个舒适的聊天氛围。
+
+有了舒适的聊天氛围之后，我们就要建立出让妹子欣赏你，同时你也在欣赏妹子的关系，营造出属于你们两的共同记忆，让两个陌生人从此联系起来。
+
+# 讲故事
+
+怎么建立出让妹子欣赏我们的现象呢？
+
+除了平时的偶尔展示自己的优势之外，讲故事是一个非常好能够让你们两联系起来的技巧。
+
+首先我们先要去学如何去讲好一个故事?
+
+讲故事的手法是什么？兄弟们记住这个顺序：捉住关键点，垫一下—ttA故开放性话题。
+
+捉住关键点，这个关键点可以是我方自己开启，或者她方开启，第三方也行，只要捉住一个关键点，就可以展开话题。
+
+比如说：你也用苹果6,听说这款手机可以折的弯，这个话题是我方开启的，苹果6就是关键点。
+
+妹子说：我平时都喜欢吃外卖，外卖就是关键点，是由她方开启的。
+
+那第三方的呢？听说最近有个男的一次性泡了17个妹子，17个妹子就是关键点。
+
+故事怎么铺垫呢？拿回刚才的例子，抓到了外卖这个关键点，应该怎么样铺垫？你可以说，说到这个吃的，我就想起了一件很搞笑的事，记住这句话，我就想起了一件很搞笑的事，这句话就是这个故事的铺垫，而且这句话是万能的铺垫句。
+
+为什么这样说？你回头可以试试，看到了你的眼睛，我就想起了什么什么，你一说到这个，我就想起了什么什么，来到这个地方，我就想起了什么什么，对不对？绝对的万能铺垫！。
+
+那么怎么样植入故事呢？你可以这样说，说到这个外卖，我就想起了一件很搞笑的事。
+
+妹子会问“什么事？”（一定要等她问）
+
+上次我约了一起创业的几个小伙伴一起来我家打火锅，东西都买好了，我把菜也切好洗好了，正打算大吃一顿的时候却发现。。。
+
+——开始植入故事
+
+妹子会问你“然后呢？”千万别傻逼的一口气说完整个故事，一定要挑起妹子的好奇心，让妹子加入这个故事当中。
+
+接着你就说，最后发现没有煤气了，家里又没有电池炉！我们又饿得不行，最后只好叫外卖了。（故事透露出我会做饭，在创业，有人缘）
+
+植入故事的话一定要言简意赅，取出不必要的内容，不要太啰嗦，集中在吸引力开关才深入，内容里面是&quot;不经意&quot;的开启吸引力开关。
+
+你遇到过什么搞笑的事吗？
+
+你会自己做饭吗？
+
+然后你可以再次为植入新的故事铺垫，其实原本我也很少做饭，因为是在是太忙了，所以只好天天都吃外卖。
+
+# 讲故事的元素
+
+讲故事在泡妞中的作用重中之重，希望兄弟们认真阅读，加以实战，想拿下你喜欢的妹子，指日可待。
+
+和喜欢的女孩子聊天，不管在网络上还是现实面对面中，总会少不了讲一些故事，或者一些你的道听途说，或者一些你本人亲身经历过的，但是，很多时候，同样的一个故事，在不同人的嘴里说出来却有着不同的效果。
+
+想要吸引女孩们的注意，不单是接近她们，说随意说几句话就能成功，相反的，展示你的高价值，然后利用高价值让女孩们对你感兴趣，才是你该知道的。这就是为什么你必须要了解，什么才是泡妞高手吸引高分妹子的地方，对于你遇到的女孩们，读出这些必备的信息，帮助你谱出性的化学反应。
+
+歐陽浮夸导师有一个超棒的方法，直接让你通过手法来表明你的正向价值，高分妹子根本不会发觉你在做什么。
+
+我们可以透过讲一个很棒的故事，达成上面的效果。
+
+丢掉你所有的把妹套路，讲故事的重要性几乎就跟开场白一样，如果你透过正确的方法讲故事，你的优势将会比其他追求者要高出许多。
+
+但是怎么才能讲的一口好故事？
+
+优质的故事由许多元素组成，不像你诉说给你朋友、家人的故事那样，你必须专注在你想展现的髙价值事物上。
+
+我决定列出八个极为简单的方法，让你也能说出吸引女孩的故事。
+
+## 1、言简意赅
+
+当你说故事时，你必须谨记四字真言“言简意赅”。
+
+在网络上，其实没那么多人愿意看你的长篇大论，而且一旦你说的话过多，妹子就会觉得你在故意讨好她。
+
+所以第一件事就是，故事尽量短而且说到重点，不超过1分钟的故事，网络上不超过100个字（真的有这么长，记得分段），如果说超过好几分钟或者字数太多，你必须修改到只留重要的部分（或者直接语首）°
+
+举个简单的例子：今天下去两点左右，我就可以到达我早就已经梦寐以求的香港了，那明星聚集，物质横流的繁荣地带，想想我都觉得好兴奋！
+
+修改一下：下午就要到达香港了，想想都觉得好兴奋！
+
+明白了吗兄弟们？言简意赅，把重要的内容保留就足够了。
+
+## 2、利用好的素材不要乏味
+
+接下来就很简单了，你必须确定你使用的是会让女孩感兴趣的素材，顺便一题，别用任何人身攻击或令人讨厌的字眼，那些哦，呵呵之类的，谁收到了都不爽。
+
+女孩特别喜欢戏剧、冒险与幽默的故事，所以将你的故事融入这些主题里。
+
+例子1:上次我去爬珠穆朗玛峰的时候差点就摔死了。
+
+例子2:我看到你我就想起了我小时候经常被我欺负的同桌。
+
+## 3、展示价值吸引她
+
+开头有说，故事必须展示你的高身份地位，你可以使用任何素材来简洁提及，这些女孩们爱听的特殊才能。
+
+1.被女孩们预选（有别的女孩纸喜欢你）
+
+2.同侪中领导地位（你是老大）
+
+3.冒险能力（喜欢刺激）
+
+4.如何勇敢面对困境（有逆转困境的智慧）
+
+5.积极向上、有趣的生活（不甘于平淡的生活)
+
+6.对朋友有情有义（义气，爱心）
+
+7.有爱心（宠物，小孩）
+
+## 4、不经意的展示而不是炫耀
+
+现在说到利用说故事如何展示高价值，这并不表示你应该自夸。相反的，你应该利用说故事时，间接的说出你的正向价值，直接炫耀的话会引起妹子的反感。
+
+最好的方法就是利用语言来暗地展示你的高价值。
+
+举个例子，我们先假装展示，你是个常被高分妹预选的人。
+
+你绝对不能说出这种话：
+
+“我有个做网红的朋友，她有几十万的粉丝，其实我还跟很多个的网红，小明星约过会，有天我们去吃了海底捞...”（你都觉得这个人炫耀得很欠揍）
+
+相反的，你可以这样说：
+
+“记得那天我和我闺蜜去吃海底捞...”
+
+都在说同样的事情，你可以看看两种说法的差别，后面的说法显现出你的经历，跟高分的女人出门，而且不会让你看起来像在自卖自夸。
+
+## 5、别自言自语
+
+所有的故事，都有一个重点，总而言之，就是把听者钩进你的故事里。
+
+当你讲故事时，钩子必须在第一个对话就下钩，吸引她的注意，并且让她融入你们的对话当中。
+
+例子：“后来真的很可笑。。。”（别说完）
+
+妹子：“后来怎么了？”
+
+## 6、开始故事你来带领
+
+就像开场白一样，你必须先决定整个故事的语调。
+
+当你开始要撩妹时，你应该计划好有趣的话题，这也是你撩妹说故事时要注意的一部份。当你准备好要打开妹子的对话框的时候，你就应该准备好你要说的话题。
+
+举例来说，你应该用这种方使开场：
+
+“好奇怪，昨天我发生一件不可思议的事......”
+
+“真的是太恐怖了......”
+
+## 7、建立互动互动很重要
+
+一个好的故事可以为一个小时的对话铺陈，如果说的恰当，故事会展现出你的个性与背景，而不用你自夸。
+
+重点是要展现出一点朦胧与神秘感，相反的直接说出关于你的事迹，你必须要提出证据，自然而然的女孩们会有点不耐烦。
+
+举些例子，你可以这样说:
+
+奇怪?）
+
+2“我比别人幸运的是，我的工作可以让我有时间做我自己的事...”(你从事什么行业?）
+
+3“从小时候起，我就对女人有戒心...”（你发生了什么事?）
+
+一个好故事就是要让妹子主动参与进来，互动互动互动互动！重要的事情岂止要说三次！千万别你自己一个人在那里傻傻的自言自语。
+
+## 8、不停的练习
+
+你如果没有完美的运用这些细节，你将不会讲得一口好故事，实际去练习，你才能掌握热度！
+
+你可以在我往期公开课的视频或者音频中，看到很多我看似不经意的讲出了一些小故事，你不注意的话你都没有发觉原来我是在讲故事，更不要说是妹子了，她们根本就发觉不了。
+
+在半夜忙完了之后，能够偷偷的在被窝里面刷微信朋友圈，觉得那是一天之中最美好的时光了！”
+
+这个故事才短短的几句话，但是透露出的信息却非常庞大，我来广州干嘛？什么工作这么忙？夜班才能忙完？为什么要偷偷的躲在被窝里玩手机？我也喜欢刷朋友圈？这个时候我是很开心的？
+
+该提示的我都提示了，剩下的兄弟们交给兄弟们的实战吧，实战出真知。
+
+现在你知道方法了...
+
+这八个方法让你讲出一口完美的故事。
+
+记得好的故事包含很多重要的元素，重点是坐下并写出一个拥有以上要素的故事。
+
+如果你在和妹子的交往时讲故事使用得当，就会一步一步建立你的吸引力，这个时候你根本就不需要任何的惯例，话术，你说出来的故事，就是属于你的套路。你就可以用最独特的方式，向女孩们展示你的高身份地位，让妹子对你感兴趣，被你吸引了之后那你对你们这段关系进行建立情感就会变得非常简单。
+
+# 分享你的多彩多姿的生活
+
+除了讲故事之外，我们还有什么更加直观的手法能够直接就吸引到妹子了呢？
+
+有的，人都相信她眼睛能够看到的东西，所以图片或者小视频可以更加直观的展示出你的优势，而这些图片或者小视频的内容你想要吸引到妹子，必须要突出吃喝玩乐这四个字，比如你吃了小龙虾，你去看了电影，你在星巴克或者是你去了外边旅游，给妹子分享你的多彩多姿的生活，她就会被你吸引。讲故事套路
+
+1、女：你在干嘛？
+
+男：刚忙完，最近在写一本书（才能）
+
+女：哇，你还会写书？
+
+男：营销方案，写给合作商的（价值）
+
+女：这么厉害！
+
+2、女：你在干嘛？
+
+男：刚去健身了，准备敷个面膜（生活品质）
+
+女：大男人还敷面膜男：你懂啥，这叫保养女：难怪皮肤这么好
+
+3、男：昨天聚会有个女孩子跑过来问我要了微信（预选)女：哟，这么大魅力男：我加了之后就后悔了女：为什么？
+
+男：她是做保险的
+
+女：哈哈
+
+4、男：最近在练车，认识了个妹子（预选）
+
+女：漂亮不？
+
+男：挺漂亮的，就是不厚道女：怎么不厚道？
+
+男：她被教练骂了，我就帮着劝教练，我被教练骂了她就知道在旁边笑女：哈哈
+
+5、男：刚哥们叫我出去喝酒（人缘）
+
+女：那你去啊
+
+男：还是别了，每次去都被他们敬酒，一轮过来都差不多醉了（雄性领袖）
+
+女：那就别去了呗
+
+6、男：刚刚我朋友又问我借钱了女：很熟的朋友吗？你借了没？
+
+男：挺熟的，借了2000,一般不到万不得已别人都不会轻易的问人借钱，我知道他有困难，能帮多少就帮多少吧（义气)女：他有你这样的朋友真好
+
+7、男：我还想再去一次澳门女：为什么？那边很好玩吗？
+
+男：非常剌激，尤其是蹦极，跳下去的那一刻真的感觉自己超越了生死（冒险能力）
+
+女：那肯定很恐怖
+
+男：很爽啊，下次带你去试试
+
+女：我才不要
+
+男：哈哈，胆小鬼
+
+女：哼
+
+男：丫头你去过最有意思的地方是哪里？
+
+女：某某地方
+
+8、女：你还不睡啊？
+
+男：刚刚忙完，松了一口气女：忙这么晚
+
+男：要赚钱啊，不努力怎么行（积极向上）
+
+女：加油
+
+9、我把我儿子送人了啊？你还有儿子？
+
+对啊，我家的阿拉斯加原来是狗狗啊，干嘛把它送人了？工作太忙了，没时间照顾它（爱心）那你把它送谁了？
+
+给我老妹，我就可以随时回去看它了干嘛不送给我啊你也喜欢狗狗啊喜欢啊
+
+你喜欢什么品种？
+
+10、男：你有什么特别想去的地方吗?女：不知道啊男：那你肯定是个宅女女：对啊，那你呢？
+
+男：我最想再去一次大理，那里的洱海美得像画一样，那里的美食令我流连忘返（生活品质）
+
+女.哇，说得我都想去了
+
+吸引女人的手法有很多，但是真正快速又有效的并不多，以下我教给兄弟们的“骄傲风趣法”，只要你运用得当，那你也能像我一样快速的吸引到你喜欢的妹子。
+
+# 骄傲风趣法
+
+很多把妹达人都清楚，骄傲+风趣=强大的吸引开关
+
+只有自大，会引人反感，只有风趣，像个滑稽的小丑。
+
+女人喜欢自大的男人，特别是漂亮的女人，喜欢那种拽拽的男人，因为自大就是自信的前提，但太自大就显得粗鲁冒犯，如果加入幽默搞笑的元素，女人就不会觉得过分，甚至会着
+
+迷。记住，两者之间一定要有度，自大风趣是一个整体，谁也离不开谁，自大不能过头，否则还是会引人反感，风趣不能过头，风趣过头你依然是个小丑。
+
+这就是一种“调戏”，是闹着玩的，并非真的嘲讽，其实女人都喜欢被调戏，被调戏是女人在恋爱中的角色定位，女人在被调戏的时候获得一种“自己很女人”的感觉。
+
+你敢调戏女人吗？你不敢，你就是不够自信，你敢调戏女人，但你会调戏女人吗？你不会，你就是不够幽默。
+
+没有什么东西比自大+风趣更能传达你的气势、信念、自信、个性，安全感和强大的内心！
+
+自大风趣法分两种，一种是夸耀自己，自夸、自恋、臭美，另一种是贬损对方，挖苦、亏损、奚落，就是一有机会就自恋，臭美，不停地找机会嘲弄和讽刺女孩，但必须是用一种幽默、搞笑的方式。
+
+学会合理运用自大风趣法，可轻松贯穿整个把妹流程。
+
+1，“不知道是这块镜子的问题还是我自己本身的问题，怎么照都是这么帅！”
+
+2，“那么快就开始佩服我了？不要太佩服我，因为佩服我的人太多了，你注定上不了排行榜的。”
+
+3，“你是不是觉得我有点眼熟？你仔细点看，别因为我太帅了而不好意思看太久。”
+
+4,“你是不是又忍不住想我了？害我连续打了好几个喷嚏！”
+
+5，“你说像我这么完美的男人，会不会没朋友啊？”
+
+6，“你喜欢被人赞美吗？喜欢？这么巧，我也喜欢，来，赞我一个。”
+
+7，“我发现你有一个优点。”“什么优点？”“你赞扬我一下我就告诉你。”“你好帅！”“我就说嘛，你的优点就是很诚实！”8，“和我走在一起是你的荣幸，你看周围经过我们身边的女人的眼神，说明她们都在嫉妒你！和我这么优秀的人走在一起你会不会觉得压力很大？”
+
+9，“你知道经过我们身边的女人都是怎么想的吗？她们都在想：哇塞！我又开始相信爱情了！”“为什么？”“她们看见一个如此普通的女人（指着她）都能和一个如此优秀的男人（指着自己）走在一起，她们还会怀疑爱情吗？”
+
+10，“别碰我，我可是贵重物品，碰我要收钱的！”
+
+## 对方
+
+1，“我发现你像两头猪，一头猪已经不够形容到你的蠢了！”
+
+2，“我老妹很笨，我一直都在怀疑，这世界上还有比她更笨的人吗？直到你出现后我非常震惊，哇塞，还真有啊！”
+
+3，“人笨不可怕，可怕的是她还要胖，你说这样跟猪有什么区别？”4，“你这个笨蛋，拿你跟猪相比我觉得简直是污染了猪的智商！”
+
+5，“人怕出名猪怕壮，知道为什么猪怕壮吗？喂〜那你那么壮，你怕不怕？”
+
+6，“你这么喜欢吃，肯定是传说中的。。。不是吃货，吃货是形容长的好看的女孩子的，你这样的只能叫做一一饭桶。”
+
+7，“近墨者黑，近猪者笨。和你一起呆久了，我的智商也变低了。”
+
+8，“天啊，你离我远一点，别跟别人说你认识我，笑得这么没有形象，和你走在一起简直是拉低了我的形象。”
+
+9，“你就是传说中早上睡醒，就想继续躺下去睡午觉的睡货？你是猪吗？”
+
+10，“你确定你是地球人？这么简单都不懂，你是来自火星的吧？”
+
+当你通过讲故事和秀照片和骄傲风情的手法吸引到了妹子
+
+之后，你就需要去和妹子升级关系，否则你永远都不可能和妹子形成情侣关系，也就可以走到了我们的下一章。</textarea>
+
+                    </div>
+                    <!-- 正文结束 -->
+                </div>
+                <hr>
+                <!-- 分享栏 -->
+                <div style="color: rgba(0,0,0,.65);padding-bottom: 10px;margin-top: 10px;">
+                
+<div class="layui-row" style="margin-bottom: 10px;padding-left: 20px;">
+    
+</div>
+
+<div class="layui-row layui-col-space20" style="padding-left: 20px;">
+    <span>
+        <i class="fa fa-user"></i>  PUAshow 
+    </span>
+    <span tooltip="更新于:2020年11月13日 21:08">
+        <i class="fa fa-clock-o"></i> 2020年11月13日 21:08
+    </span>
+
+    <button id="share" class="doc-bottom-btn" tooltip="分享本文档">
+        <i class="fa fa-share-alt"></i> 分享
+    </button>
+
+    
+</div>
+
+
+
+                </div>
+
+                <!-- 广告代码开始 -->
+                
+                    
+                        <div class="ad-code">
+                        <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                        </div>
+                    
+                
+                <!-- 广告代码结束 -->
+
+                
+    
+    <div class="layui-row" style="margin-top: 10px;padding:10px;display:flex;justify-content:space-around;">
+        <!-- <hr> -->
+        <div>
+            
+                <a href="../doc-23/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius"><i class="layui-icon layui-icon-prev "></i>上一篇</a>
+            
+        </div>
+        <div>
+            
+                <a href="../doc-25/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius">下一篇<i class="layui-icon layui-icon-next"></i></a>
+            
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 右侧文档栏结束 -->
+    <!-- 右下角工具按钮 -->
+    <div class="fixed-tool-bar">
+        <div class="toTop"><i class="fa fa-arrow-up"></i></div>
+        
+<!-- 目录 -->
+<div class="tocMenu" style="display: none;"><i class="fa fa-list"></i></div>
+<!-- 分享按钮 -->
+
+
+    </div>
+</div>
+
+<script src="../../static/jquery/3.1.1/jquery.min.js"></script>
+<script src="../../static/layui/layui.all.js"></script>
+<!-- 生成文集目录大纲 -->
+<script>
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: '3uk5LoK8MUemblNyhJRA2qvj4PeBNEYqq2mg8ABt0iWBdV6ZXXR4Sk5nhcBMiE8o' },
+    });
+    // 视频iframe域名白名单
+    var iframe_whitelist = ''.split(',')
+    // 异步生成文集目录
+    getProjectToc = function(){
+        $.post("/get_pro_doc_tree/",{'pro_id':'3'},function(r){
+            $("#loading-project-toc").hide();
+            if(r.status){
+                var toc_str = ""
+                layui.each(r.data,function(index,item){
+                    toc_str += "<li>"
+                    if(item['children'] != undefined){ // 存在二级文档
+                        li = '<div style="display:flex;justify-content:space-between;">' + 
+                            '<a href="/project-'+'3'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                            '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                        '</div>'+
+                        '<ul class="sub-menu toc-close">'
+                        toc_str += li
+                        layui.each(item['children'],function(index,item){// 遍历二级文档
+                            toc_str += '<li>'
+                            if(item['children'] != undefined){ //存在三级文档
+                                li = '<div style="display:flex;justify-content:space-between;">' + 
+                                    '<a href="/project-'+'3'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                                    '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                                '</div>'+'<ul class="sub-menu toc-close">'
+                                toc_str += li
+                                layui.each(item['children'],function(index,item){ // 遍历三级文档
+                                    li = '<li><a href="/project-'+'3'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a></li>'
+                                    toc_str += li
+                                })
+                                toc_str += '</ul>'
+                            }else{// 不存在三级文档
+                                li = '<a href="/project-'+'3'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                                toc_str += li
+                            }
+                            toc_str += '</li>'
+                        })    
+                        toc_str += '</ul>'
+                    }else{//不存在二级文档
+                       li = '<a href="/project-'+'3'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                       toc_str += li
+                    }
+                    toc_str += '</li>'
+                });
+                $('#project-toc').append(toc_str)
+                tagCurrentDoc();
+            }else{
+                layer.msg("获取文集目录失败！")
+            }
+        });
+    };
+    
+
+    //为当前页面的目录链接添加蓝色样式
+    tagCurrentDoc = function(){
+        $("nav li a").each(function (i) {
+            var $me = $(this);
+            var lochref = $.trim(window.location.href); // 获取当前URL
+            var mehref = $.trim($me.get(0).href); 
+            if (lochref.indexOf(mehref) != -1) {
+                // console.log($me,lochref,mehref)
+                $me.closest("li").addClass("active");
+                //展开当前文档的上级目录
+                if($me.parent("li").parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开二级文档目录")
+                    $me.parent("li").parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("div").parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开包含下级的二级文档目录")
+                    $me.parent("div").parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开三级目录")
+                    $me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                // 切换图标
+                $me.parents("ul.sub-menu").prevAll("div").each(function(i){
+                    var $link = $(this);
+                    if($link.children("i").hasClass("fa-chevron-left")){
+                        $link.children("i").toggleClass("fa-chevron-left fa-chevron-down");
+                    }
+                })
+                // 目录的当前文档滚动于目录顶端
+                this.scrollIntoView({ behavior: 'auto', block: "start" });
+            } else {
+                // console.log(lochref,mehref)
+                $me.closest("li").removeClass("active");
+            }
+        });
+    };
+    tagCurrentDoc();
+</script>
+
+<!-- 小屏自动收起左侧文集大纲 -->
+<script>
+    //加载页面时执行一次
+    changeSidebar();
+    //监听浏览器宽度的改变
+    window.onresize = function(){
+        changeSidebar();
+    };
+    function changeSidebar(){
+        // 获取匹配指定的媒体查询
+        var screen_width = window.matchMedia('(max-width: 768px)');
+        //判断匹配状态
+        if(screen_width.matches){
+            //如果匹配到，切换侧边栏
+            //console.log('小屏幕')
+            $("body").addClass("big-page");
+        }else{
+            $("body").removeClass("big-page");
+        }
+    }
+    // 监听文档div点击
+    document.querySelector('.doc-body').addEventListener('click', function (e) {
+        // console.log("点击了div")
+        changeSidebar();
+    });
+</script>
+
+
+<script src="../../static/editor.md/lib/marked.min.js"></script>
+<script src="../../static/editor.md/lib/prettify.min.js"></script>
+<script src="../../static/editor.md/lib/raphael.min.js"></script>
+<script src="../../static/editor.md/lib/underscore.min.js"></script>
+<!-- <script src="/static/editor.md/editormd.min.js?version=0.6.1"></script> -->
+<script src="../../static/editor.md/editormd.js?version=0.6.1"></script>
+
+<script src="../../static/qrcodejs/qrcode.min.js"></script>
+
+
+<!-- 解析Markdown -->
+<script>
+    // EditorMD模式
+    
+        //解析Markdown为HTML
+        editormd.markdownToHTML("content", {
+            htmlDecode      : "style,script,iframe",
+            emoji           : true,  //emoji表情
+            taskList        : true,  // 任务列表
+            tex             : true,  // 科学公式
+            flowChart       : true,  // 流程图
+            sequenceDiagram : true,  // 时序图
+            tocm            : true, //目录
+            toc             :true,
+            tocContainer : "#toc-container",
+            tocDropdown   : false,
+            atLink    : false,//禁用@链接
+
+        });
+    // Vditor模式
+    
+    // 显示分享弹出框
+    $("#share").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','350px'],
+            shadeClose: true,
+            content: $('#share_div')
+          });
+    });
+</script>
+
+<!-- 页面初始化字体设置 -->
+<script>
+    font_stauts = window.localStorage.getItem('font-sans')
+    if(font_stauts == 'serif'){// 字体类型
+        $(".doc-content").toggleClass("switch-font")
+        $("#content").toggleClass("switch-font")
+    }
+    if(window.localStorage.getItem('font-size')){// 字体大小
+        font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        $('#content').css({'font-size':font_size+'rem'})
+    }else{
+        window.localStorage.setItem('font-size',1.0)
+    }
+</script>
+
+<!-- 返回顶部 -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 初始时，“返回顶部”标签隐藏
+        $(".toTop").hide();
+        $(window).scroll(function() {
+            // 若滚动的高度，超出指定的高度后，“返回顶部”的标签出现。
+            if($(document).scrollTop() >= 140) {
+                $(".toTop").show();
+            } else {
+                $(".toTop").hide();
+            }
+        })
+        // 绑定点击事件，实现返回顶部的效果
+        $(".toTop").click(function() {
+            $(document).scrollTop(0);
+        });
+        // 生成当前网页链接
+        $("input[name=current_url]").val(document.URL)
+    });
+</script>
+
+<!-- 切换隐藏侧边栏 -->
+<script>
+    // 切换侧边栏
+    $(function(){
+        $(".js-toolbar-action").click(toggleSidebar);
+    });
+    //切换侧边栏显示隐藏
+    function toggleSidebar(){
+        console.log("切换侧边栏")
+        $("body").toggleClass("big-page");
+        return false;
+    }
+</script>
+
+<!-- 切换内容字体 -->
+<script>
+    //切换文档内容字体类型
+    $(function(){
+        $('.font-switch').click(switchFont);
+    });
+    function switchFont(){
+        if(font_stauts == 'serif'){
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','sans')
+        }else{
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','serif')
+        }
+    };
+    //放大字体
+    $(function(){
+        $('.font-large').click(largeFont);
+    });
+    function largeFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        if(parseFloat(font_size) < 1.4){
+            size = parseFloat(font_size) + 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+    //缩小字体
+    $(function(){
+        $('.font-small').click(smallFont);
+    });
+    function smallFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        if(parseFloat(font_size) >= 0.6){
+            size = parseFloat(font_size) - 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+
+    // 显示打赏图片
+    $("#dashang").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['480px','400px'],
+            shadeClose: true,
+            content: $('#dashang_img')
+          });
+    });
+</script>
+
+<!-- 分享选项卡模板 -->
+<div id="share_div" style="display: none;">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">微信扫一扫</li>
+            <li>复制链接</li>
+        </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        <div class="layui-tab-item layui-show" align='center'>
+            <p style="font-weight: 700;margin-bottom: 10px;">手机扫一扫进行分享</p>
+            <div id="url_qrcode"></div>
+        </div>
+        <div class="layui-tab-item" align='center'>
+            <input type="text" id="copy_crt_url" name="current_url" class="layui-input"><br>
+            <button class="layui-btn layui-btn-radius layui-btn-xs" style="background-color: #333;" onclick="copyUrl();">复制链接</button>
+        </div>
+    </div>
+    </div> 
+</div>
+
+<!-- 打赏选项卡模板 -->
+<div id="dashang_img" style="display: none;">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+          <li class="layui-this">微信</li>
+          <li>支付宝</li>
+          <li>QQ支付</li>
+          <li>PayPal</li>
+          <li>项目源码</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px;">
+          <div class="layui-tab-item layui-show" align='center'>
+            <img src="../../static/dashang/dashang_wx.webp" style="width: 300px;height: auto;">
+          </div>
+
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_alipay.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_qq.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <a href="https://paypal.me/zmister" target="_blank">
+                <img src="../../static/dashang/dashang_paypal.png" style="width: 280px;height: auto;">
+            </a>
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <p><a href="https://github.com/zmister2016/MrDoc" target="_blank">GitHub：https://github.com/zmister2016/MrDoc</a></p>
+            <br>
+            <p><a href="https://gitee.com/zmister/MrDoc" target="_blank">码云：https://gitee.com/zmister/MrDoc</a> </p>
+            <br>
+            <p><a href="https://zmister.com" target="_blank">作者博客：https://zmister.com</a></p>
+          </div>
+        </div>
+      </div> 
+  </div>
+  
+<script>
+    // 展开收起左边目录
+    $(function(){
+        // $(".switch-toc").click(SwitchToc);
+        $("body").on('click','.switch-toc',SwitchToc)
+    });
+    function SwitchToc(i){
+        console.log("点击了")
+        var $me = $(this);
+        $(this).parent().next("ul").toggleClass("toc-close"); //切换展开收起样式
+        $(this).toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+    };
+
+    // 展开文档树
+    function openDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).removeClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+        
+    };
+    // 收起文档树
+    function closeDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).addClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+    };
+    // 文档分享 - 复制链接
+    copyUrl = function(){
+        var crt_url_val = document.getElementById("copy_crt_url");
+        crt_url_val.select();
+        window.clipb
+        document.execCommand("Copy");
+        layer.msg("链接复制成功！")
+    }
+    // 生成二维码
+    var qrcode = new QRCode("url_qrcode", {
+        text: document.URL,
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
+<!-- 统计代码开始 -->
+    
+        <script type="text/javascript" src="//js.users.51.la/20830315.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+    
+<!-- 统计代码结束 -->
+
+<!-- 下载选项卡模板 -->
+<div id="download_div" style="display: none;">
+    <div class="layui-row" style="margin: 10px;">
+        <a class="" download='第七章 增加联系感.md' href="../../download_doc_md/24/index.htm" target="_blank">
+            <i class="fa fa-download"></i> 下载Markdown文件
+        </a>
+    </div>
+</div>
+<!-- 分享文档选项卡模板 -->
+<div id="share_doc_div" style="display: none;">
+    <div class="layui-tab-content">
+        <div class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分享</label>
+                <div class="layui-input-block">
+                  <input type="checkbox" name="switch" lay-skin="switch" lay-text="开启|关闭" lay-filter="share-switch">
+                </div>
+            </div>
+            
+            <div class="layui-form" style="display: none;" id="share-link">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">链接</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="share_link" class="layui-input" id="share_link" disabled="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="layui-form-item" style="display:none;" id="share-type">
+                <label class="layui-form-label">类型</label>
+                <div class="layui-input-block">
+                    
+                    <input type="radio" name="share_type" value="0" title="公开" checked="" lay-filter="share_type">
+                    <input type="radio" name="share_type" value="1" title="私密" lay-filter="share_type">
+                    
+                </div>
+                
+            </div>
+            <div class="layui-form" style="display:none;" id="share_value_item">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="share_value" value='' disabled="" class="layui-input" id="share_doc_value">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        <button class="layui-btn layui-btn-xs layui-btn-primary" id="updateShareValue"><i class="fa fa-repeat"></i> 更新密码</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/toc/doctoc.js"></script>
+<script src="../../static/viewerjs/viewer.min.js"></script>
+<script>
+    var layer = layui.layer;
+    var form = layui.form;
+    // 手机屏幕上默认最小化目录
+    if(window.outerWidth < 1300){
+        $(".sidebar").toggleClass("doc-toc-hide");
+    }
+    // 切换文档目录显示与否
+    $(".tocMenu").click(function() {
+        console.log("隐藏文档目录")
+        $(".sidebar").toggleClass("doc-toc-hide");
+    });
+    
+    //修改a标签链接新窗口打开
+    $('#content').on('click','a',function(e){
+        e.target.target = '_blank';
+    });
+    
+    // 图片放大显示
+    var img_options = {
+        url: 'data-original',
+        fullscreen:false,//全屏
+        rotatable:false,//旋转
+        scalable:false,//翻转
+        button:false,//关闭按钮
+        toolbar:false,
+        title:false,
+      };
+    var viewer = new Viewer(document.getElementById('content'), img_options);
+
+    // 显示文档下载弹出框
+    $("#download_doc").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','150px'],
+            shadeClose: true,
+            content: $('#download_div')
+          });
+    });
+    
+    // 生成随机分享码
+    function randomWord(randomFlag, min, max){
+        var str = "",
+            range = min,
+            arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        // 随机产生
+        if(randomFlag){
+            range = Math.round(Math.random() * (max-min)) + min;
+        }
+        for(var i=0; i<range; i++){
+            pos = Math.round(Math.random() * (arr.length-1));
+            str += arr[pos];
+        }
+        return str;
+    };
+    
+    // 更新文档分享状态
+    function updateDocShare(data){
+        $.post("/share_doc/",data,function(r){
+            if(r.status){
+                layer.msg("设置成功",{offset: 't'})
+                console.log(r.data)
+                $("input[name=share_link]").val(document.domain + '/share_doc/?token=' + r.data.doc)
+            }else{
+                layer.msg("设置出错")
+            }
+        })
+    }
+
+    // 分享文档
+    $("#shareDoc").click(function(){
+        layer.open({
+            type:1,
+            title:'分享文档:第七章 增加联系感',
+            content:$("#share_doc_div"),
+            area:'450px',
+            // btn:['创建分享','取消'],
+            success : function(index, layero) { // 成功弹出后回调
+                form.render();
+            },
+        })
+    })
+    
+
+    var share_data = {
+        'id':'24',
+    }
+
+    //监听分享框分享类型的单选事件
+    form.on('radio(share_type)', function(data){
+    //   console.log(data.value); //被点击的radio的value值
+      if(data.value == 0){ // 公开
+            $("#share_value_item").css("display","none");
+            share_data['share_type'] = 0;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+            
+      }else if(data.value == 1){ // 私密
+            $("#share_value_item").css("display","block");
+            
+                $("#share_doc_value").val(randomWord(false,4))
+            
+            share_data['share_type'] = 1;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+      }
+    });
+
+    // 监听分享开关事件
+    form.on('switch(share-switch)', function(data){
+        console.log(data.elem.checked); //开关是否开启，true或者false
+        if(data.elem.checked){ // 开启
+            console.log("开启分享")
+            $("#share-type").css('display',"block");
+            $("#share-expire").css('display',"block");
+            $("#share-link").css("display","block");
+            if($("input[name='share_type']:checked").val() == 1){
+                $("#share_value_item").css("display","block");
+            }
+            // 开启
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+        }else{
+            console.log("关闭分享")
+            layer.msg("关闭分享",{offset: 't'})
+            $("#share-type").css('display',"none")
+            $("#share-expire").css('display',"none")
+            $("#share_value_item").css("display","none");
+            $("#share-link").css("display","none");
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = false
+            updateDocShare(share_data);
+        }
+    });  
+
+    // 更新文档分享密码
+    $("#updateShareValue").click(function(){
+        $("#share_doc_value").val(randomWord(false,4));
+        share_data['share_type'] = 1;
+        share_data['share_value'] = $("#share_doc_value").val();
+        share_data['is_enable'] = true
+        updateDocShare(share_data);
+    })
+</script>
+
+
+
+</body>
+</html>

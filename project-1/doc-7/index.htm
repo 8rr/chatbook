@@ -1,0 +1,1498 @@
+﻿<!-- 继承自模板：app_doc/docs_base.html -->
+
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 14px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="max-age=7200">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="第四章 游戏的规则与架构 Rules and Structure of the Game,迷男方法,PUAshow,泡学,迷男方法,泡学chat">
+    <meta name="description" content="谜男方法包含了几个方面。首先，M3模型（M3Model）描述了男女从邂逅到发生性关系的求爱过程。其次，团体理论（GroupTheory）是将社交力学和M3模型应用在公共场合中的三教九流身上。这很重要，">
+    <title>第四章 游戏的规则与架构 Rules and Structure of the Game - 迷男方法 - 泡学chat书库 </title>
+    <link href="../../static/layui/css/layui-1.css?version=0.6.1" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/editor.md/css/editormd.css?version=0.6.1">
+    
+
+    <link href="../../static/viewerjs/viewer.min.css?version=0.6.1" rel="stylesheet">
+    <link rel="icon" href="../../static/search/mrdoc_logo_300.png" sizes="192x192">
+    <link href="../../static/mrdoc/mrdoc.css?version=0.6.1" rel="stylesheet">
+    <style>
+        /*一级无序li显示实心圆点*/
+        .doc-content ul li{
+            list-style:disc;
+        }
+        /*二级无序li显示空心圆点*/
+        .doc-content ul > li > ul > li{
+            list-style-type: circle;
+        }
+        /*有序li显示数字*/
+        .doc-content ol li{
+            list-style-type: decimal;
+        }
+        .doc-content ol ol ul,.doc-content ol ul ul,.doc-content ul ol ul,.doc-content ul ul ul {
+            list-style-type: square;
+        }
+        /* 三级及以下无序li显示小方块 */
+        .doc-content ul ul ul li{
+            list-style-type: square;
+        }
+        /* 下拉目录隐藏li样式 */
+        .editormd-toc-menu ul.markdown-toc-list li{
+            /*list-style:none;*/
+        }
+        /* 弹出框文档目录样式 */
+        ul.markdown-toc-list{
+            list-style-position:inside;
+        }
+        ul.markdown-toc-list li{
+            list-style: none!important;
+            line-height: 24px;
+        }
+        ul.markdown-toc-list > li > ul > li,ul.markdown-toc-list > li > ul li{
+            padding-left:15px;
+        }
+        ul.markdown-toc-list a{
+            /* text-decoration: underline!important; */
+        }
+        /* 块级代码和行内代码去除边框 */
+        .markdown-body p code{
+            border:none;
+        }
+        /* HTML预览样式 */
+        .markdown-body h1{ 
+            font-size: 1.7em;
+        }
+        .markdown-body h2{
+            font-size: 1.5em;
+        }
+        .markdown-body h3{
+            font-size: 1.25em;
+        }
+        .markdown-body h4{
+            font-size: 1em;
+        }
+        .markdown-body h5{
+            font-size: .875em;
+        }
+        .markdown-body h6{
+            font-size: .85em;
+        }
+        
+        .markdown-body p img{
+            max-width: 350px;
+        }
+        
+        #url_qrcode img{
+            margin: auto;
+        }
+        /* 文档代码块样式 */
+        ol.linenums li{ 
+            width: max-content;
+        }
+        pre.linenums{
+            max-height: 500px;
+        }
+        li.L1, li.L3, li.L5, li.L7, li.L9 {
+            background: none !important;
+        }
+
+        /* layui弹出框颜色 */
+        .layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+            border-bottom: 2px solid #333;
+        }
+        .layui-tab-brief>.layui-tab-title .layui-this{
+            color: #333;
+        }
+        /* 覆盖vditor样式 */
+        .vditor-outline__item{
+            padding: 0;
+            padding-bottom: 5px;
+            color: #333;
+        }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="doc layui-fluid" style="padding-left:0px;">
+    <!-- 左侧目录栏 -->
+    <div class="doc-summary">
+        <!-- 文档搜索 -->
+        <form action="/project-1/" method="get">
+            <div id="doc-search-input">
+                <input type="text" name="kw" placeholder="输入并回车搜索" value="" class="layui-input doc-search-input">
+            </div>
+        </form>
+        <!-- 文集名称 -->
+        <div class="project-title">
+            <a href="../index.htm">迷男方法
+                
+            </a>
+            <p>
+                
+            </p>
+        </div>
+        <hr>
+        <!-- <div style="margin-left:15px;">
+            <a href="javascript:void(0);" onclick="openDocTree()"><i class="fa fa-bars"></i> 展开</a>
+            <a href="javascript:void(0);" onclick="closeDocTree()"><i class="fa fa-bars"></i> 折叠</a>
+        </div> -->
+        
+        <!-- 遍历文集大纲 -->
+        <!-- 如果文集的文档数量超过999，使用异步加载文集目录 -->
+        
+        <!-- 文档数量小于999，使用同步加载文集目录 -->
+        <nav>
+            <ul class="summary">
+            <!-- 一级目录 -->
+            
+                <li>
+                    
+                        <a href="../doc-4/index.htm" title="迷男方法 视频课程 售价10元">迷男方法 视频课程 售价10元</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-1/index.htm" title="前言 Foreword">前言 Foreword</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-2/index.htm" title="自序 Preface">自序 Preface</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-3/index.htm" title="第一章 大情圣背后之谜 The Mystery behind Casanova">第一章 大情圣背后之谜 The Mystery behind Casanova</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-5/index.htm" title="第二章 人生的终极目标 The Ultimate Purpose of Life">第二章 人生的终极目标 The Ultimate Purpose of Life</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-6/index.htm" title="第三章 改写她的恋爱电路 Rewiring Her Attraction Circuitry">第三章 改写她的恋爱电路 Rewiring Her Attraction Circuitry</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="index.htm" title="第四章 游戏的规则与架构 Rules and Structure of the Game">第四章 游戏的规则与架构 Rules and Structure of the Game</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-8/index.htm" title="第五章 A1打开组合 Open">第五章 A1打开组合 Open</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-9/index.htm" title="第六章 A2女对男的兴趣 Female-to-Male Interest">第六章 A2女对男的兴趣 Female-to-Male Interest</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-10/index.htm" title="第七章 A3男对女的兴趣 Male-to-Female Interest">第七章 A3男对女的兴趣 Male-to-Female Interest</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-11/index.htm" title="第八章 交谈 Conversation">第八章 交谈 Conversation</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-12/index.htm" title="第九章 中场游戏与结尾游戏 Mid-Game and End-Game">第九章 中场游戏与结尾游戏 Mid-Game and End-Game</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-13/index.htm" title="结语 | 前进与征服 Conclusion | Go forth and Conquer">结语 | 前进与征服 Conclusion | Go forth and Conquer</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-14/index.htm" title="谜男的信 A Bonus Letter from Mystery">谜男的信 A Bonus Letter from Mystery</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-15/index.htm" title="把妹术语一览表 Glossary">把妹术语一览表 Glossary</a>
+                    
+                </li>
+            
+            </ul>
+        </nav>
+        
+        <div class="bq">
+            <a href="javascript:void(0);" class="mrdoc-link" id="dashang">本文档使用MrDoc发布</a>
+        </div>
+        <!-- 右下角广告块 -->
+        <!-- 广告代码开始 -->
+        
+            
+                <div class="ad-code">
+                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                </div>
+            
+        
+        <!-- 广告代码结束 -->
+    </div>
+    <!-- 左侧目录栏结束 -->
+
+    <!-- 右侧文档栏 -->
+    <div class="doc-body">
+        <!-- 文档导航 -->
+        <div class="doc-header" role="navigation">
+            <a class="btn pull-left js-toolbar-action" aria-label="" href="javascript:void(0);" title="切换侧边栏">
+                <i class="fa fa-align-justify"></i>
+            </a>
+            <a class="btn pull-left font-small" href="javascript:void(0);" title="缩小字体">
+                <i class="fa fa-font">-</i>
+            </a>
+            <a class="btn pull-left font-large" href="javascript:void(0);" title="放大字体">
+                <i class="fa fa-font">+</i>
+            </a>
+            <a class="btn pull-left font-switch" href="javascript:void(0);" title="切换字体类型">
+                <i class="fa fa-text-height"></i>
+            </a>
+            <!-- 顶部工具栏 -->
+            
+    
+    <!-- 文档目录 -->
+    <div id="toc-container" class='sidebar'></div>
+    
+
+
+            <a class="btn pull-right" aria-label="" href="../../index.htm">
+                <i class="fa fa-home"></i> <span class="layui-hide-xs">首页</span>
+            </a>
+        </div>
+        <!-- 文档主体 -->
+        <div class="doc-body-content">
+            <div class="doc-body-content-div">
+                <!-- 文档内容 -->
+                <div class="doc-content">
+                    <!-- 标题 -->
+                    <div class="doc-info">
+                        <!-- 页面主体头信息 -->
+                        
+    <h1>第四章 游戏的规则与架构 Rules and Structure of the Game</h1><hr>
+
+
+                        <!-- 广告代码开始 -->
+                        
+                            
+                                <div class="ad-code">
+                                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                                </div>
+                            
+                        
+                        <!-- 广告代码结束 -->
+                    </div>
+                    <!-- 标题结束 -->
+                    <!-- 正文开始 -->
+                    <div class="markdown-body" id="content" style="padding: 20px;padding-top: 5px;">
+                        
+    <textarea style="display: none;">谜男方法包含了几个方面。首先，M3模型（M3Model）描述了男女从邂逅到发生性关系的求爱过程。其次，团体理论（GroupTheory）是将社交力学和M3模型应用在公共场合中的三教九流身上。这很重要，因为高档美眉通常都在这种社交情境中。第三，谜男方法是在现场执行游戏的方法学。第四，它包括一套经过现场实证、源自这个方法学的技巧，泡学达人称之为求爱艺术绝招（VenusianArtsGambits）。其中包括否定（neg）与假性时间限制（FalseTimeConstraint），我会在本书稍后几章解说。
+
+# 4.1游戏要在现实场景上玩
+
+游戏不是在电脑或网络上玩的，也不是在书上玩的，而是在现实世界、真实人物与真实情况下玩的。唯有在现场不断练习，才能培养出直觉与技巧。随着时间的累积，这些方法会渐渐变成你的习惯。
+
+经过几周的反复练习，方法一旦内化，其实继续做下去会比改掉容易。你会自然而然地做出正确的事。为了达成这个目标，你必须：
+
+•把心思放在建立技巧上，而不是认识新女友或“爽到”。要把社交力学当作一套新的电玩游戏来学习。
+
+•不要执迷于特定一个女人。忘了这三个月来你所朝思暮想的女人吧，你必须先接受训练。
+
+•吸引新的目标比挽救已经搞砸的目标容易多了。（因为吸引可以在几秒钟到几分钟内发生，发生性关系则大约需要4到10小时。）
+
+# 4.2谜男指派的菜鸟任务
+
+•每周出去练习4个晚上，每晚4个小时；
+
+•每小时平均进行3次搭讪，这样子每次接近都有充裕的20分钟。
+
+所以，你每晚会练习12次接近，每周48次，每个月将近200次（第五章会说明搭讪的艺术）。一年之内，你会接近2000多个女人。
+
+过去一年来，你搭讪过几个女人？
+
+# 4.3标准化与内化
+
+在现场一两周之后，所有的搭讪行为会开始变成一团模糊，新模式也将随之产生。你原本**不透的社交行为会变得越来越清楚，也能预测即将发生的各种状况跟反应。这种强而敏锐的社交直觉，会随着在现场花费的时间微调，这称作标准化（calibration）。
+
+对一个熟练的泡学达人来说，几乎能预测任何社交挑战，并有一套应对之道，因为他早就碰过这种状况了，还用各种不同的反应实验过，也跟朋友们讨论切磋过，因此发现了有效的答案，而且已经在现场演练到游刃有余了。
+
+所以当挑战发生时，会先冒出答案，然后下意识自动转化为行动。所有练习过的行为都会变成条件反射动作，谜男方法的技巧也是如此。这个过程叫做内化（internalization）。
+
+对任何泡学达人而言，即使是大师，标准化都是个永无止境的过程。例如有一次在社交实验中，我带了一只大型假雪茄去夜店。为了整体搭配，我也给了朋友们几支，我们全拿着大雪茄一起出场，以便塑造出“我们是一伙人”的社交形象。（团体作战比单打独斗好多了。）然后，突然冒出一个女人问我：“你干嘛拿一根假雪茄？”我很惊讶，因为我没有标准答案。我回答：“呃，我不知道……因为好玩吧。”当时我觉得这个回答很蠢，心想：这道具竟然会有这样的破绽，但是因为我拿着，就一定会有人问这个问题。我怎么会没想到？我怎么可以没准备？于是我回家想好了答案，下次当我在现场又被问到这个问题时，就回答：“因为我觉得吸烟很恶心。”——而且吸假雪茄很搞笑。结果我并没有被赶出组合。
+
+## 4.3.1女人善于社交，因为她们经常被联系
+
+男人要进入这场游戏，就得主动接近女人。如果他不这么做，就等于弃权了。女人就不能这么轻易作选择。只要她长得很正点，无论她喜不喜欢，男人都会自动黏过来，而她只是在场而已，什么也没做。因此，女人通常比男人有更多标准化的社交技巧，只因为她们经历过的搭讪比男人还多。典型的10分美女，在24岁之前可能已经被搭讪过几千次了，所以泡学达人必须出奇制胜。
+
+# 4.4过程重于结果
+
+泡学达人每晚到现场报到，主要是为了精进标准化并且内化技巧，而不是为了“追某个女人”或“今晚要爽到”。你必须把眼光放远，现在的练习都是为了将来能拥有无敌社交技巧的基本功，让你在需要的时候运用自如，不需要的时候就收起来。而且，你永远处于准备好的状态。
+
+你不能太在乎每一次搭讪的结果，至少等到抵达适当时间点（通常是打进组合后的10到25分钟），再确定你是否真的很重视这个目标。就像打电动一样：如果你挂掉了，就按RELOAD键重新开始。如果某次搭讪的结果变得对你很重要，将对你的游戏造成轻微的潜在影响，降低你的胜算，所以真的不必太在乎。
+
+把自己的情绪从对结果的渴望中抽离出来，反而比较有机会达到目的。
+
+就像冲浪或潜水，游戏过程本身就是你的收获，包括认识新朋友、探索他们的人生，这些都很有趣。但是，如果你不喜欢探索人性或不带目的地主动进行轻松的社交实验，你可能会缺乏精通这些技巧所需的耐心。
+
+几个月的练习与现场实验之后，你会开始精进自己的独门功夫。你的技巧会让你享受跟美女打成一片的快感，再也不会被接近焦虑、拒绝、甚至结果所困扰，而是纯粹地享受这个过程。
+
+# 4.5性关系的结构
+
+每段长期（亲密的性的）关系都有个起点、中段、与终点。也就是：
+
+起点[求爱]→中段[性关系]→终点[分手]
+
+你所学到关于求爱艺术的每件事都可以归纳在这三个阶段之一。
+
+# 4.6求爱
+
+此外，从认识到发生性关系的每次求爱也都有起点、中段与终点。完成起点之前不能跳到中段，完成起点与中段之前也不能跳到终点。
+
+谜男方法只专注于这三个求爱阶段，我把它们命名为：
+
+起点[搭讪]→中段[中场游戏]→终点[结尾游戏]
+
+你所知道的每个爱情故事与你过去、未来所经历的每段关系，都是这三个阶段的演变过程。
+
+# 4.7吸引
+
+谜男方法的首要焦点不是**，而是吸引。
+
+·吸引（AT·TRACT）
+
+及物动词：引发接近或接触，向某人或某物靠近〈例如磁铁吸引铁块〉，或自然而然被刺激感、情绪或美观所影响，同义词是ENTICE〈引人注意〉。
+
+不及物动词：发出重力
+
+语源：中世纪英语，拉丁文是attractus,attrahere的过去分词，从ad+trahere变成拉近或驱使之意。
+
+·**（SE·DUCE）
+
+1、说服抗拒或不忠诚的人
+
+2、通常指用说服或假承诺诱导异端分子
+
+3、为了发生性关系而行使肉体的**
+
+语源：中世纪英语，晚期拉丁文是seducere，意思是引开某人，从seapart+ducere变成引导之意。
+
+——韦氏网路大学典第10版
+
+26
+
+## 4.7.1吸引的秘诀
+
+吸引是情不自禁的。——泡妞大师大卫·狄安杰罗名言
+
+地球上每个男人与女人的择偶机制，都内建一些可以量化计算的吸引力开关。男人都以同样的方式自动对《运动画刊》的泳装模特儿感到强烈的吸引力，因为她触动了我们的吸引力开关。我们也可以发明一套方法来触动女人的吸引力开关，让她们被动地感受到男人的性魅力。
+
+某些开关得有正当的繁殖价值才能触动。反过来说，如果有迹象暗示负面的繁殖价值，开关也可能瞬间关闭。这就是达尔文主义：比起更年期的欧巴桑，跟年轻健康的女孩交配，更能提高你基因成功繁殖的机会。
+
+我们的开关设计会对下列特质产生反应：**比例、胸型与大小、脸蛋与身材对称，以及其他年轻健康的象征。因此，如果女人具备并展示出某些特质，让你的择偶开关设定有所反应，你会立刻被她吸引，连想都不用想。事实上，这种事你一点选择余地也没有。
+
+我要指出有趣的事：
+
+•男人的吸引力开关大多对女人的繁殖价值有反应，只有少数开关对生存价值有反应。
+
+•女人的开关只有少数对男人的繁殖价值有反应，大多数对他的生存价值有反应。
+
+即使女人的胸部是假的，你还是觉得她比平胸更有吸引力。否则世界上不会有这么多女人采取激烈手段（例如隆胸）。我们的吸引力电路都能够灵敏地感受到女人的繁殖价值。
+
+所以女人的吸引力电路会对男人的什么特质有反应？我们在现场该如何快速有效地触动它？先前我讨论过健康、健美的身材、亲切与微笑等等基本特质。现在，让我们来检视一个强度很高的吸引力开关……
+
+## 4.7.2预选
+
+这个开关不仅存在于人类的择偶机制中，也适用于许多动物。落单的公鸡很难吸引母鸡，但如果在它身边放一只假的母鸡，其他母鸡会迅速进入它的地盘与之交配。同样地，如果女人认为某男士对其他女人具有性魅力，可能会立刻觉得被他吸引。而孤零零站在酒吧里，看起来就是不象身旁围绕着美女那么有魅力。
+
+用这种直接的方式透露出你很吃得开，这只是许多触动择偶开关的方式之一。还有其他方法，比如你也可以擦女性香水。当女人问你擦了什么，你就说：“没有啊……”然后闻闻自己的衣领，做出恍然大悟的表情说：“啊！”然后微笑。
+
+另一个方法是在脸颊上留个口红印。就像女人绝佳的**曲线让你感受到强烈的吸引力一样，女人会因为这个重要的口红印而被你吸引。
+
+还有很多其他方法可以触动预选开关，也有很多其他开关可以触动。吸引的秘诀在于了解这些开关是什么，然后勇敢地火力全开！没有比这更快更强烈的吸引方式了。（第六章和第七章都会*分析“吸引力”这个主题，以及培养与活用吸引力的各种战术。）
+
+# 4.8M3模型
+
+你要能吸引到人，才有可能发生**。不过在**被你吸引的女人之前，有个很重要的附加阶段：建立舒适感（第八章和第九章都在描述谜男方法的舒适感与**阶段）。
+
+吸引→建立舒适感→**
+
+现在我们知道了M3模型每个阶段的重点：
+
+搭讪＝吸引
+
+中场游戏＝建立舒适感
+
+结尾游戏＝诱惑
+
+## 4.8.1诱惑是相互的
+
+如果你能跟女人建立足够的舒适感，让她能在中场游戏阶段跟你在房间里独处，那么她就会在结尾游戏阶段同意跟你发生性关系。事实上，她甚至可能试图诱惑你。
+
+吸引→建立舒适感＝诱惑
+
+1＋2＝3
+
+所以，如果你努力制造机会让她**你，就不必太花心思在**本身。
+
+不幸的是，这都要靠吸引力才可能发生。如果没有吸引力，她当然不会接受你苦心经营的舒适感，尤其是她经历过无数个好好先生的追求，已经社会化了（besocialized）之后。小心：如果你太早寻求舒适感，只会降低你的吸引力。甚至更糟，你会被困在友谊区（FriendshipZone，我们很快就会详述）。
+
+复述要点，谜男方法的三大主要目标是：
+
+搭讪吸引女人
+
+中场游戏建立舒适、信任与联系感
+
+结尾游戏营造被**的机会
+
+从简图可以看出，吸引、舒适感、**的线性关系似乎很单纯而且不言自明，但是全世界的泡学达人却经常因为搞错M3发生的顺序而苦恼。
+
+# 4.9M3顺序的四个错误
+
+1.先**——从结尾开始；
+
+2.先寻求舒适感——从中段开始；
+
+3.吸引而没有舒适感——从起点开始，却跳过中段直接到结尾；
+
+4.只有吸引与舒适感——从起点开始，却困在中段。
+
+## 4.9.1顺序错误一：从结尾开始
+
+结尾[**]
+
+**者
+
+菜鸟最常犯的错误，就是在吸引到女人之前就集中精力**她。这就像把马车放在马匹前面。抢先**几乎等于（尤其对美女而言）是说：“你不认识我，但是你愿意跟我发生性关系吗？”你迟早会有时机（与地点）展开**，但得先有吸引力与舒适感，更不用说还要保持隐私了。
+
+**者（seducer）误从结尾开始，就会像普通人一样，完全无视女人的舒适感。即使**者的外貌具有一定程度的吸引力，也抵挡不了她的不自在感。因为她必须应付既不熟悉又不信任的人所施展的积极的性追求。最好在结尾游戏之前，都别太早透露出强烈的性兴趣。
+
+愚人的笨招
+
+玩西洋棋有可能在四步之内就赢棋，这叫做愚人的笨招（Fool’sMate）。但是，靠愚人的笨招迅速获胜并不表示你就是西洋棋高手，顶多证明你的对手缺乏经验罢了。老练的西洋棋士甚至不会试图布局，因为如果他的对手不上当，他自己反而会有危险。同样地，虽然有机会快速**，但社交经验丰富的女人不太可能上当。在求爱艺术中，我们把抢先**的战术比喻为“愚人的笨招”。对照之下，西洋棋士跟泡学达人都会宁可稳扎稳打（PlaySolidGame）。
+
+愚人的笨招或许可以在某些情况下生效，例如原本就喜欢搞**的女人。但是别让它成为你唯一的必杀技。
+
+## 4.9.2顺序错误二：从中断开始
+
+中段[建立舒适感]→终点[**]
+
+好好先生
+
+很多男人都了解抢先**会让女性觉得不自在，所以他们的做法是先集中精力建立舒适感。
+
+这些人不懂的是，美眉们天天被那些好好先生疲劳轰炸，搞不好都快烦死了，她们得应付太多黏上来的好人，实在没空一再耐心回答那些老套的对话。好好先生或许不像**者那么讨人嫌，但是同样恼人。如果男人一开始就没有吸引力，只会说“嗨，我是乔，你叫什么名字？”就会像之前的其他好人一样被打枪。不被你吸引的女人干嘛在乎你或记得你的名字？只因为你发问，她就必须透露个人资料吗？
+
+防护罩比喻
+
+如果女人不受你吸引，企图建立舒适感只会让她无聊。向她自我介绍、引导她自我介绍、太早开口称赞她、都是企图建立舒适感。如果你曾经跟对你不感兴趣的人僵在对话中，就知道这有多别扭了。
+
+想象这种事每天要发生好几次，而且持续好多年。你不觉得最好应该在这些人开口之前就先让他闭嘴吗？长久下来，女人跟越来越多的好好先生互动，开始演化出简单有效的方法来抵挡这些无聊的攻势。整体而言，这些方法构成了比喻上所谓的防护罩（ProtectionShield，第五章有详述）。
+
+透露性兴趣
+
+光是接近她们故作好人状，等于是在暗示你对美女有企图。如果她没误会你是推销员（或想要乞讨）的话，她就会认定你想把她。即使你对她没有性兴趣，她也会假设你有，因为你接近她的方式跟其他人一样。
+
+男：好漂亮的靴子啊！
+
+女：我有男朋友了。
+
+大多数男人都误以为这种冷淡的防御是女人的人格缺陷。但这招可以轻松击退男人，女人才如此爱用啊。从她的观点来看，宁可让一大批她没兴趣的男人认为她是个**，也不要困在当场听完每个人的废话。
+
+男：你叫什么名字？
+
+女：滚开！
+
+如果好人讲话够幽默，有些女人还稍微可以容忍，但是对话一旦变得无趣，她们就会闪人。要是这些男人死缠烂打，可能会遭受更强烈的拒绝。扮演**对某些女人或许是一种乐趣，但大多数有防护罩的女人并不会滥用，她们其实挺善良的。
+
+男：嗨，你好。
+
+女：听着，我不会跟你发生性关系的。
+
+如果你不先花时间吸引女人，她就没有理由要跟你讲话。那会强迫她使出防护罩。“建立舒适感”要留到中场游戏再做，不要急着从中段开始。
+
+## 4.9.3顺序错误三：从开始起点，却直接跳到结尾
+
+起点[吸引]→终点[**]
+
+每个起点与终点之间都有中段，M3模型的中段就是“建立舒适感”。总会有适合**女人（或被**）的时机出现，但是你要先建立舒适感。
+
+玩家
+
+玩家是指从起点开始、成功吸引到女人，却无法避免下列三个玩家陷阱（player-trap）的男人。所以，每个泡学达人都要注意以下陷阱：
+
+1.无法把互相吸引正当化
+
+2.忽略了舒适感
+
+3.女方事后反悔
+
+玩家陷阱1：无法把互相吸引正当化
+
+女人正到让你忍不住想跟她交往，这对男人无可厚非。但我们不能让她知道我们是根据外貌才选择她，因为这样很虚伪，显得我们跟其他普通人差不多。
+
+女人的兴趣指标（IOI）会提示我们何时可以从“吸引”阶段前进到“舒适感”阶段，但是你还不能这么做，除非她也积极地想赢得你的兴趣指标！即使从女人身上获得兴趣指标，还不足以让你开始回报。如果你太容易到手，她只会把你当作另一件战利品，然后继续寻找更有挑战性的目标。
+
+兴趣指标的范例如下：
+
+•她询问你的名字。
+
+•她触**你。当你说“请勿触碰商品”，她又**你一下。
+
+•当你抓她的手握住，她也握回来。
+
+•她对你讲的所有笑话都很捧场——包括无聊的冷笑话。
+
+•你要求她轻咬你的脖子，她照办了。
+
+你必须先鼓励她展现能引起你兴趣的特质。如果不这么做，她会怀疑你只是在玩弄她的感情，纯粹为了征服欲才来钓她，反而被你吸引得很不自在，于是很快放弃你。你们在吸引阶段的对话会被当作是逢场作戏，而她会认为你不过是个操弄感情的高手。由此看来，玩家只是拥有厉害开场的**者而已。
+
+成功克服第一个玩家陷阱之后，就可以继续建立舒适感了。
+
+玩家陷阱2：忽略了舒适感
+
+如果你在建立足够的舒适感之前企图**女人，她对你的吸引力开关就会关闭。为了不让这种事情发生，你必须建立足够的舒适感，才不会让她觉得别扭。除非你建立了足够的舒适感，否则不要跨过“舒适感”与“**”的界限。
+
+要怎么才能知道已经有足够舒适感可以开始**了？累积舒适感平均得花4到10小时，女人才会准备好接受**。（不包括愚人的笨招——如我先前所说，真正的泡学达人要避免这种策略。）判断时机何在并没有确定的规则，你积累的经验自然会告诉你（后面会再谈到七小时法则）。
+
+七小时法则：吸引→建立舒适感→**（7个小时）
+
+玩家陷阱3：事后反悔
+
+事后反悔（Buyer’sRemorse）是指一个人心血来潮买下了某件东西，事后又反悔的情况。同样地，被你吸引的女人可能被动或主动地进展得太快。当下她可能沉醉于吸引与性兴奋之中，事后却又对自己的情绪或行为反悔。如果你想要到达**阶段，必须不惜代价地避免她事后反悔。
+
+————————————
+
+案例研究：JimMeetsJannie
+
+男方观点
+
+吉姆认识了名叫珍妮的美女，两人互相吸引。当晚，吉姆很快地向珍妮**，气氛也越来越火热，但是当时无法转移阵地到隐秘的地方，于是他们交换电话号码，决定改天再约。他高兴地告诉死党他刚刚认识了下一任女朋友。
+
+隔天晚上吉姆打电话给珍妮，但她在电话里显得很冷淡。他想要说服她依照约定出来见面，而她现在“很忙”。他留言过好几次，但珍妮一次也没回电。几个礼拜过去了，他们一直没有再见面，他既困惑又沮丧又寂寞，更糟糕的是，这个痛苦的模式在其他女人身上一再重演。
+
+这个情境正是条件还不错的男人，却又落入事后反悔陷阱的典型案例。很多人一犯再犯，丧失了无数的恋爱的机会。
+
+问题到底出在哪里？事情是这样的——
+
+女方观点
+
+珍妮很喜欢跟吉姆**，但是吉姆没有主动减缓**气氛的升高，好好地停留在“建立舒适感”阶段。她确实想要再跟他见面，但只限于当时而已。隔天吉姆打电话来的时候，珍妮并不在当晚那样的情绪兴奋状态。因为文化上的制约，跟不太熟的人做出那些事让她觉得有点愧疚。她知道吉姆打来的唯一动机是继续那件让她想起来都觉得很别扭的事。如果再见面，她不确定他会做出什么事，会不会毛手毛脚让她觉得更别扭？她跟他并没有熟到可以信任他的地步。有这样的情绪之后，她的决策再次被情绪牵动，连跟他讲电话都觉得别扭。所以珍妮显得很冷淡，还谎称她忙得没空讲话。
+
+困惑的吉姆试着挑战她的理智，珍妮则认为这是企图操控她。她不想被迫跟一个缺乏舒适感与安全感的人发生性关系，尤其是她根本兴奋不起来。
+
+吉姆很难在电话上改变她的情绪状态，就他当时所知，很多因素已经变质，珍妮可能刚跟室友吵过架或刚换过猫砂盆。接下来一两周，他没留话一次，她就更不自在。于是她再也不打算跟这个男人见面了。
+
+吉姆不该责怪珍妮“吊他胃口”，毕竟是他没有花足够时间停留在“舒适”阶段，才导致这样的状况。当牵手升高成接吻（稍后会讲解如何施展谜男的**绝招），你会很快到达时候反悔的不归点。
+
+————————————
+
+接吻[舒适感]→前戏[**]
+
+注意事后反悔的不归点，这个不归点位于接吻转变成前戏却没有营造足够舒适感的时候。
+
+·**（kiss）
+
+用嘴唇接触或抚**，当作感情的表示（或问候）语源：中世纪英语，源自古英语cyssan，接近古代北日耳曼语kussen时期：十二世纪之前
+
+·前戏：（foreplay）
+
+发生性关系之前的互相性刺激时期：1929年
+
+——韦氏大字典第10版
+
+留意你在某时间点所作的决定，将如何影响一天或更久之后的结果。你一旦越过不归点，除非你建立了足够的舒适感能带她到附近的隐秘处**（在她兴奋感消退之前），否则她会事后反悔。
+
+只有**者才会带她到附近公厕里办事。想清楚，如果连交往了两年的女朋友都不太愿意跟你在公厕里**，就别指望你刚认识20分钟的人会愿意，无论她多么兴奋。这是愚人笨招的幻想（Fool’sMateFantasy），不是正确的游戏。如果你太快逼近到**，可能会丧失大好的机会。（除非很难得地你们两个人都愿意，那就尽情玩吧。）
+
+没有性含义的亲密接吻常被使用在“舒适感”阶段。事实上，如果你等太久才吻她，她会在某个时间点失去兴趣，让你错失未来吻她的机会。
+
+通常这种“舒适感**”持续不超过30秒，也不会是舌吻。另外，接吻是表达并且建立联系感；前戏则是纯属**阶段。前戏通常包括法式舌吻，进而变成**，能够激发双方性兴奋以准备发生性关系。
+
+除非你已经建立了可以自然转移到性行为所需的舒适感与隐秘性，否则最好不要展开前戏。当接吻太快变成前戏的时候，你应该把她推开。这么做是让她知道时间和地点都不适合让气氛太火热或太沉重。我知道，阵前收枪非常辛苦，所以许多男人都败在这里。
+
+为了避免失败，问你自己一个非常严肃的问题：“我要的是一晚的**，还是无数个夜晚的**？”要判断是否接近不归点，就自问：“这是前戏吗？”如果答案是肯定的，快停手！把她推开。你要建立的是舒适感，不是性兴奋。能自我克制的真正男子汉才会说：“哇，我们最好停止。走吧，去跟我们的朋友会合。”“我们的朋友”其实可能是“她的朋友”。这个绝招能表示出你想要进一步认识她，而非只有性趣，让你建立信任感。现在她对你的性趣已经很明显了，当你建立足够的舒适感，并
+
+带她到隐秘的**地点，例如你的卧室，就可以放心了，让应该发生的事尽情发生。你可以建立亲密感并且逼近不归点好几次，只要每次到达时你都能够先推开她。
+
+## 4.9.4错误顺序四：从起点开始，却困在中断
+
+起点[搭讪]→[中场]游戏中段
+
+友谊区
+
+“朋友”这个字眼在游戏中有很明确的含意，是指害怕向花了时间去相处的女人表达爱慕之意的男人。
+
+如果你无法在舒适感阶段向女人透露你是个潜在的爱慕者，她可能没这么强的直觉发现你是。在舒适感阶段，你若没有牵到她的手、嗅她的脖子、**她，可能会永远困在这里。
+
+事实上，女人可能会对你的无性本质舒适到希望你永远保持这样。以至于当你最后企图跟女人进展到**阶段，会听到她说：“我们还是当朋友就好……”这就说明你被困在友谊区（FriendshipZone）了。
+
+你要先完成舒适感阶段才能开始**。她也必须对你的性行为（sexuality）非常放心，例如**她不会让她觉得别扭。当你跟她独处并且展开**，可不要让她被你突发的性趣吓一大跳。
+
+你要像躲避瘟疫一样避开友谊区，营造一个相互**的机会。这不是错误也不是罪恶，毕竟共同建立性关系对她也有利。
+
+有逃生路线吗？
+
+如果你跟一个你非常重视的目标困在友谊区里怎么办？还有救？或者一切都完了？我这么说吧：如果女人在你们互动的25分钟内没有给你兴趣指标，你的第一印象就毁了。如果你们相处20个小时她仍是个朋友，对任何肢体接触都觉得别扭，你就别指望突然展示出高价值就可能把到她了，因为她已经知道你没有她想要的那些价值，而且她已经跟你交上了朋友，就没必要放弃已经到手的价值。
+
+这时候，如果你还是很在意她，唯一能做的就是把自己从她身边抽离一阵子——然后脱胎换骨再回来。你必须向她展示更高的价值，让她知道你的S与R价值已经提升了，例如搬进新公寓、买了很**的新车——基本上就是打造全新的自己，让她对你刮目相看。最重要的是，你还必须带着新女人回来，让她产生嫉妒情节。她原本可以占有你，却选择了拒绝，现在机会没了，她又会想要你。
+
+可别搞错了，在这个情况下展现高价值真的很困难，甚至比重新开始还难，因为你现在必须向她证明你的身价真的不一样了，并不是嘴巴上说说而已。如果你不想搞得这么累，就老老实实的跟她当朋友。既然她不认为你有价值，当然就没搞头了。快去找下一个新目标吧。
+
+## 4.9.5摘要：M3顺序不良衍生的问题
+
+1.从终点开始：愚人的笨招
+
+2.从中段开始：防护罩
+
+3.从起点开始，却跳过中段：事后反悔
+
+4.从起点开始，却困在中段：友谊区
+
+# 4.10游戏地点
+
+以**结尾的正常求爱游戏很少（可能从来没有）只在一个地理位置上发生。与你素昧平生的女人不太可能跑来敲你的房门，自己送上门来。大自然要求你走出房门，踏进一个比较可能认识女人的地方，可是许多寂寞的宅男都不懂这一点。
+
+你跟你的心仪对象可能光临（或换场）的地点有三种：
+
+A【邂逅地点】→C【建立舒适感地点】→S【**地点】
+
+## 4.10.1地点变幻
+
+游戏中常发生的变换地点（或换场）有三种方式：就是转场（Move）、护送（Bounce）与时间桥梁（TimeBridge）。在此仅简要叙述，这些地点变换在本书的后续章节会有详细说明。
+
+A→C【M转场】→S
+
+T时间桥梁=M转场=B护送
+
+M转场（Move）：把女人带开，到现场的其他区域。
+
+B护送（Bounce）：你跟女人一起离开现场，一起去不同的场地。
+
+T时间桥梁（TimeBridge）：有时候你无法为感情加温，或许外在因素让你必须跟女人交换联络方式，易时易地继续游戏，这就叫“时间桥梁”。
+
+# 4.11M3模型的九个阶段
+
+M3模型的三大阶段——吸引（Attract）、建立舒适感（Buildfort）、与**（Seduce）——可以各自拆解为三个小阶段。在此仅简要描述，本书后续章节会比较详细说明这九个阶段。
+
+A1－打开组合C1－对话S1－前戏
+
+A2－女对男的兴趣C2－联系感S2－LMR
+
+A3－男对女的兴趣C3－亲密感S3－发生性关系
+
+A吸引
+
+A1－打开组合：男人接近一个组合，执行开场白，并立刻被这个组合接受。
+
+A2－女对男的兴趣：男方展示较高的价值，同时显示对目标没兴趣，她则以兴趣指标回应。
+
+A3－男对女的兴趣：男方引诱女方在互动中投资更多，然后以兴趣指标奖赏她的努力。
+
+C舒适感
+
+C1－对话：两人分享友善的对话，培养舒适感与熟悉感。
+
+C2－联系感：双方感到“来电”的悸动，发生接吻，这个阶段可能延续好几次约会。
+
+C3－亲密感：现在是在**的地点，继续发生激烈**，双方进入卧房。
+
+S**
+
+S1－前戏：两人开始往发生性关系方向进展，如果太早发生，可能会引发事后反悔。
+
+S2－LMR：最后一刻的抵抗是**发生之前的不归点，通常是女人临阵退缩的时刻。
+
+S3－发生性关系：必须发生好几次发生性关系以确保性关系
+
+## 4.11.1整体架构图
+
+酒吧[A1][A2][A3]→酒吧的安静角落[M]→[C1][C2][C3]→卧室[M]→卧室[S1][S2][S3]
+
+见面吃寿司[T]=[C1][C2][C3]=深夜晚餐[B]
+
+A1：手法高明的泡学达人在酒吧里用开场白接近一个组合（一群人）。他看起来毫无企图，对目标没兴趣，假装正要离开时经过目标身旁。然后他向组合展示高价值，越过社交上钩点，被他们接纳了。
+
+A2：他继续利用故事、幽默、模式、惯例、游戏、看手相、作诗等方法表现他的个性，加上他显得对目标缺乏兴趣，提升了他对她的相对社交价值，升高她的情绪张力。她开始给他兴趣指标。
+
+A3,C1：他利用欲擒故纵手法，引诱她主动想赢得他的注意力。等她在互动中投资了更多，他就用兴趣指标来奖赏她。然后，他把她带到酒吧的安静角落，开始建立舒适感。
+
+C2,C3：护送她到别家餐厅，加上隔天一起吃寿司的时间桥梁，他在累计七小时期间建立了舒适、联系与信任感。在C2阶段中，他们开始**，然后一起回他家。
+
+S1,S2,S3：最后，他把她带进房间，开始前戏，摧毁最后一刻的抵抗，跟她**。
+
+# 4.12重点复习
+
+•游戏是在现场玩的，快出门吧。
+
+•MM菜鸟演习：每周出去练习四晚，每晚四小时。每小时搭讪三次。把结果贴在谜男方法讨论区（也要看别人的报告），网址：.themysterymethod./forum
+
+•游戏就像打高尔夫或钓鱼，你必须享受过程、不抱期待，以便最后获得好结果。
+
+•每段性关系都有起点、中段与终点，起点称之为求爱。
+
+•求爱有三个阶段：搭讪、中场游戏与结尾游戏。
+
+•谜男方法先专注于吸引而非**。道德上而言，谜男方法的信徒都是吸引者而非**者。
+
+•每个女人心里都有一些天生的吸引力开关，被吸引不是人们有意识的选择，而是开关被触动之后，自动感受到的反应。
+
+•当女人看见你已经受到其他女人的认同，就会触动她的预选开关。
+
+•M3模型描述求爱的结构分成三阶段发生：吸引、建立舒适感与**。开始**女人之前必须先建立舒适感，她愿意跟你建立舒适感之前又必须先吸引她。
+
+•你在建立舒适感的时候，最重要的是，要让女人知道你是个有**的男人与潜在追求者，否则你可能困在友谊区。
+
+•有时候，你还没有建立足够的舒适感就能发生性关系的现象称为愚人的笨招。
+
+•女人有一些随着岁月累积的策略，好让她们回避一直黏过来的男人，称作防护罩。即使她原本是个和善的人，有时还是会显得很贱（bitchy），不过这不是她的本性。
+
+•M3模型的三大阶段可以各自拆解为三个小阶段：A1打开，A2女对男的兴趣，A3男对女的兴趣；C1对话，C2联系感，C3亲密感；S1前戏，S2最后一刻的抵抗，S3发生性关系。
+
+•地点有三种：邂逅场地，建立舒适感场地与**场地。
+
+•场地变换（或换场）有三种：移动、护送与时间桥梁。
+
+•搭讪发生在邂逅地点，包括A1、A2、A3与C1阶段，通常至少要移动一次，结尾是护送或时间桥梁。
+
+•下一个阶段称作中场游戏，发生在一个或好几个建立舒适感的地点，包括C2阶段，也可能发生几次护送与时间桥梁。当这个阶段结束，你跟她会在**地点。而且跟她已经有一点亲密了（例如接吻）。
+
+•最后阶段称作结尾游戏，开始是C3，但是很快转移到S1（前戏）。通常会遭遇最后一刻的抵抗（S2），这是正常的，然后就是发生性关系（S3）。如果你在建立足够舒适感之前发动前戏，会导致事后反悔。
+
+•要发生好几次发生性关系才能确保性关系，在此之前甚至之后，她都会一直测试你的一致性。</textarea>
+
+                    </div>
+                    <!-- 正文结束 -->
+                </div>
+                <hr>
+                <!-- 分享栏 -->
+                <div style="color: rgba(0,0,0,.65);padding-bottom: 10px;margin-top: 10px;">
+                
+<div class="layui-row" style="margin-bottom: 10px;padding-left: 20px;">
+    
+</div>
+
+<div class="layui-row layui-col-space20" style="padding-left: 20px;">
+    <span>
+        <i class="fa fa-user"></i>  PUAshow 
+    </span>
+    <span tooltip="更新于:2020年11月13日 15:18">
+        <i class="fa fa-clock-o"></i> 2020年11月13日 15:18
+    </span>
+
+    <button id="share" class="doc-bottom-btn" tooltip="分享本文档">
+        <i class="fa fa-share-alt"></i> 分享
+    </button>
+
+    
+</div>
+
+
+
+                </div>
+
+                <!-- 广告代码开始 -->
+                
+                    
+                        <div class="ad-code">
+                        <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                        </div>
+                    
+                
+                <!-- 广告代码结束 -->
+
+                
+    
+    <div class="layui-row" style="margin-top: 10px;padding:10px;display:flex;justify-content:space-around;">
+        <!-- <hr> -->
+        <div>
+            
+                <a href="../doc-6/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius"><i class="layui-icon layui-icon-prev "></i>上一篇</a>
+            
+        </div>
+        <div>
+            
+                <a href="../doc-8/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius">下一篇<i class="layui-icon layui-icon-next"></i></a>
+            
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 右侧文档栏结束 -->
+    <!-- 右下角工具按钮 -->
+    <div class="fixed-tool-bar">
+        <div class="toTop"><i class="fa fa-arrow-up"></i></div>
+        
+<!-- 目录 -->
+<div class="tocMenu" style="display: none;"><i class="fa fa-list"></i></div>
+<!-- 分享按钮 -->
+
+
+    </div>
+</div>
+
+<script src="../../static/jquery/3.1.1/jquery.min.js"></script>
+<script src="../../static/layui/layui.all.js"></script>
+<!-- 生成文集目录大纲 -->
+<script>
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: '35V937aPruAW1NDKKXvwPK6vDdQ8AJX8qDXkqj1aFSib3nWbqbv0FEGzQAdj5J76' },
+    });
+    // 视频iframe域名白名单
+    var iframe_whitelist = ''.split(',')
+    // 异步生成文集目录
+    getProjectToc = function(){
+        $.post("/get_pro_doc_tree/",{'pro_id':'1'},function(r){
+            $("#loading-project-toc").hide();
+            if(r.status){
+                var toc_str = ""
+                layui.each(r.data,function(index,item){
+                    toc_str += "<li>"
+                    if(item['children'] != undefined){ // 存在二级文档
+                        li = '<div style="display:flex;justify-content:space-between;">' + 
+                            '<a href="/project-'+'1'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                            '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                        '</div>'+
+                        '<ul class="sub-menu toc-close">'
+                        toc_str += li
+                        layui.each(item['children'],function(index,item){// 遍历二级文档
+                            toc_str += '<li>'
+                            if(item['children'] != undefined){ //存在三级文档
+                                li = '<div style="display:flex;justify-content:space-between;">' + 
+                                    '<a href="/project-'+'1'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                                    '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                                '</div>'+'<ul class="sub-menu toc-close">'
+                                toc_str += li
+                                layui.each(item['children'],function(index,item){ // 遍历三级文档
+                                    li = '<li><a href="/project-'+'1'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a></li>'
+                                    toc_str += li
+                                })
+                                toc_str += '</ul>'
+                            }else{// 不存在三级文档
+                                li = '<a href="/project-'+'1'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                                toc_str += li
+                            }
+                            toc_str += '</li>'
+                        })    
+                        toc_str += '</ul>'
+                    }else{//不存在二级文档
+                       li = '<a href="/project-'+'1'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                       toc_str += li
+                    }
+                    toc_str += '</li>'
+                });
+                $('#project-toc').append(toc_str)
+                tagCurrentDoc();
+            }else{
+                layer.msg("获取文集目录失败！")
+            }
+        });
+    };
+    
+
+    //为当前页面的目录链接添加蓝色样式
+    tagCurrentDoc = function(){
+        $("nav li a").each(function (i) {
+            var $me = $(this);
+            var lochref = $.trim(window.location.href); // 获取当前URL
+            var mehref = $.trim($me.get(0).href); 
+            if (lochref.indexOf(mehref) != -1) {
+                // console.log($me,lochref,mehref)
+                $me.closest("li").addClass("active");
+                //展开当前文档的上级目录
+                if($me.parent("li").parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开二级文档目录")
+                    $me.parent("li").parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("div").parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开包含下级的二级文档目录")
+                    $me.parent("div").parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开三级目录")
+                    $me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                // 切换图标
+                $me.parents("ul.sub-menu").prevAll("div").each(function(i){
+                    var $link = $(this);
+                    if($link.children("i").hasClass("fa-chevron-left")){
+                        $link.children("i").toggleClass("fa-chevron-left fa-chevron-down");
+                    }
+                })
+                // 目录的当前文档滚动于目录顶端
+                this.scrollIntoView({ behavior: 'auto', block: "start" });
+            } else {
+                // console.log(lochref,mehref)
+                $me.closest("li").removeClass("active");
+            }
+        });
+    };
+    tagCurrentDoc();
+</script>
+
+<!-- 小屏自动收起左侧文集大纲 -->
+<script>
+    //加载页面时执行一次
+    changeSidebar();
+    //监听浏览器宽度的改变
+    window.onresize = function(){
+        changeSidebar();
+    };
+    function changeSidebar(){
+        // 获取匹配指定的媒体查询
+        var screen_width = window.matchMedia('(max-width: 768px)');
+        //判断匹配状态
+        if(screen_width.matches){
+            //如果匹配到，切换侧边栏
+            //console.log('小屏幕')
+            $("body").addClass("big-page");
+        }else{
+            $("body").removeClass("big-page");
+        }
+    }
+    // 监听文档div点击
+    document.querySelector('.doc-body').addEventListener('click', function (e) {
+        // console.log("点击了div")
+        changeSidebar();
+    });
+</script>
+
+
+<script src="../../static/editor.md/lib/marked.min.js"></script>
+<script src="../../static/editor.md/lib/prettify.min.js"></script>
+<script src="../../static/editor.md/lib/raphael.min.js"></script>
+<script src="../../static/editor.md/lib/underscore.min.js"></script>
+<!-- <script src="/static/editor.md/editormd.min.js?version=0.6.1"></script> -->
+<script src="../../static/editor.md/editormd.js?version=0.6.1"></script>
+
+<script src="../../static/qrcodejs/qrcode.min.js"></script>
+
+
+<!-- 解析Markdown -->
+<script>
+    // EditorMD模式
+    
+        //解析Markdown为HTML
+        editormd.markdownToHTML("content", {
+            htmlDecode      : "style,script,iframe",
+            emoji           : true,  //emoji表情
+            taskList        : true,  // 任务列表
+            tex             : true,  // 科学公式
+            flowChart       : true,  // 流程图
+            sequenceDiagram : true,  // 时序图
+            tocm            : true, //目录
+            toc             :true,
+            tocContainer : "#toc-container",
+            tocDropdown   : false,
+            atLink    : false,//禁用@链接
+
+        });
+    // Vditor模式
+    
+    // 显示分享弹出框
+    $("#share").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','350px'],
+            shadeClose: true,
+            content: $('#share_div')
+          });
+    });
+</script>
+
+<!-- 页面初始化字体设置 -->
+<script>
+    font_stauts = window.localStorage.getItem('font-sans')
+    if(font_stauts == 'serif'){// 字体类型
+        $(".doc-content").toggleClass("switch-font")
+        $("#content").toggleClass("switch-font")
+    }
+    if(window.localStorage.getItem('font-size')){// 字体大小
+        font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        $('#content').css({'font-size':font_size+'rem'})
+    }else{
+        window.localStorage.setItem('font-size',1.0)
+    }
+</script>
+
+<!-- 返回顶部 -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 初始时，“返回顶部”标签隐藏
+        $(".toTop").hide();
+        $(window).scroll(function() {
+            // 若滚动的高度，超出指定的高度后，“返回顶部”的标签出现。
+            if($(document).scrollTop() >= 140) {
+                $(".toTop").show();
+            } else {
+                $(".toTop").hide();
+            }
+        })
+        // 绑定点击事件，实现返回顶部的效果
+        $(".toTop").click(function() {
+            $(document).scrollTop(0);
+        });
+        // 生成当前网页链接
+        $("input[name=current_url]").val(document.URL)
+    });
+</script>
+
+<!-- 切换隐藏侧边栏 -->
+<script>
+    // 切换侧边栏
+    $(function(){
+        $(".js-toolbar-action").click(toggleSidebar);
+    });
+    //切换侧边栏显示隐藏
+    function toggleSidebar(){
+        console.log("切换侧边栏")
+        $("body").toggleClass("big-page");
+        return false;
+    }
+</script>
+
+<!-- 切换内容字体 -->
+<script>
+    //切换文档内容字体类型
+    $(function(){
+        $('.font-switch').click(switchFont);
+    });
+    function switchFont(){
+        if(font_stauts == 'serif'){
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','sans')
+        }else{
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','serif')
+        }
+    };
+    //放大字体
+    $(function(){
+        $('.font-large').click(largeFont);
+    });
+    function largeFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        if(parseFloat(font_size) < 1.4){
+            size = parseFloat(font_size) + 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+    //缩小字体
+    $(function(){
+        $('.font-small').click(smallFont);
+    });
+    function smallFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        if(parseFloat(font_size) >= 0.6){
+            size = parseFloat(font_size) - 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+
+    // 显示打赏图片
+    $("#dashang").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['480px','400px'],
+            shadeClose: true,
+            content: $('#dashang_img')
+          });
+    });
+</script>
+
+<!-- 分享选项卡模板 -->
+<div id="share_div" style="display: none;">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">微信扫一扫</li>
+            <li>复制链接</li>
+        </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        <div class="layui-tab-item layui-show" align='center'>
+            <p style="font-weight: 700;margin-bottom: 10px;">手机扫一扫进行分享</p>
+            <div id="url_qrcode"></div>
+        </div>
+        <div class="layui-tab-item" align='center'>
+            <input type="text" id="copy_crt_url" name="current_url" class="layui-input"><br>
+            <button class="layui-btn layui-btn-radius layui-btn-xs" style="background-color: #333;" onclick="copyUrl();">复制链接</button>
+        </div>
+    </div>
+    </div> 
+</div>
+
+<!-- 打赏选项卡模板 -->
+<div id="dashang_img" style="display: none;">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+          <li class="layui-this">微信</li>
+          <li>支付宝</li>
+          <li>QQ支付</li>
+          <li>PayPal</li>
+          <li>项目源码</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px;">
+          <div class="layui-tab-item layui-show" align='center'>
+            <img src="../../static/dashang/dashang_wx.webp" style="width: 300px;height: auto;">
+          </div>
+
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_alipay.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_qq.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <a href="https://paypal.me/zmister" target="_blank">
+                <img src="../../static/dashang/dashang_paypal.png" style="width: 280px;height: auto;">
+            </a>
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <p><a href="https://github.com/zmister2016/MrDoc" target="_blank">GitHub：https://github.com/zmister2016/MrDoc</a></p>
+            <br>
+            <p><a href="https://gitee.com/zmister/MrDoc" target="_blank">码云：https://gitee.com/zmister/MrDoc</a> </p>
+            <br>
+            <p><a href="https://zmister.com" target="_blank">作者博客：https://zmister.com</a></p>
+          </div>
+        </div>
+      </div> 
+  </div>
+  
+<script>
+    // 展开收起左边目录
+    $(function(){
+        // $(".switch-toc").click(SwitchToc);
+        $("body").on('click','.switch-toc',SwitchToc)
+    });
+    function SwitchToc(i){
+        console.log("点击了")
+        var $me = $(this);
+        $(this).parent().next("ul").toggleClass("toc-close"); //切换展开收起样式
+        $(this).toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+    };
+
+    // 展开文档树
+    function openDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).removeClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+        
+    };
+    // 收起文档树
+    function closeDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).addClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+    };
+    // 文档分享 - 复制链接
+    copyUrl = function(){
+        var crt_url_val = document.getElementById("copy_crt_url");
+        crt_url_val.select();
+        window.clipb
+        document.execCommand("Copy");
+        layer.msg("链接复制成功！")
+    }
+    // 生成二维码
+    var qrcode = new QRCode("url_qrcode", {
+        text: document.URL,
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
+<!-- 统计代码开始 -->
+    
+        <script type="text/javascript" src="//js.users.51.la/20830315.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+    
+<!-- 统计代码结束 -->
+
+<!-- 下载选项卡模板 -->
+<div id="download_div" style="display: none;">
+    <div class="layui-row" style="margin: 10px;">
+        <a class="" download='第四章 游戏的规则与架构 Rules and Structure of the Game.md' href="../../download_doc_md/7/index.htm" target="_blank">
+            <i class="fa fa-download"></i> 下载Markdown文件
+        </a>
+    </div>
+</div>
+<!-- 分享文档选项卡模板 -->
+<div id="share_doc_div" style="display: none;">
+    <div class="layui-tab-content">
+        <div class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分享</label>
+                <div class="layui-input-block">
+                  <input type="checkbox" name="switch" lay-skin="switch" lay-text="开启|关闭" lay-filter="share-switch">
+                </div>
+            </div>
+            
+            <div class="layui-form" style="display: none;" id="share-link">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">链接</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="share_link" class="layui-input" id="share_link" disabled="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="layui-form-item" style="display:none;" id="share-type">
+                <label class="layui-form-label">类型</label>
+                <div class="layui-input-block">
+                    
+                    <input type="radio" name="share_type" value="0" title="公开" checked="" lay-filter="share_type">
+                    <input type="radio" name="share_type" value="1" title="私密" lay-filter="share_type">
+                    
+                </div>
+                
+            </div>
+            <div class="layui-form" style="display:none;" id="share_value_item">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="share_value" value='' disabled="" class="layui-input" id="share_doc_value">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        <button class="layui-btn layui-btn-xs layui-btn-primary" id="updateShareValue"><i class="fa fa-repeat"></i> 更新密码</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/toc/doctoc.js"></script>
+<script src="../../static/viewerjs/viewer.min.js"></script>
+<script>
+    var layer = layui.layer;
+    var form = layui.form;
+    // 手机屏幕上默认最小化目录
+    if(window.outerWidth < 1300){
+        $(".sidebar").toggleClass("doc-toc-hide");
+    }
+    // 切换文档目录显示与否
+    $(".tocMenu").click(function() {
+        console.log("隐藏文档目录")
+        $(".sidebar").toggleClass("doc-toc-hide");
+    });
+    
+    //修改a标签链接新窗口打开
+    $('#content').on('click','a',function(e){
+        e.target.target = '_blank';
+    });
+    
+    // 图片放大显示
+    var img_options = {
+        url: 'data-original',
+        fullscreen:false,//全屏
+        rotatable:false,//旋转
+        scalable:false,//翻转
+        button:false,//关闭按钮
+        toolbar:false,
+        title:false,
+      };
+    var viewer = new Viewer(document.getElementById('content'), img_options);
+
+    // 显示文档下载弹出框
+    $("#download_doc").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','150px'],
+            shadeClose: true,
+            content: $('#download_div')
+          });
+    });
+    
+    // 生成随机分享码
+    function randomWord(randomFlag, min, max){
+        var str = "",
+            range = min,
+            arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        // 随机产生
+        if(randomFlag){
+            range = Math.round(Math.random() * (max-min)) + min;
+        }
+        for(var i=0; i<range; i++){
+            pos = Math.round(Math.random() * (arr.length-1));
+            str += arr[pos];
+        }
+        return str;
+    };
+    
+    // 更新文档分享状态
+    function updateDocShare(data){
+        $.post("/share_doc/",data,function(r){
+            if(r.status){
+                layer.msg("设置成功",{offset: 't'})
+                console.log(r.data)
+                $("input[name=share_link]").val(document.domain + '/share_doc/?token=' + r.data.doc)
+            }else{
+                layer.msg("设置出错")
+            }
+        })
+    }
+
+    // 分享文档
+    $("#shareDoc").click(function(){
+        layer.open({
+            type:1,
+            title:'分享文档:第四章 游戏的规则与架构 Rules and Structure of the Game',
+            content:$("#share_doc_div"),
+            area:'450px',
+            // btn:['创建分享','取消'],
+            success : function(index, layero) { // 成功弹出后回调
+                form.render();
+            },
+        })
+    })
+    
+
+    var share_data = {
+        'id':'7',
+    }
+
+    //监听分享框分享类型的单选事件
+    form.on('radio(share_type)', function(data){
+    //   console.log(data.value); //被点击的radio的value值
+      if(data.value == 0){ // 公开
+            $("#share_value_item").css("display","none");
+            share_data['share_type'] = 0;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+            
+      }else if(data.value == 1){ // 私密
+            $("#share_value_item").css("display","block");
+            
+                $("#share_doc_value").val(randomWord(false,4))
+            
+            share_data['share_type'] = 1;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+      }
+    });
+
+    // 监听分享开关事件
+    form.on('switch(share-switch)', function(data){
+        console.log(data.elem.checked); //开关是否开启，true或者false
+        if(data.elem.checked){ // 开启
+            console.log("开启分享")
+            $("#share-type").css('display',"block");
+            $("#share-expire").css('display',"block");
+            $("#share-link").css("display","block");
+            if($("input[name='share_type']:checked").val() == 1){
+                $("#share_value_item").css("display","block");
+            }
+            // 开启
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+        }else{
+            console.log("关闭分享")
+            layer.msg("关闭分享",{offset: 't'})
+            $("#share-type").css('display',"none")
+            $("#share-expire").css('display',"none")
+            $("#share_value_item").css("display","none");
+            $("#share-link").css("display","none");
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = false
+            updateDocShare(share_data);
+        }
+    });  
+
+    // 更新文档分享密码
+    $("#updateShareValue").click(function(){
+        $("#share_doc_value").val(randomWord(false,4));
+        share_data['share_type'] = 1;
+        share_data['share_value'] = $("#share_doc_value").val();
+        share_data['is_enable'] = true
+        updateDocShare(share_data);
+    })
+</script>
+
+
+
+</body>
+</html>

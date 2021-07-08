@@ -1,0 +1,91 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>404 页面未找到 - 泡学chat书库 </title>
+    <link href="../../static/layui/css/layui.css" rel="stylesheet">
+    <link href="../../static/mrdoc/mrdoc-1.css" rel="stylesheet">
+    <link rel="icon" href="../../static/search/mrdoc_logo_300.png" sizes="192x192">
+</head>
+<body class="layui-container">
+<!-- 页头 -->
+
+<div class="layui-header layui-fluid">
+    <div class="" style="display:flex;flex-direction:row;justify-content:space-between;">
+        <!-- LOGO -->
+        <div class="">
+            <a class="logo" href="../../index.htm">
+                <img src="../../static/logo.jpg" style="height: 32px;width: auto;">
+                <!-- <h1><strong>MrDoc</strong></h1> -->
+            </a>
+        </div>
+        <!-- 搜索框 -->
+        <div style="margin:12px;" class="layui-hide-xs">
+            <form method="get" action="/search/" target="_blank">
+            <div class="layui-input-inline">
+                <input class="layui-input mrdoc-search-input" placeholder="搜索文集或文档" name="kw">
+                <button type="submit" style="position: absolute;top:12px;right: 8px;border: none;background-color: white;">
+                    <i class="layui-icon layui-icon-search"></i>
+                </button>
+            </div>
+            </form>
+        </div>
+        <div class="layui-hide-lg layui-hide-md layui-hide-sm" style="margin:20px;">
+            <a href="../../search/index.htm">
+                <i class="layui-icon layui-icon-search" style="font-size: 24px;"></i>
+            </a>
+        </div>
+        
+        <!-- 新建文档按钮 -->
+        <div class="layui-hide-xs" style="">
+            <ul class="layui-nav" style="">
+                <li class="layui-nav-item">
+                    <a>
+                        <i class="layui-icon layui-icon-add-circle" style="color:black;"></i> <span>新建</span>
+                    </a>
+                    <dl class="layui-nav-child">
+                        
+                        <dd>
+                            <a href="../../user/login/index.htm" target="_blank">
+                                <img src="../../static/icon_img/create-doc-icon.svg" height="14px" width="14px">
+                                <span class="layui-hide-xs">新建文档</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <!-- 用户菜单 -->
+        <div class="">
+            <ul class="layui-nav layui-layout-right">
+                
+                <li class="layui-nav-item">
+                <a href="javascript:void(0);">
+                <i class="layui-icon layui-icon-username"></i> 游客
+                </a>
+                <dl class="layui-nav-child">
+                <!-- <dd><a href="">基本资料</a></dd> -->
+                    
+                    <dd><a href="../../user/register/index.htm">注册</a></dd>
+                    <dd><a href="../../user/login/index-1.htm">登录</a></dd>
+                    
+                </dl>
+            </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 页头结束 -->
+<div class="layui-main">
+    <div style="text-align: center;">
+        <img src="../../static/404.png">
+        <p><a href="../../index.htm">返回首页</a></p>
+    </div>
+</div>
+
+<script src="../../jquery/3.1.1/jquery.min.js"></script>
+<script src="../../static/layui/layui.all.js"></script>
+</body>
+</html>

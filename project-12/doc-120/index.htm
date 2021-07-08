@@ -1,0 +1,1164 @@
+﻿<!-- 继承自模板：app_doc/docs_base.html -->
+
+<!DOCTYPE html>
+<html lang="zh-cn" style="font-size: 14px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="max-age=7200">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="PALY连招第七招----恋爰契约,PALY连招-乌鸦救赎,PUAshow,泡学,迷男方法,泡学chat">
+    <meta name="description" content="不要以为截杀了目标，事情就这样搞定了。如果我们想让自己有高质量的恋爱，就必须和爱人一起规划美好生活的未来，没有什么能比一个给女人方向和未来的男人更有魅惑力了。对于任何性质的一群人或者只是两个人形成的联">
+    <title>PALY连招第七招----恋爰契约 - PALY连招-乌鸦救赎 - 泡学chat书库 </title>
+    <link href="../../static/layui/css/layui-1.css?version=0.6.1" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/editor.md/css/editormd.css?version=0.6.1">
+    
+
+    <link href="../../static/viewerjs/viewer.min.css?version=0.6.1" rel="stylesheet">
+    <link rel="icon" href="../../static/search/mrdoc_logo_300.png" sizes="192x192">
+    <link href="../../static/mrdoc/mrdoc.css?version=0.6.1" rel="stylesheet">
+    <style>
+        /*一级无序li显示实心圆点*/
+        .doc-content ul li{
+            list-style:disc;
+        }
+        /*二级无序li显示空心圆点*/
+        .doc-content ul > li > ul > li{
+            list-style-type: circle;
+        }
+        /*有序li显示数字*/
+        .doc-content ol li{
+            list-style-type: decimal;
+        }
+        .doc-content ol ol ul,.doc-content ol ul ul,.doc-content ul ol ul,.doc-content ul ul ul {
+            list-style-type: square;
+        }
+        /* 三级及以下无序li显示小方块 */
+        .doc-content ul ul ul li{
+            list-style-type: square;
+        }
+        /* 下拉目录隐藏li样式 */
+        .editormd-toc-menu ul.markdown-toc-list li{
+            /*list-style:none;*/
+        }
+        /* 弹出框文档目录样式 */
+        ul.markdown-toc-list{
+            list-style-position:inside;
+        }
+        ul.markdown-toc-list li{
+            list-style: none!important;
+            line-height: 24px;
+        }
+        ul.markdown-toc-list > li > ul > li,ul.markdown-toc-list > li > ul li{
+            padding-left:15px;
+        }
+        ul.markdown-toc-list a{
+            /* text-decoration: underline!important; */
+        }
+        /* 块级代码和行内代码去除边框 */
+        .markdown-body p code{
+            border:none;
+        }
+        /* HTML预览样式 */
+        .markdown-body h1{ 
+            font-size: 1.7em;
+        }
+        .markdown-body h2{
+            font-size: 1.5em;
+        }
+        .markdown-body h3{
+            font-size: 1.25em;
+        }
+        .markdown-body h4{
+            font-size: 1em;
+        }
+        .markdown-body h5{
+            font-size: .875em;
+        }
+        .markdown-body h6{
+            font-size: .85em;
+        }
+        
+        .markdown-body p img{
+            max-width: 350px;
+        }
+        
+        #url_qrcode img{
+            margin: auto;
+        }
+        /* 文档代码块样式 */
+        ol.linenums li{ 
+            width: max-content;
+        }
+        pre.linenums{
+            max-height: 500px;
+        }
+        li.L1, li.L3, li.L5, li.L7, li.L9 {
+            background: none !important;
+        }
+
+        /* layui弹出框颜色 */
+        .layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{
+            border-bottom: 2px solid #333;
+        }
+        .layui-tab-brief>.layui-tab-title .layui-this{
+            color: #333;
+        }
+        /* 覆盖vditor样式 */
+        .vditor-outline__item{
+            padding: 0;
+            padding-bottom: 5px;
+            color: #333;
+        }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="doc layui-fluid" style="padding-left:0px;">
+    <!-- 左侧目录栏 -->
+    <div class="doc-summary">
+        <!-- 文档搜索 -->
+        <form action="/project-12/" method="get">
+            <div id="doc-search-input">
+                <input type="text" name="kw" placeholder="输入并回车搜索" value="" class="layui-input doc-search-input">
+            </div>
+        </form>
+        <!-- 文集名称 -->
+        <div class="project-title">
+            <a href="../index.htm">PALY连招-乌鸦救赎
+                
+            </a>
+            <p>
+                
+            </p>
+        </div>
+        <hr>
+        <!-- <div style="margin-left:15px;">
+            <a href="javascript:void(0);" onclick="openDocTree()"><i class="fa fa-bars"></i> 展开</a>
+            <a href="javascript:void(0);" onclick="closeDocTree()"><i class="fa fa-bars"></i> 折叠</a>
+        </div> -->
+        
+        <!-- 遍历文集大纲 -->
+        <!-- 如果文集的文档数量超过999，使用异步加载文集目录 -->
+        
+        <!-- 文档数量小于999，使用同步加载文集目录 -->
+        <nav>
+            <ul class="summary">
+            <!-- 一级目录 -->
+            
+                <li>
+                    
+                        <a href="../doc-112/index.htm" title="目录">目录</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-114/index.htm" title="开篇我们的存在是梦境">开篇我们的存在是梦境</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-113/index.htm" title="PALY连招第一招----自我引导">PALY连招第一招----自我引导</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-115/index.htm" title="PALY连招第二招----变相带领">PALY连招第二招----变相带领</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-116/index.htm" title="PALY连招第三招----人格筛选">PALY连招第三招----人格筛选</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-117/index.htm" title="PALY连招第四招----有利描述">PALY连招第四招----有利描述</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-118/index.htm" title="PALY连招第五招----建立联系">PALY连招第五招----建立联系</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-119/index.htm" title="PALY连招第六招----中段截杀">PALY连招第六招----中段截杀</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="index.htm" title="PALY连招第七招----恋爰契约">PALY连招第七招----恋爰契约</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-121/index.htm" title="PALY连招第八招----约会时光">PALY连招第八招----约会时光</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-122/index.htm" title="PALY连招第九招----私密空间">PALY连招第九招----私密空间</a>
+                    
+                </li>
+            
+                <li>
+                    
+                        <a href="../doc-123/index.htm" title="PALY连招----悬记">PALY连招----悬记</a>
+                    
+                </li>
+            
+            </ul>
+        </nav>
+        
+        <div class="bq">
+            <a href="javascript:void(0);" class="mrdoc-link" id="dashang">本文档使用MrDoc发布</a>
+        </div>
+        <!-- 右下角广告块 -->
+        <!-- 广告代码开始 -->
+        
+            
+                <div class="ad-code">
+                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                </div>
+            
+        
+        <!-- 广告代码结束 -->
+    </div>
+    <!-- 左侧目录栏结束 -->
+
+    <!-- 右侧文档栏 -->
+    <div class="doc-body">
+        <!-- 文档导航 -->
+        <div class="doc-header" role="navigation">
+            <a class="btn pull-left js-toolbar-action" aria-label="" href="javascript:void(0);" title="切换侧边栏">
+                <i class="fa fa-align-justify"></i>
+            </a>
+            <a class="btn pull-left font-small" href="javascript:void(0);" title="缩小字体">
+                <i class="fa fa-font">-</i>
+            </a>
+            <a class="btn pull-left font-large" href="javascript:void(0);" title="放大字体">
+                <i class="fa fa-font">+</i>
+            </a>
+            <a class="btn pull-left font-switch" href="javascript:void(0);" title="切换字体类型">
+                <i class="fa fa-text-height"></i>
+            </a>
+            <!-- 顶部工具栏 -->
+            
+    
+    <!-- 文档目录 -->
+    <div id="toc-container" class='sidebar'></div>
+    
+
+
+            <a class="btn pull-right" aria-label="" href="../../index.htm">
+                <i class="fa fa-home"></i> <span class="layui-hide-xs">首页</span>
+            </a>
+        </div>
+        <!-- 文档主体 -->
+        <div class="doc-body-content">
+            <div class="doc-body-content-div">
+                <!-- 文档内容 -->
+                <div class="doc-content">
+                    <!-- 标题 -->
+                    <div class="doc-info">
+                        <!-- 页面主体头信息 -->
+                        
+    <h1>PALY连招第七招----恋爰契约</h1><hr>
+
+
+                        <!-- 广告代码开始 -->
+                        
+                            
+                                <div class="ad-code">
+                                <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                                </div>
+                            
+                        
+                        <!-- 广告代码结束 -->
+                    </div>
+                    <!-- 标题结束 -->
+                    <!-- 正文开始 -->
+                    <div class="markdown-body" id="content" style="padding: 20px;padding-top: 5px;">
+                        
+    <textarea style="display: none;">不要以为截杀了目标，事情就这样搞定了。如果我们想让自己有高质量的恋爱，就必须和爱人一起规划美好生活的未来，没有什么能比一个给女人方向和未来的男人更有魅惑力了。对于任何性质的一群人或者只是两个人形成的联盟来说，如果要让别人死心塌地的跟着我们走，我们就必须给予他们未来，有美好希望的未来。在展开邀约之前，要先和对方做恋爱契约，让对方感受到我们是真的想要和她恋爱，不是在玩弄她的感情。
+
+恋爱契约：
+
+恋爱契约是指和爱人规划你们应当如何相处，你们彼此将要扮演何等的角色的过程。人生是一场大戏，人越是认同自己的角色就会越发的入戏。如果说我前面提到的是通过称呼来定性角色从而使对方入戏，那么恋爱规划则是通过角色要做出的行为来使对方入戏。当然我们不会大剌剌的要求对方做什么，刻意的强调会让人产生抵触，我们要做的是一种暗示，感觉没那么真实。暗示，应该是润物细无声，将暗示设于对方最不设防之处。在这个阶段，女人最需要的就是安全感，但是让女人获得安全感方式不是通过口头方式告诉对方自己有多爱她，而是通过表现出自己愿意为这段关系付出什么，愿意为俩人的关系做出什么样的努力。这才足以让女人看到你对这段关系的重视程度，我们越是表达出我们愿意参与到女人的未来之中，女人就越是感觉你对这段感情是认真的。
+
+最好的带领永远是自己先首当其冲，为对方去示范，并非一再强调别人要如何做。真诚和虚伪的区别就在于此。截杀之后聊天可以变得很随意，不需要考虑太多的策略套路问题，更多的是心与心的交流，这个时候可以适当的暴露一部分需求，表现出对对方的在乎。注意我说的是适当的这能让对方感觉到我们对她的态度是认真的。如果让对方感觉我们太冷淡，或者不认真，那会激发女人的不安全感，从而和我们中断连接，所以我们必须当一段时间的保姆，直到最后一刻。
+
+范例1：
+
+男：宝贝，你的过去我来不及参与，但是你的未来我将奉陪到底丨
+
+女：巴拉巴拉。
+
+范例2：
+
+男：我想你一定上辈子和我有什么深仇大恨。
+
+女：为什么这么说？
+
+男：我听说报复一个女人最厉害的办法就是娶了她，让她为你洗衣做饭，让她为你传宗接代，让她为你孝顺父母。当然你现在还没有嫁给我，但是，你愿意让我丨报这个仇么女：哈哈哈，报吧丨
+
+范例3：
+
+男：你喜欢男孩还是女孩？
+
+女：男孩吧。
+
+男：我喜欢女孩，我们家男孩太多了，舅舅伯伯家里全是男孩。
+
+女：哈哈，这个是我能决定的么，好像生男生女是取决于男人的。
+
+男：那就生一男一女。
+
+女：切，你有那个本事嘛，那么准？
+
+男：不信啊，好啊，那我们打个赌，如果生的不是一男一女，我就十倍的对你好丨女：切，少来了，这个看起来是你占便宜哦，再说了，如果是一男一女的话，难道你就不对我好了吗？
+
+男：当然会对你好，但不是十倍，而是百倍。
+
+范例4：
+
+男：听说，你做了XXX(你的名字）的女朋友了？
+
+女：你听谁说的啊，才没有的事。
+
+男：好多人都这么说，你就不要再藏了。
+
+女：哈哈，是又如何？
+
+男：没事，我只是觉得他挺幸运的，以后他的脏衣服、臭袜子什么的就有着落了。
+
+女：去去去，我才不给你洗臭袜子呢！
+
+男：没有啦，我家有洗衣机，我只是在想一个画面。
+
+女：什么画面？
+
+男：当你在站在洗衣机旁给我衣服的时候，我轻轻从后面把你抱住，亲吻你的脸颊，那应该是很美的画面吧丨女：巴拉巴拉。
+
+范例5：
+
+男：老婆我想你了。
+
+女：我也是。
+
+男：好想抱着你睡觉觉，躺在床上，轻轻拍着你的后背，哄你入眠，当你的呼吸变得均匀我就知道你已经入睡，我亲吻你的额头，搂着你相拥而眠。
+
+女：巴拉巴拉。
+
+范例6：
+
+男：你特么这些年都去哪了，怎么才出现？
+
+女：在找你啊丨
+
+男：你知道么？为了遇见你，最近我连一个去外企的机会都放弃了，现在我才发现原来这一切都是为了遇见你。
+
+女：巴拉巴拉•••••
+
+要经常对女人说&quot;我想你〃，这三个字就像有魔力一样，能让女人更加真实的感受到你对她的爱意。但是不要对女人说&quot;我爱你〃，用&quot;我想你〃代替&quot;我爱你〃。当女人要求我说爱她的时候我会拒绝她，我会对女人说：&quot;这三个字值金子，不是随便能说的，如果我一旦对一个女人说了这三个字，就代表着我要娶她了，所以才没那么容易。”这样会给女人制造出一种挑战的感觉，她会为了得到这三个字而更加好好表现自己。
+
+每一个playboy都绝对不能心怀恶意的玩弄女人的感情。在开始的时候我们或许会对女人表现的玩世不恭、挑剔、不可捉摸，但是一旦锁定了恋爱关系，playboy必须全力以赴，直到爱意消退。或许你并没有做到你为这段爱情做出的所有规划，但那并不是欺骗，承诺这种东西在没有足够强的爱意和敬畏时是靠不住的。有个故事是这样的，一对夫妻办理了离婚手续，丈夫和妻子共进最后的晚餐。丈夫问妻子：&quot;你曾说过，要和我共度此生，终生不悔，爱我直到生命的尽头，可是现在你却和我离婚了，你欺骗了我的感情。〃妻子说：&quot;亲爱的，我当初说爱你直到永远是没有骗你的，当时我就是那么想的，我没有撒谎，那话是真的。但是现在我说我不爱你了，要离开你，我也没有骗你，也是真的。〃
+
+懂了么？很多时候海誓山盟，只是表达自己当时有多爱对方的一种方式，不是说一定要那么做。只要在当时说那话的时候是发自内心动了情，就已经是真实的表达自己了，而非欺骗。欺骗是言不由衷的，说着和自己内心感受相反的话才是欺骗。
+
+约会规划：
+
+因为恋爱关系已经锁定，所以只要做足恋爱规划，让对方信任我们，那么这个时候女人其实已经迫不及待想要和我们见面了，甚至有绝大部分时候女人会主动提出约会。每个女人都非常喜欢恋爱以及恋爱的感觉，但是前提是她也喜欢这个人。锁定关系就说明我们已经是她的男友了，邀约便会变得异常的简单，这就是截杀的好处，也是中国人的恋爱习惯。
+
+如果女人自己提出约会，那么我们设计约会就OK，如果女人自己没有提出，那么我们可以暗示她一下，&quot;亲爱的，我们该见个面了。”这个是没有任何技巧的，可以直接说，女人最近可能会因没时间而延迟约会，但是绝对不会拒绝约会。
+
+要让女人参与到约会的设计之中，时间、地点、要娱乐的项目。有人曾经说为了保持神秘性，不要告诉女人约会的流程，但是我的个人经验是在约会流程上保持神秘和不保持神秘并没什么区别，相反如果我们给女人一个可见的约会流程，会増加其安全感。当然，増加安全感只是辅助性的作用，不是主要目的，更多的是让女人参与进来。就像和销售人员讨价还价的时候，销售人员会问顾客：&quot;你觉得多少钱合适？&quot;如果顾客一旦说了价钱，就不能改了，因为这是你自己决定的，最后就得按这个价钱购买。从这点上来说，让对方参与到约会设计中来，所达到的效果是相同的，女人给出了约会时间，或者地点，或者想玩的一个项目，也就是说，她愿意约会，这场约会她已经有了责任，这可以有效的避免男人被放鸽子。当然我们不需要让女人来定所有的约会内容，只需要她们给出两三个建设性意见就OK。
+
+具体要和女人商量的内容包含&quot;约会地点〃，&quot;约会时间〃，&quot;碰面方式〃，&quot;约会项目〃四个模块，我给出了一些范例，但是还是那句话不要照搬，可以以聊天的感觉自然而然的谈到这些内容，一般先从&quot;约会项目〃切入对话，好玩的项目能够剌激对方更加想要参与的欲望。
+
+锁定项目范例
+
+男：宝贝，让我们来规划一下第一次的约会吧。女：恩，你说吧。
+
+男：你想吃什么女：嗯，我想去吃牛排。
+
+男：好的，项目之一牛排。
+
+锁定时间范例
+
+男：宝贝，你一般什么时候休息，或者下班？女：周六、曰吧。
+
+男：OK，那么我们就周六的时候约吧。
+
+女：嗯，好的。
+
+锁定约会地点范例
+
+男：这些玩的东西很难一个地方都P有啊丨女：嗯，我们直接就去XX国际广场吧丨男：ok，这个听你的。
+
+锁定碰面方式范例
+
+男：那到时候我过去接你呢，还是你直接来约会的地方？
+
+女：嗯，我自己直接过去吧丨
+
+第一次约会要放女人鸽子：
+
+这个不是说真的要在第一次约会就把女人骗到约会场所，然后放她鸽子。虽然我干过很多次，但是这样做很容易会将关系中断，导致崩盘。放女人鸽子会造成极大的心理投资，她会因为不甘心而生闷气、自我纠结，从而更想得到我们，更想和我们约会。我将这个策略做了一个折中处理，首先我们可以简单的和对方定一个约会时间以及地点，对方答应之后，过一会再告诉她自己可能没办法去了或者因为什么事情而突然临时决定不去了,然后再另行定一个时间。这会让女人产生落差感，她会更想要得到这次约会，而且也能看出来她的态度，是不是真的很想和自己约会。这用到的&quot;捭阖之术〃的原理，关上门是为了让对方更坚定对于某事的信心。放了女人鸽子之后我们可以直接再另订一个时间，或者先和她聊会别的，过一会再重新制定一个约会流程。但这个不是一个必出策略，有些时候感觉到对方在约会上有敷衍的成分可以用这招试探她，也可以加重她的投资，迫使她主动参与。
+
+近挪锁定：
+
+近挪锁定是说在规划玩约会流程之后主动发出意图申明，告诉对方我们可能会对她做什么。只要我们的要求不是非常的过分，很大程度上就不会被拒绝，即便女人拒绝了我们，其实也没事。很多人理解不了这个，这个道理很抽象，我也是想了很久才理解。我们只是表达
+
+出一种可能性，告诉女人我会这么做，女人在口头上拒绝了我们，但是她要理解我们那句话的时候，她就必须先把这句话在脑子里过一遍，而且多次重复后，女人会自动做好准备，当我们真的去做了之前说过的事情的时候，女人也不会很抗拒。如果将这种描述加深，是可以产生第一次见面发生关系的效果的，但是这个不是本书要叙述的重点。中国女人比较保守，所以当我们发出意图申明的时候，大部分女人会选择沉默，这是一种被动的IOD。人类很多时候碍于某些原因不能直接答应，但不拒绝就代表了许可。近挪锁定的时候不需要拐弯抹角，直接发出申明即可。
+
+范例1
+
+男：亲爱的，到时候过去了，我会直接牵你的手，不要拒绝我。女：为什么？
+
+男：因为我们是情侣，我很想知道我们牵手的感觉会是什么样。女：好的吧。
+
+范例2
+
+男：老婆你喜欢舌吻还是只是轻轻的碰下嘴唇女：都还可以吧。
+
+男：那我们到时候都试试看。
+
+女：你好坏哦。
+
+范例3
+
+男：等我们见面之后独处的时候，我要你趴在我耳边，轻轻的叫我老公。
+
+女：不要，叫不出来。
+
+男：不行，必须叫！否则打哭你。
+
+女：好暴力，好的吧，叫就是了。
+
+当我们把这些都锁定好之后，就可以约女人出来了，在恋爱契约这块做的越完善，约会的时候就会越顺畅。但是大家也要注意，当我们在做一些锁定时，如果受到了女人拒绝，不要非得让女人答应才罢休，很多时候女人是欲拒还迎，只要对方不是口气非常生硬的拒绝，就可以视为默许。我们只是在向她表达一种可能性，女人拒绝男人大多是因为男人在做某事之前没有给对方足够暗示，对方内心没有一点准备。女人在没有准备好的时候任何突然发生的情况都可能会吓到她。所以我们要提前给予意图声明，让对方知道我们有这种可能性，或者直接同意或者默许我们的行为。那么当我们真的以实际行动去做这件事的时候女人就不会感觉唐突了。</textarea>
+
+                    </div>
+                    <!-- 正文结束 -->
+                </div>
+                <hr>
+                <!-- 分享栏 -->
+                <div style="color: rgba(0,0,0,.65);padding-bottom: 10px;margin-top: 10px;">
+                
+<div class="layui-row" style="margin-bottom: 10px;padding-left: 20px;">
+    
+</div>
+
+<div class="layui-row layui-col-space20" style="padding-left: 20px;">
+    <span>
+        <i class="fa fa-user"></i>  PUAshow 
+    </span>
+    <span tooltip="更新于:2020年12月10日 21:04">
+        <i class="fa fa-clock-o"></i> 2020年12月10日 21:04
+    </span>
+
+    <button id="share" class="doc-bottom-btn" tooltip="分享本文档">
+        <i class="fa fa-share-alt"></i> 分享
+    </button>
+
+    
+</div>
+
+
+
+                </div>
+
+                <!-- 广告代码开始 -->
+                
+                    
+                        <div class="ad-code">
+                        <li><a href="http://pua.show"><font color="#FFC0CB">100元购买5000G泡学课程加微信:paoxuechat</font></a></li>
+<li><a href="http://paoxue.chat"><font color="#FFC0CB">返回泡学chat</font></a></li>
+                        </div>
+                    
+                
+                <!-- 广告代码结束 -->
+
+                
+    
+    <div class="layui-row" style="margin-top: 10px;padding:10px;display:flex;justify-content:space-around;">
+        <!-- <hr> -->
+        <div>
+            
+                <a href="../doc-119/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius"><i class="layui-icon layui-icon-prev "></i>上一篇</a>
+            
+        </div>
+        <div>
+            
+                <a href="../doc-121/index.htm" class="layui-btn layui-btn-primary layui-btn-sm layui-btn-radius">下一篇<i class="layui-icon layui-icon-next"></i></a>
+            
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 右侧文档栏结束 -->
+    <!-- 右下角工具按钮 -->
+    <div class="fixed-tool-bar">
+        <div class="toTop"><i class="fa fa-arrow-up"></i></div>
+        
+<!-- 目录 -->
+<div class="tocMenu" style="display: none;"><i class="fa fa-list"></i></div>
+<!-- 分享按钮 -->
+
+
+    </div>
+</div>
+
+<script src="../../static/jquery/3.1.1/jquery.min.js"></script>
+<script src="../../static/layui/layui.all.js"></script>
+<!-- 生成文集目录大纲 -->
+<script>
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: 'uXJTsOG9mf9CHglf2Zwot8TUrUM5XxOsRvL4P0xuADRRJQEGIdwSj2tYEh9gsxYq' },
+    });
+    // 视频iframe域名白名单
+    var iframe_whitelist = ''.split(',')
+    // 异步生成文集目录
+    getProjectToc = function(){
+        $.post("/get_pro_doc_tree/",{'pro_id':'12'},function(r){
+            $("#loading-project-toc").hide();
+            if(r.status){
+                var toc_str = ""
+                layui.each(r.data,function(index,item){
+                    toc_str += "<li>"
+                    if(item['children'] != undefined){ // 存在二级文档
+                        li = '<div style="display:flex;justify-content:space-between;">' + 
+                            '<a href="/project-'+'12'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                            '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                        '</div>'+
+                        '<ul class="sub-menu toc-close">'
+                        toc_str += li
+                        layui.each(item['children'],function(index,item){// 遍历二级文档
+                            toc_str += '<li>'
+                            if(item['children'] != undefined){ //存在三级文档
+                                li = '<div style="display:flex;justify-content:space-between;">' + 
+                                    '<a href="/project-'+'12'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>' +
+                                    '<i class="fa fa-chevron-left switch-toc" style="padding:15px;"></i>'+
+                                '</div>'+'<ul class="sub-menu toc-close">'
+                                toc_str += li
+                                layui.each(item['children'],function(index,item){ // 遍历三级文档
+                                    li = '<li><a href="/project-'+'12'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a></li>'
+                                    toc_str += li
+                                })
+                                toc_str += '</ul>'
+                            }else{// 不存在三级文档
+                                li = '<a href="/project-'+'12'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                                toc_str += li
+                            }
+                            toc_str += '</li>'
+                        })    
+                        toc_str += '</ul>'
+                    }else{//不存在二级文档
+                       li = '<a href="/project-'+'12'+'/doc-'+item.id+'/" title="'+item.title+'">'+item.title+'</a>'
+                       toc_str += li
+                    }
+                    toc_str += '</li>'
+                });
+                $('#project-toc').append(toc_str)
+                tagCurrentDoc();
+            }else{
+                layer.msg("获取文集目录失败！")
+            }
+        });
+    };
+    
+
+    //为当前页面的目录链接添加蓝色样式
+    tagCurrentDoc = function(){
+        $("nav li a").each(function (i) {
+            var $me = $(this);
+            var lochref = $.trim(window.location.href); // 获取当前URL
+            var mehref = $.trim($me.get(0).href); 
+            if (lochref.indexOf(mehref) != -1) {
+                // console.log($me,lochref,mehref)
+                $me.closest("li").addClass("active");
+                //展开当前文档的上级目录
+                if($me.parent("li").parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开二级文档目录")
+                    $me.parent("li").parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("div").parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开包含下级的二级文档目录")
+                    $me.parent("div").parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                if($me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').hasClass("toc-close")){
+                    console.log("展开三级目录")
+                    $me.parent("li").parent('ul').parent('li').parent('ul.sub-menu').toggleClass("toc-close");
+                }
+                // 切换图标
+                $me.parents("ul.sub-menu").prevAll("div").each(function(i){
+                    var $link = $(this);
+                    if($link.children("i").hasClass("fa-chevron-left")){
+                        $link.children("i").toggleClass("fa-chevron-left fa-chevron-down");
+                    }
+                })
+                // 目录的当前文档滚动于目录顶端
+                this.scrollIntoView({ behavior: 'auto', block: "start" });
+            } else {
+                // console.log(lochref,mehref)
+                $me.closest("li").removeClass("active");
+            }
+        });
+    };
+    tagCurrentDoc();
+</script>
+
+<!-- 小屏自动收起左侧文集大纲 -->
+<script>
+    //加载页面时执行一次
+    changeSidebar();
+    //监听浏览器宽度的改变
+    window.onresize = function(){
+        changeSidebar();
+    };
+    function changeSidebar(){
+        // 获取匹配指定的媒体查询
+        var screen_width = window.matchMedia('(max-width: 768px)');
+        //判断匹配状态
+        if(screen_width.matches){
+            //如果匹配到，切换侧边栏
+            //console.log('小屏幕')
+            $("body").addClass("big-page");
+        }else{
+            $("body").removeClass("big-page");
+        }
+    }
+    // 监听文档div点击
+    document.querySelector('.doc-body').addEventListener('click', function (e) {
+        // console.log("点击了div")
+        changeSidebar();
+    });
+</script>
+
+
+<script src="../../static/editor.md/lib/marked.min.js"></script>
+<script src="../../static/editor.md/lib/prettify.min.js"></script>
+<script src="../../static/editor.md/lib/raphael.min.js"></script>
+<script src="../../static/editor.md/lib/underscore.min.js"></script>
+<!-- <script src="/static/editor.md/editormd.min.js?version=0.6.1"></script> -->
+<script src="../../static/editor.md/editormd.js?version=0.6.1"></script>
+
+<script src="../../static/qrcodejs/qrcode.min.js"></script>
+
+
+<!-- 解析Markdown -->
+<script>
+    // EditorMD模式
+    
+        //解析Markdown为HTML
+        editormd.markdownToHTML("content", {
+            htmlDecode      : "style,script,iframe",
+            emoji           : true,  //emoji表情
+            taskList        : true,  // 任务列表
+            tex             : true,  // 科学公式
+            flowChart       : true,  // 流程图
+            sequenceDiagram : true,  // 时序图
+            tocm            : true, //目录
+            toc             :true,
+            tocContainer : "#toc-container",
+            tocDropdown   : false,
+            atLink    : false,//禁用@链接
+
+        });
+    // Vditor模式
+    
+    // 显示分享弹出框
+    $("#share").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','350px'],
+            shadeClose: true,
+            content: $('#share_div')
+          });
+    });
+</script>
+
+<!-- 页面初始化字体设置 -->
+<script>
+    font_stauts = window.localStorage.getItem('font-sans')
+    if(font_stauts == 'serif'){// 字体类型
+        $(".doc-content").toggleClass("switch-font")
+        $("#content").toggleClass("switch-font")
+    }
+    if(window.localStorage.getItem('font-size')){// 字体大小
+        font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        $('#content').css({'font-size':font_size+'rem'})
+    }else{
+        window.localStorage.setItem('font-size',1.0)
+    }
+</script>
+
+<!-- 返回顶部 -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 初始时，“返回顶部”标签隐藏
+        $(".toTop").hide();
+        $(window).scroll(function() {
+            // 若滚动的高度，超出指定的高度后，“返回顶部”的标签出现。
+            if($(document).scrollTop() >= 140) {
+                $(".toTop").show();
+            } else {
+                $(".toTop").hide();
+            }
+        })
+        // 绑定点击事件，实现返回顶部的效果
+        $(".toTop").click(function() {
+            $(document).scrollTop(0);
+        });
+        // 生成当前网页链接
+        $("input[name=current_url]").val(document.URL)
+    });
+</script>
+
+<!-- 切换隐藏侧边栏 -->
+<script>
+    // 切换侧边栏
+    $(function(){
+        $(".js-toolbar-action").click(toggleSidebar);
+    });
+    //切换侧边栏显示隐藏
+    function toggleSidebar(){
+        console.log("切换侧边栏")
+        $("body").toggleClass("big-page");
+        return false;
+    }
+</script>
+
+<!-- 切换内容字体 -->
+<script>
+    //切换文档内容字体类型
+    $(function(){
+        $('.font-switch').click(switchFont);
+    });
+    function switchFont(){
+        if(font_stauts == 'serif'){
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','sans')
+        }else{
+            $(".doc-content").toggleClass("switch-font")
+            $("#content").toggleClass("switch-font")
+            window.localStorage.setItem('font-sans','serif')
+        }
+    };
+    //放大字体
+    $(function(){
+        $('.font-large').click(largeFont);
+    });
+    function largeFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        console.log(font_size)
+        if(parseFloat(font_size) < 1.4){
+            size = parseFloat(font_size) + 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+    //缩小字体
+    $(function(){
+        $('.font-small').click(smallFont);
+    });
+    function smallFont(){
+        var font_size = window.localStorage.getItem('font-size')
+        if(parseFloat(font_size) >= 0.6){
+            size = parseFloat(font_size) - 0.1
+            $('#content').css({'font-size':size+'rem'})
+            window.localStorage.setItem('font-size',size)
+        }else{
+            console.log("xxx")
+        }
+    };
+
+    // 显示打赏图片
+    $("#dashang").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['480px','400px'],
+            shadeClose: true,
+            content: $('#dashang_img')
+          });
+    });
+</script>
+
+<!-- 分享选项卡模板 -->
+<div id="share_div" style="display: none;">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">微信扫一扫</li>
+            <li>复制链接</li>
+        </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        <div class="layui-tab-item layui-show" align='center'>
+            <p style="font-weight: 700;margin-bottom: 10px;">手机扫一扫进行分享</p>
+            <div id="url_qrcode"></div>
+        </div>
+        <div class="layui-tab-item" align='center'>
+            <input type="text" id="copy_crt_url" name="current_url" class="layui-input"><br>
+            <button class="layui-btn layui-btn-radius layui-btn-xs" style="background-color: #333;" onclick="copyUrl();">复制链接</button>
+        </div>
+    </div>
+    </div> 
+</div>
+
+<!-- 打赏选项卡模板 -->
+<div id="dashang_img" style="display: none;">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+          <li class="layui-this">微信</li>
+          <li>支付宝</li>
+          <li>QQ支付</li>
+          <li>PayPal</li>
+          <li>项目源码</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px;">
+          <div class="layui-tab-item layui-show" align='center'>
+            <img src="../../static/dashang/dashang_wx.webp" style="width: 300px;height: auto;">
+          </div>
+
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_alipay.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <img src="../../static/dashang/dashang_qq.webp" style="width: 300px;height: auto;">
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <a href="https://paypal.me/zmister" target="_blank">
+                <img src="../../static/dashang/dashang_paypal.png" style="width: 280px;height: auto;">
+            </a>
+          </div>
+          
+          <div class="layui-tab-item" align='center'>
+            <p><a href="https://github.com/zmister2016/MrDoc" target="_blank">GitHub：https://github.com/zmister2016/MrDoc</a></p>
+            <br>
+            <p><a href="https://gitee.com/zmister/MrDoc" target="_blank">码云：https://gitee.com/zmister/MrDoc</a> </p>
+            <br>
+            <p><a href="https://zmister.com" target="_blank">作者博客：https://zmister.com</a></p>
+          </div>
+        </div>
+      </div> 
+  </div>
+  
+<script>
+    // 展开收起左边目录
+    $(function(){
+        // $(".switch-toc").click(SwitchToc);
+        $("body").on('click','.switch-toc',SwitchToc)
+    });
+    function SwitchToc(i){
+        console.log("点击了")
+        var $me = $(this);
+        $(this).parent().next("ul").toggleClass("toc-close"); //切换展开收起样式
+        $(this).toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+    };
+
+    // 展开文档树
+    function openDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).removeClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+        
+    };
+    // 收起文档树
+    function closeDocTree(){
+        $("nav ul.summary ul").each(function(obj){
+            console.log(obj,this)
+            $(this).addClass("toc-close")
+            $(this).prev().children('i').toggleClass("fa-chevron-left fa-chevron-down");//切换图标
+        })
+    };
+    // 文档分享 - 复制链接
+    copyUrl = function(){
+        var crt_url_val = document.getElementById("copy_crt_url");
+        crt_url_val.select();
+        window.clipb
+        document.execCommand("Copy");
+        layer.msg("链接复制成功！")
+    }
+    // 生成二维码
+    var qrcode = new QRCode("url_qrcode", {
+        text: document.URL,
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
+<!-- 统计代码开始 -->
+    
+        <script type="text/javascript" src="//js.users.51.la/20830315.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+    
+<!-- 统计代码结束 -->
+
+<!-- 下载选项卡模板 -->
+<div id="download_div" style="display: none;">
+    <div class="layui-row" style="margin: 10px;">
+        <a class="" download='PALY连招第七招----恋爰契约.md' href="../../download_doc_md/120/index.htm" target="_blank">
+            <i class="fa fa-download"></i> 下载Markdown文件
+        </a>
+    </div>
+</div>
+<!-- 分享文档选项卡模板 -->
+<div id="share_doc_div" style="display: none;">
+    <div class="layui-tab-content">
+        <div class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <label class="layui-form-label">分享</label>
+                <div class="layui-input-block">
+                  <input type="checkbox" name="switch" lay-skin="switch" lay-text="开启|关闭" lay-filter="share-switch">
+                </div>
+            </div>
+            
+            <div class="layui-form" style="display: none;" id="share-link">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">链接</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="share_link" class="layui-input" id="share_link" disabled="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="layui-form-item" style="display:none;" id="share-type">
+                <label class="layui-form-label">类型</label>
+                <div class="layui-input-block">
+                    
+                    <input type="radio" name="share_type" value="0" title="公开" checked="" lay-filter="share_type">
+                    <input type="radio" name="share_type" value="1" title="私密" lay-filter="share_type">
+                    
+                </div>
+                
+            </div>
+            <div class="layui-form" style="display:none;" id="share_value_item">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="share_value" value='' disabled="" class="layui-input" id="share_doc_value">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">
+                        <button class="layui-btn layui-btn-xs layui-btn-primary" id="updateShareValue"><i class="fa fa-repeat"></i> 更新密码</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/toc/doctoc.js"></script>
+<script src="../../static/viewerjs/viewer.min.js"></script>
+<script>
+    var layer = layui.layer;
+    var form = layui.form;
+    // 手机屏幕上默认最小化目录
+    if(window.outerWidth < 1300){
+        $(".sidebar").toggleClass("doc-toc-hide");
+    }
+    // 切换文档目录显示与否
+    $(".tocMenu").click(function() {
+        console.log("隐藏文档目录")
+        $(".sidebar").toggleClass("doc-toc-hide");
+    });
+    
+    //修改a标签链接新窗口打开
+    $('#content').on('click','a',function(e){
+        e.target.target = '_blank';
+    });
+    
+    // 图片放大显示
+    var img_options = {
+        url: 'data-original',
+        fullscreen:false,//全屏
+        rotatable:false,//旋转
+        scalable:false,//翻转
+        button:false,//关闭按钮
+        toolbar:false,
+        title:false,
+      };
+    var viewer = new Viewer(document.getElementById('content'), img_options);
+
+    // 显示文档下载弹出框
+    $("#download_doc").click(function(r){
+        var layer = layui.layer;
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['350px','150px'],
+            shadeClose: true,
+            content: $('#download_div')
+          });
+    });
+    
+    // 生成随机分享码
+    function randomWord(randomFlag, min, max){
+        var str = "",
+            range = min,
+            arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        // 随机产生
+        if(randomFlag){
+            range = Math.round(Math.random() * (max-min)) + min;
+        }
+        for(var i=0; i<range; i++){
+            pos = Math.round(Math.random() * (arr.length-1));
+            str += arr[pos];
+        }
+        return str;
+    };
+    
+    // 更新文档分享状态
+    function updateDocShare(data){
+        $.post("/share_doc/",data,function(r){
+            if(r.status){
+                layer.msg("设置成功",{offset: 't'})
+                console.log(r.data)
+                $("input[name=share_link]").val(document.domain + '/share_doc/?token=' + r.data.doc)
+            }else{
+                layer.msg("设置出错")
+            }
+        })
+    }
+
+    // 分享文档
+    $("#shareDoc").click(function(){
+        layer.open({
+            type:1,
+            title:'分享文档:PALY连招第七招----恋爰契约',
+            content:$("#share_doc_div"),
+            area:'450px',
+            // btn:['创建分享','取消'],
+            success : function(index, layero) { // 成功弹出后回调
+                form.render();
+            },
+        })
+    })
+    
+
+    var share_data = {
+        'id':'120',
+    }
+
+    //监听分享框分享类型的单选事件
+    form.on('radio(share_type)', function(data){
+    //   console.log(data.value); //被点击的radio的value值
+      if(data.value == 0){ // 公开
+            $("#share_value_item").css("display","none");
+            share_data['share_type'] = 0;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+            
+      }else if(data.value == 1){ // 私密
+            $("#share_value_item").css("display","block");
+            
+                $("#share_doc_value").val(randomWord(false,4))
+            
+            share_data['share_type'] = 1;
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+      }
+    });
+
+    // 监听分享开关事件
+    form.on('switch(share-switch)', function(data){
+        console.log(data.elem.checked); //开关是否开启，true或者false
+        if(data.elem.checked){ // 开启
+            console.log("开启分享")
+            $("#share-type").css('display',"block");
+            $("#share-expire").css('display',"block");
+            $("#share-link").css("display","block");
+            if($("input[name='share_type']:checked").val() == 1){
+                $("#share_value_item").css("display","block");
+            }
+            // 开启
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = true
+            updateDocShare(share_data);
+        }else{
+            console.log("关闭分享")
+            layer.msg("关闭分享",{offset: 't'})
+            $("#share-type").css('display',"none")
+            $("#share-expire").css('display',"none")
+            $("#share_value_item").css("display","none");
+            $("#share-link").css("display","none");
+            share_data['share_type'] = $("input[name='share_type']:checked").val();
+            share_data['share_value'] = $("#share_doc_value").val();
+            share_data['is_enable'] = false
+            updateDocShare(share_data);
+        }
+    });  
+
+    // 更新文档分享密码
+    $("#updateShareValue").click(function(){
+        $("#share_doc_value").val(randomWord(false,4));
+        share_data['share_type'] = 1;
+        share_data['share_value'] = $("#share_doc_value").val();
+        share_data['is_enable'] = true
+        updateDocShare(share_data);
+    })
+</script>
+
+
+
+</body>
+</html>
